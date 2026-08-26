@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,6 +41,13 @@
                         const container = document.getElementById('site-header');
                         if (container) {
                             container.innerHTML = html;
+                            // Re-execute any <script> tags (innerHTML blocks script execution)
+                            container.querySelectorAll('script').forEach(function(oldScript) {
+                                var newScript = document.createElement('script');
+                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
+                                newScript.textContent = oldScript.textContent;
+                                oldScript.parentNode.replaceChild(newScript, oldScript);
+                            });
 
                             // Highlight active link supporting Clean URLs and subfolder matching
                             const currentPath = window.location.pathname;
@@ -416,6 +423,20 @@
                         const footerContainer = document.getElementById('site-footer');
                         if (footerContainer) {
                             footerContainer.innerHTML = html;
+                            // Re-execute scripts (innerHTML blocks script execution)
+                            footerContainer.querySelectorAll('script').forEach(function(oldScript) {
+                                var newScript = document.createElement('script');
+                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
+                                newScript.textContent = oldScript.textContent;
+                                oldScript.parentNode.replaceChild(newScript, oldScript);
+                            });
+                            // Re-execute any <script> tags (innerHTML blocks script execution)
+                            container.querySelectorAll('script').forEach(function(oldScript) {
+                                var newScript = document.createElement('script');
+                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
+                                newScript.textContent = oldScript.textContent;
+                                oldScript.parentNode.replaceChild(newScript, oldScript);
+                            });
                         }
                     })
                     .catch(err => console.error('Failed to load footer:', err));
