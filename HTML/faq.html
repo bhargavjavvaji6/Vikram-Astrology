@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.kamleshyadav.com/themeforest-html/astrology/version-2/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2026 12:22:24 GMT -->
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>FAQ</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_faq_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 offset-lg-1">
+                        <div class="as_faq_section">
+                            <div class="accordion as_accordion" id="accordionPanelsStayOpenExample">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="panelsStayOpen-headingOne">
+                                        <h2 class="mb-0">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                aria-controls="panelsStayOpen-collapseOne">
+                                                What is 'the zodiac'
+                                            </button>
+                                        </h2>
+                                    </div>
+
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <h2 class="mb-0">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                Why are interpretations by various astrologers so different for the same
+                                                forecast period?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingTwo">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="panelsStayOpen-headingThree">
+                                        <h2 class="mb-0">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                What is a Rising Sign or Ascendant?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingThree">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="panelsStayOpen-headingFour">
+                                        <h2 class="mb-0">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                                What is a Ascendant?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingFour">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="panelsStayOpen-headingFive">
+                                        <h2 class="mb-0">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                                What is a Ascendant?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingFive">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="panelsStayOpen-headingSix">
+                                        <h2 class="mb-0">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix"
+                                                aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                                What is a Ascendant?
+                                            </button>
+                                        </h2>
+                                    </div>
+                                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-headingSix">
+                                        <div class="accordion-body">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_footer_wrapper as_padderTop80">
+            <div class="container">
+                <div class="as_newsletter_wrapper as_padderBottom60">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                            <h1 class="as_heading">Our Newsletter</h1>
+                            <p>Get Your Daily Horoscope, Daily Lovescope and Daily<br> Tarot Directly In Your Inbox</p>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                            <div class="as_newsletter_box">
+                                <input type="text" name="" id="" class="form-control"
+                                    placeholder="Enter your Email Here...">
+                                <a href="javascript:;" class="as_btn">subscribe now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="site-footer">
+                    <script>
+                        fetch('./Footer.html')
+                            .then(response => {
+                                if (!response.ok) throw new Error('Footer load error');
+                                return response.text();
+                            })
+                            .then(html => {
+                                const footerContainer = document.getElementById('site-footer');
+                                if (footerContainer) {
+                                    footerContainer.innerHTML = html;
+                                }
+                            })
+                            .catch(err => console.error('Failed to load footer:', err));
+                    </script>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from demo.kamleshyadav.com/themeforest-html/astrology/version-2/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2026 12:22:24 GMT -->
+
+</html>

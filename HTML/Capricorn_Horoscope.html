@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Zodiac Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_zodiac_single_wrapper as_padderTop80 as_padderBottom60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="as_zodiac_single_inner">
+                            <div class="as_zodiac_heading as_padderBottom50">
+                                <span class="as_sign"><img src="assets/images/svg/sign1.svg" alt=""></span>
+                                Aries Horoscope Today
+                                <span>( Mar 21 - Apr 19 )</span>
+                            </div>
+
+                            <div class="as_tab_wrapper">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="today" role="tabpanel"
+                                        aria-labelledby="Today">
+
+
+                                        <p class="as_font14 as_padderBottom20">Aries Horoscope Today provides valuable
+                                            guidance for love, career, finances, and personal growth. As the first sign
+                                            of the zodiac, Aries is known for confidence, courage, and a strong desire
+                                            to succeed. People born between March 21 and April 19 belong to the Aries
+                                            zodiac sign and are often recognized for their leadership qualities,
+                                            determination, and energetic personality.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Ruled by Mars, Aries individuals are
+                                            action-oriented and rarely hesitate when pursuing their goals. Their
+                                            enthusiasm and adventurous spirit make them natural pioneers who enjoy
+                                            taking on new challenges. Reading your Aries daily horoscope can help you
+                                            understand current astrological influences and make better decisions
+                                            throughout the day.</p>
+
+                                        <h3 class="as_subheading as_orange">Aries Personality Traits</h3>
+
+                                        <p class="as_font14 as_padderBottom20">The Aries personality is bold, ambitious,
+                                            and independent. Aries natives are known for their confidence and
+                                            willingness to take initiative in both personal and professional situations.
+                                            They often inspire others through their determination and positive outlook.
+                                            While Aries is naturally courageous and enthusiastic, they can sometimes act
+                                            impulsively. Learning to balance confidence with patience helps Aries
+                                            achieve long-term success and maintain healthy relationships.
+                                        </p>
+                                        <h3 class="as_subheading as_orange">Aries Compatibility</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Aries compatibility is often strongest
+                                            with signs that appreciate energy, passion, and adventure. Aries and Leo
+                                            compatibility is known for excitement and mutual support, while Aries and
+                                            Sagittarius compatibility often creates a fun and adventurous connection.
+                                            Aries and Gemini compatibility can bring excellent communication and shared
+                                            interests, while Aries and Aquarius compatibility often thrives on
+                                            independence and intellectual stimulation.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Other relationships, including Aries and
+                                            Scorpio compatibility, Aries and Cancer compatibility, Aries and Libra
+                                            compatibility, Aries and Taurus compatibility, Aries and Virgo
+                                            compatibility, Aries and Capricorn compatibility, and Aries and Pisces
+                                            compatibility, can also succeed when both partners understand and respect
+                                            each other's differences.</p>
+
+                                        <h3 class="as_subheading as_orange">Aries Horoscope Dates</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Aries horoscope dates fall between March
+                                            21 and April 19. Represented by the Ram, Aries symbolizes courage,
+                                            leadership, and new beginnings. As the first sign of the zodiac, Aries is
+                                            often associated with initiative, ambition, and a desire to move forward
+                                            with confidence.</p>
+
+                                        <h3 class="as_subheading as_orange">Aries Horoscope Today for Love, Career, and
+                                            Money</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Today's Aries horoscope encourages focus
+                                            and determination. Career opportunities may arise when you combine
+                                            confidence with thoughtful planning. In relationships, open communication
+                                            can strengthen connections and resolve misunderstandings. Financially,
+                                            taking a practical approach to spending and investments may help support
+                                            long-term stability.</p>
+
+                                        <p class="as_font14 as_padderBottom20">By following your Aries Horoscope Today,
+                                            you can gain useful insight into upcoming opportunities and make more
+                                            informed decisions in different areas of life.</p>
+
+                                        <h3 class="as_subheading as_orange">Trusted Astrology Guidance in New York</h3>
+
+                                        <p class="as_font14 as_padderBottom20">If you are looking for deeper
+                                            astrological insights, Vikram Astrologer & Psychic in New York offers
+                                            professional astrology and psychic consultations backed by more than 30
+                                            years of experience. Clients across New York and throughout the United
+                                            States seek guidance for horoscope readings, compatibility analysis,
+                                            spiritual consultations, and birth chart interpretations.
+
+                                        <p class="as_font14 as_padderBottom20">Many people searching for the best
+                                            psychic in New York, best astrology in New York, and best horoscope reading
+                                            in New York choose experienced astrology services to gain clarity about
+                                            relationships, career decisions, finances, and future opportunities.
+
+                                        <h3 class="as_subheading as_orange">Explore More Horoscope Insights</h3>
+
+                                        <p class="as_font14 as_padderBottom20">After reading Aries Horoscope Today, you
+                                            may also enjoy exploring Taurus Daily Horoscope and Gemini Horoscope Today.
+                                            You can also learn more about Cancer Horoscope Today, Leo Horoscope Today,
+                                            Virgo Horoscope Today, Libra Horoscope Today, Scorpio Horoscope Today,
+                                            Sagittarius Horoscope Today, Capricorn Horoscope Today, Aquarius Horoscope
+                                            Today, and Pisces Horoscope Today for additional zodiac insights.
+
+                                        <h3 class="as_subheading as_orange">Final Thoughts</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Aries Horoscope Today helps you
+                                            understand your strengths, opportunities, and challenges through astrology.
+                                            Whether you are interested in Aries personality traits, Aries compatibility,
+                                            or daily horoscope guidance, astrology can provide valuable insight to
+                                            support personal growth, relationships, and future planning.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="as_zodiac_sidebar">
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign1.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Aries</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign2.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Taurus </h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign3.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Gemini</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign4.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Cancer</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign5.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Leo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign6.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Virgo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign7.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Libra</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign8.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Scorpio</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign9.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Sagittarius</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign10.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign11.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign12.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Pisces</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_tarotReading_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Your Daily Tarot Reading</h1>
+                        <p class="as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod tempor
+                            incididuesdeentiut labore <br> etesde dolore magna aliquapspendisse and the gravida.</p>
+
+                        <div class="row as_card_slider">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+
+
+
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

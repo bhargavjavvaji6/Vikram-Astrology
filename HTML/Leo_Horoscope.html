@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Zodiac Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_zodiac_single_wrapper as_padderTop80 as_padderBottom60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="as_zodiac_single_inner">
+                            <div class="as_zodiac_heading as_padderBottom50">
+                                <span class="as_sign"><img src="assets/images/svg/sign1.svg" alt=""></span>
+                                Leo Horoscope Today
+                                <span>( Mar 21 - Apr 19 )</span>
+                            </div>
+
+                            <div class="as_tab_wrapper">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="today" role="tabpanel"
+                                        aria-labelledby="Today">
+
+
+                                        <p class="as_font14 as_padderBottom20">Leo Horoscope Today provides valuable
+                                            guidance for love, career, finances, and personal growth. As one of the most
+                                            confident and charismatic signs of the zodiac, Leo is known for leadership,
+                                            creativity, and a strong sense of determination. People born under the Leo
+                                            zodiac sign often enjoy being recognized for their talents and inspiring
+                                            others through their enthusiasm and positive energy.</p>
+
+                                        <. class="as_font14 as_padderBottom20">Ruled by the Sun, Leo individuals
+                                            naturally radiate confidence and warmth. Their ambitious nature motivates
+                                            them to pursue goals with passion and persistence. Reading your Leo daily
+                                            horoscope can help you better understand current astrological influences and
+                                            make informed decisions throughout the day.</p>
+
+                                            <h3 class="as_subheading as_orange">Leo Personality Traits</h3>
+
+                                            <p class="as_font14 as_padderBottom20">The Leo zodiac sign is often
+                                                associated with confidence, generosity, and ambition. Leo natives are
+                                                natural leaders who enjoy motivating others and taking initiative in
+                                                both personal and professional situations. Their strong sense of
+                                                self-belief often helps them overcome obstacles and pursue success with
+                                                determination.
+                                                One of Leo's greatest strengths is loyalty. They value meaningful
+                                                relationships and often go out of their way to support friends, family
+                                                members, and loved ones. While Leo is naturally confident, they can
+                                                sometimes be stubborn or seek validation from others. Maintaining
+                                                balance and self-awareness allows Leo individuals to continue growing
+                                                and achieving their goals.
+                                            </p>
+                                            <h3 class="as_subheading as_orange">Leo Compatibility</h3>
+
+                                            <p class="as_font14 as_padderBottom20">Leo compatibility is often strongest
+                                                with signs that appreciate passion, confidence, and open communication.
+                                                Aries and Leo compatibility is known for creating an energetic and
+                                                exciting relationship built on mutual admiration and shared ambition.
+                                                Leo and Gemini compatibility often thrives through communication,
+                                                curiosity, and a love of new experiences.</p>
+
+                                            <p class="as_font14 as_padderBottom20">Leo and Aquarius compatibility can
+                                                create a unique connection between two strong personalities, while Leo
+                                                and Libra compatibility is often admired for its balance of passion and
+                                                harmony. Other relationships, including Leo and Scorpio compatibility,
+                                                Leo and Virgo compatibility, Leo and Pisces compatibility, and Leo and
+                                                Capricorn compatibility, can also succeed when both partners understand
+                                                each other's strengths and differences.
+                                                Whether exploring Leo Gemini compatibility or Leo Virgo compatibility,
+                                                astrology can provide valuable insight into relationship dynamics and
+                                                emotional connections.
+                                            </p>
+
+                                            <h3 class="as_subheading as_orange">Leo Horoscope Dates</h3>
+
+                                            <p class="as_font14 as_padderBottom20">Leo horoscope dates fall between July
+                                                23 and August 22. Represented by the Lion, Leo symbolizes courage,
+                                                leadership, and self-expression. The Leo astrological sign is associated
+                                                with confidence, creativity, and a desire to make a positive impact on
+                                                the world.
+                                            </p>
+                                            <p class="as_font14 as_padderBottom20">Understanding Leo zodiac sign dates
+                                                can help individuals gain deeper insight into the qualities and
+                                                characteristics commonly associated with this powerful fire sign.
+                                            </p>
+
+                                            <h3 class="as_subheading as_orange">Leo Horoscope Today for Love, Career,
+                                                and
+                                                Money</h3>
+
+                                            <p class="as_font14 as_padderBottom20">Leo Horoscope Today encourages
+                                                confidence and focused action. Career opportunities may arise when you
+                                                showcase your skills and leadership abilities. In relationships, honest
+                                                communication and appreciation can strengthen emotional connections and
+                                                build trust.</p>
+
+                                            <p class="as_font14 as_padderBottom20">Financially, thoughtful planning can
+                                                help you make the most of new opportunities while maintaining stability.
+                                                By paying attention to your Leo horoscope today, you can gain valuable
+                                                insight into important decisions and future possibilities.</p>
+
+                                            <h3 class="as_subheading as_orange">Famous Astrology Guidance in New York
+                                            </h3>
+
+                                            <p class="as_font14 as_padderBottom20">If you are looking for deeper
+                                                astrological insight, Vikram Astrologer & Psychic in New York offers
+                                                professional astrology and psychic consultations backed by more than 30
+                                                years of experience. Clients throughout New York and across the United
+                                                States seek guidance for horoscope readings, compatibility analysis,
+                                                spiritual consultations, and birth chart interpretations.</p>
+
+                                            <p class="as_font14 as_padderBottom20">Many individuals searching for the
+                                                best psychic in New York, best astrology in New York, and best horoscope
+                                                reading in New York choose experienced astrology services for clarity
+                                                regarding relationships, career choices, finances, and future
+                                                opportunities.</p>
+
+                                            <h3 class="as_subheading as_orange">Explore More Horoscope Insights</h3>
+
+                                            <p class="as_font14 as_padderBottom20">After reading Leo Horoscope Today,
+                                                you may also enjoy exploring Virgo Horoscope Today and Libra Horoscope
+                                                Today for additional zodiac insights. You can also learn more about
+                                                Aries Horoscope Today, Taurus Horoscope Today, Gemini Horoscope Today,
+                                                Cancer Horoscope Today, Scorpio Horoscope Today, Sagittarius Horoscope
+                                                Today, Capricorn Horoscope Today, Aquarius Horoscope Today, and Pisces
+                                                Horoscope Today to better understand compatibility and daily
+                                                astrological influences.</p>
+
+                                            <h3 class="as_subheading as_orange">Final Thoughts</h3>
+
+                                            <p class="as_font14 as_padderBottom20">Leo Horoscope Today helps you
+                                                understand your strengths, opportunities, and daily influences through
+                                                astrology. Whether you are interested in the Leo zodiac sign, Leo
+                                                compatibility, Leo horoscope dates, or daily horoscope guidance,
+                                                astrology can provide valuable insight to support personal growth,
+                                                relationships, and future planning.
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="as_zodiac_sidebar">
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign1.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Aries</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign2.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Taurus </h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign3.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Gemini</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign4.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Cancer</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign5.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Leo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign6.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Virgo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign7.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Libra</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign8.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Scorpio</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign9.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Sagittarius</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign10.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign11.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign12.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Pisces</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_tarotReading_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Your Daily Tarot Reading</h1>
+                        <p class="as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod tempor
+                            incididuesdeentiut labore <br> etesde dolore magna aliquapspendisse and the gravida.</p>
+
+                        <div class="row as_card_slider">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+
+
+
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
+
+
+</html>

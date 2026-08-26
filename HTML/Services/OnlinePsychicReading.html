@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=" ../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="../assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('../header2.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Service Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_servicedetail_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+
+                <div class="col-lg-14">
+                    <div class="as_service_detail_inner">
+                        <img src="../assets/images/service_single.jpg" alt="" class="img-responsive">
+                        <br><br>
+                        <h2 class="as_orange">
+                            Accurate Online Psychic Reading for Love, Career, Relationships & Spiritual Guidance.
+                        </h2>
+                        <p class="as_font14 as_margin0 as_padderBottom10">
+                            Are you wondering whether you and your partner are truly compatible? An Astrology
+                            Compatibility Birth Chart provides a deeper understanding of your relationship by analyzing
+                            both partners' birth charts, planetary positions, zodiac signs, and astrological influences.
+                            At Vikram Psychic Astrology in New York, we offer professional Astrology Compatibility Birth
+                            Chart consultations to help couples understand their emotional connection, communication,
+                            long-term compatibility, and future together.
+                        </p>
+
+                        <h2 class="as_orange">What Is an Astrology Compatibility Birth Chart?</h2>
+                        <p class="as_font14">
+                            An Astrology Compatibility Birth Chart is a detailed comparison of two individuals' birth
+                            charts to evaluate relationship compatibility. Unlike simple zodiac matching, this method
+                            examines planetary placements, birth houses, aspects, and life patterns to provide a
+                            complete understanding of a relationship.
+                            At Vikram Psychic Astrology in New York, our compatibility analysis goes beyond sun signs to
+                            deliver accurate insights into love, marriage, emotional connection, family life,
+                            communication, and long-term relationship potential.
+
+                        </p>
+
+                        <h2 class="as_orange">Why Clients Trust Vikram Psychic Astrology</h2>
+                        <p>
+                            Relationships are complex. Sometimes couples face challenges that affect their
+                            compatibility, communication, or long-term goals. At Vikram Psychic Astrology in New
+                            York,
+                            our Astrology Compatibility Birth Chart analysis helps couples understand:<br>
+                            &#9784; Experienced Astrology Professionals <br>
+                            &#9784; Personalized Horoscope Analysis<br>
+                            &#9784; Detailed Birth Chart Interpretation <br>
+                            &#9784; Traditional Vedic Astrology Principles <br>
+                            &#9784; Confidential Consultations <br>
+                            &#9784; Practical Astrological Guidance <br>
+                            &#9784; Online & In-Person Appointments <br>
+                            &#9784; Family harmony <br>
+                            &#9784; Future relationship potential <br>
+                            &#9818; Partner compatibility <br>
+                        </p>
+                        <h2 class="as_orange">Birth Chart Compatibility Analysis</h2>
+                        <p>Our Birth Chart Compatibility service compares the birth charts of two individuals to
+                            identify strengths, challenges, and opportunities within the relationship.
+                            Our Birth Chart Compatibility analysis includes:<br>
+                            &#9818; Planetary Compatibility <br>
+                            &#9818; Emotional Compatibility <br>
+                            &#9818; Marriage Compatibility <br>
+                            &#9818; Communication Compatibility <br>
+                            &#9818; Family Harmony <br>
+                            &#9818; Career Support Between Partners <br>
+                            &#9818; Financial Compatibility <br>
+                            &#9818; Spiritual Compatibility <br>
+                            &#9818; Long-Term Relationship Potential <br>
+                            Every Birth Chart Compatibility consultation is personalized according to both partners'
+                            birth details.
+                        </p>
+                        <h2 class="as_orange">Astrology Chart Compatibility for Lasting Relationships</h2>
+                        <p>Our Astrology Chart Compatibility service helps couples understand how planetary influences
+                            affect their relationship. By comparing both birth charts, we identify compatible energies,
+                            possible challenges, and practical guidance for building a stronger relationship.
+                            Whether you're dating, engaged, or married, Astrology Chart Compatibility provides valuable
+                            insights that support informed relationship decisions.
+                        <h2 class="as_orange">Birth Chart Love Compatibility</h2>
+                        <p>Understanding Birth Chart Love Compatibility can help you discover how you and your partner
+                            connect emotionally, mentally, and spiritually.
+                            Our Birth Chart Love Compatibility consultation helps answer questions such as:<br>
+                            &#9818; Are we compatible for marriage? <br>
+                            &#9818; How strong is our emotional connection? <br>
+                            &#9818; What challenges may arise in the relationship? <br>
+                            &#9818; How can we improve communication? <br>
+                            &#9818; What are our relationship strengths? <br>
+                            Every relationship is unique, and our astrologers provide guidance tailored to your
+                            individual birth charts.
+                        </p>
+                        <h2 class="as_orange">Natal Birth Chart Compatibility</h2>
+                        <p>Our Natal Birth Chart Compatibility analysis carefully compares the complete natal charts of
+                            both partners instead of relying only on zodiac signs.
+                            This detailed consultation includes:<br>
+                            &#9818; Planetary Aspects <br>
+                            &#9818; House Comparisons <br>
+                            &#9818; Compatibility Yogas <br>
+                            &#9818; Dasha Analysis <br>
+                            &#9818; Marriage Indicators <br>
+                            &#9818; Relationship Timing <br>
+                            &#9818; Long-Term Compatibility <br>
+                            A Natal Birth Chart Compatibility reading provides deeper insights into your relationship
+                            and future together.
+                        </p>
+                        <h2 class="as_orange">Natal Chart Love Compatibility</h2>
+                        <p>Our Natal Chart Love Compatibility service is designed for couples who want a more detailed
+                            understanding of their romantic relationship. By studying both natal charts, our astrologers
+                            identify emotional compatibility, shared strengths, communication styles, and potential
+                            areas for growth.
+                            This personalized consultation helps couples build stronger, healthier, and more harmonious
+                            relationships.
+                        </p>
+                        <h2 class="as_orange">Relationship Astrology Chart Analysis</h2>
+                        <p>A Relationship Astrology Chart offers valuable insights into how two people interact
+                            emotionally, mentally, spiritually, and practically.
+                            Our Relationship Astrology Chart analysis includes:<br>
+                            &#9818; Love Compatibility <br>
+                            &#9818; Marriage Compatibility <br>
+                            &#9818; Trust & Communication <br>
+                            &#9818; Emotional Bond <br>
+                            &#9818; Shared Life Goals <br>
+                            &#9818; Conflict Resolution <br>
+                            &#9818; Long-Term Relationship Potential <br>
+                            Every consultation is based on authentic Vedic astrology principles and personalized birth
+                            chart analysis.
+                        </p>
+                        <h2 class="as_orange">Zodiac Birth Chart Compatibility</h2>
+                        <p>Many people rely only on zodiac signs to evaluate compatibility. However, Zodiac Birth Chart
+                            Compatibility provides a much more complete picture by considering the entire birth chart,
+                            including planetary positions, houses, and important astrological combinations.
+                            This comprehensive approach delivers more meaningful relationship guidance than zodiac sign
+                            comparisons alone.
+                        </p>
+                        <h2 class="as_orange">Birthdate Compatibility Chart</h2>
+                        <p>A Birthdate Compatibility Chart is created using both partners' birth information to examine
+                            their astrological connection. Our astrologers use your birth date, birth time, and
+                            birthplace to prepare a detailed compatibility report that highlights relationship
+                            strengths, areas for improvement, and future opportunities.
+                        </p>
+                        <h2 class="as_orange">Astrology Compatibility Calculator vs Professional Compatibility Reading
+                        </h2>
+                        <p>Many people use an online Astrology Compatibility Calculator or Birth Chart Compatibility
+                            Calculator to check relationship compatibility. While these tools provide basic automated
+                            results, they cannot replace a personalized consultation with an experienced astrologer.
+                            At Vikram Psychic Astrology in New York, we carefully analyze every aspect of your
+                            horoscope, including planetary positions, Dashas, yogas, and life patterns. This provides
+                            far more accurate and meaningful insights than a standard Astrology Compatibility Calculator
+                            or Birth Chart Compatibility Calculator.
+                        </p>
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage <br>
+                            &#9818; Newly engaged couples <br>
+                            &#9818; Married couples <br>
+                            &#9818; Long-distance relationships <br>
+                            &#9818; Individuals seeking relationship guidance <br>
+                            &#9818; Families seeking marriage compatibility <br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship <br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis <br>
+                            &#9818; Experienced Vedic Astrologers <br>
+                            &#9818; Personalized Relationship Guidance <br>
+                            &#9818; Confidential Consultations <br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology <br>
+                        </p>
+                        </p>
+
+                        </p>
+                        </p>
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis <br>
+                            &#9818; Experienced Vedic Astrologers <br>
+                            &#9818; Personalized Relationship Guidance <br>
+                            &#9818; Confidential Consultations <br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology <br>
+                        </p>
+
+
+
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage <br>
+                            &#9818; Newly engaged couples <br>
+                            &#9818; Married couples <br>
+                            &#9818; Long-distance relationships <br>
+                            &#9818; Individuals seeking relationship guidance <br>
+                            &#9818; Families seeking marriage compatibility <br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship <br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis <br>
+                            &#9818; Experienced Vedic Astrologers <br>
+                            &#9818; Personalized Relationship Guidance <br>
+                            &#9818; Confidential Consultations <br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology <br>
+                        </p>
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis <br>
+                            &#9818; Experienced Vedic Astrologers <br>
+                            &#9818; Personalized Relationship Guidance <br>
+                            &#9818; Confidential Consultations <br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology <br>
+                        </p>
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis <br>
+                            &#9818; Experienced Vedic Astrologers <br>
+                            &#9818; Personalized Relationship Guidance <br>
+                            &#9818; Confidential Consultations <br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology <br>
+                        </p>
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage<br>
+                            &#9818; Newly engaged couples<br>
+                            &#9818; Married couples<br>
+                            &#9818; Long-distance relationships<br>
+                            &#9818; Individuals seeking relationship guidance<br>
+                            &#9818; Families seeking marriage compatibility<br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship<br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology<br>
+                        </p>
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology<br>
+                        </p>
+
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage<br>
+                            &#9818; Newly engaged couples<br>
+                            &#9818; Married couples<br>
+                            &#9818; Long-distance relationships<br>
+                            &#9818; Individuals seeking relationship guidance<br>
+                            &#9818; Families seeking marriage compatibility<br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship<br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology<br>
+                        </p>
+
+
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage<br>
+                            &#9818; Newly engaged couples<br>
+                            &#9818; Married couples<br>
+                            &#9818; Long-distance relationships<br>
+                            &#9818; Individuals seeking relationship guidance<br>
+                            &#9818; Families seeking marriage compatibility<br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship<br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology<br>
+                        </p>
+
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage<br>
+                            &#9818; Newly engaged couples<br>
+                            &#9818; Married couples<br>
+                            &#9818; Long-distance relationships<br>
+                            &#9818; Individuals seeking relationship guidance<br>
+                            &#9818; Families seeking marriage compatibility<br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship<br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology<br>
+                        </p>
+
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage<br>
+                            &#9818; Newly engaged couples<br>
+                            &#9818; Married couples<br>
+                            &#9818; Long-distance relationships<br>
+                            &#9818; Individuals seeking relationship guidance<br>
+                            &#9818; Families seeking marriage compatibility<br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship<br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology<br>
+                        </p>
+
+
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage<br>
+                            &#9818; Newly engaged couples<br>
+                            &#9818; Married couples<br>
+                            &#9818; Long-distance relationships<br>
+                            &#9818; Individuals seeking relationship guidance<br>
+                            &#9818; Families seeking marriage compatibility<br>
+                            &#9818; Anyone wanting a deeper understanding of their relationship<br>
+                            Each consultation is tailored to your personal circumstances and relationship goals.
+                        </p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Trustworthy and Authentic Vedic Astrology<br>
+                        </p>
+
+
+
+                        <h2 class="as_orange">Astro Chart Compatibility Consultation</h2>
+                        <p>Our Astro Chart Compatibility consultation is ideal for:<br>
+                            &#9818; Couples planning marriage<br>
+                            &#9818; Newly engaged couples<br>
+                            &#9818; Married couples<br>
+                            &#9818; Long-distance relationships<br>
+                            &#9818; Individuals seeking relationship guidance<br>
+                            &#9818; Families seeking marriage compatibility
+                            Anyone wanting a deeper understanding of their relationship</p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Astrology Compatibility Birth Chart in New York, experience and
+                            personalized guidance matter.
+                            Clients choose Vikram Psychic Astrology in New York because we provide:<br>
+                            &#9818; Accurate Birth Chart Compatibility Analysis<br>
+                            &#9818; Experienced Vedic Astrologers<br>
+                            &#9818; Personalized Relationship Guidance<br>
+                            &#9818; Confidential Consultations<br>
+                            &#9818; Marriage Compatibility Analysis<br>
+                            &#9818; Love Compatibility Readings<br>
+                            &#9818; Detailed Natal Chart Analysis<br>
+                            &#9818;Traditional Vedic Astrology<br>
+                            &#9818;Online and In-Person Consultations<br>
+                            &#9818;Trusted Astrology Services Across New York, USA<br>
+                        <p>
+                            Our goal is to help couples gain clarity, strengthen their relationships, and make informed
+                            decisions through authentic astrological guidance.
+                            Book Your Astrology Compatibility Birth Chart Consultation Today
+                            If you're looking for the best Astrology Compatibility Birth Chart in New York, Birth Chart
+                            Compatibility, Birth Chart Love Compatibility, Natal Birth Chart Compatibility, or
+                            professional Relationship Astrology Chart analysis, Vikram Psychic Astrology in New York is
+                            here to help.
+                            Our experienced astrologers provide personalized compatibility consultations designed to
+                            help you understand your relationship, strengthen emotional connections, and make confident
+                            decisions about your future together.
+                            Book your consultation today and discover how a detailed Astrology Compatibility Birth Chart
+                            can provide valuable insights into your love life, marriage, and long-term relationship
+                            compatibility.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section class="as_know_sign_wrapper as_padderBottom80 as_padderTop80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="as_heading as_heading_center">Know Your Zodiac Sign</h1>
+                    <p class="as_font14 as_margin0 as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod
+                        tempor incididuesdeentiut labore <br>etesde dolore magna aliquapspendisse and the gravida.
+                    </p>
+
+
+                    <div class="as_sign_form text-left">
+                        <ul>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Date Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_datepicker"
+                                        placeholder="DD/MM/YYYY" id="">
+                                    <span><img src="../assets/images/svg/date.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Time Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_timepicker" placeholder="08:00"
+                                        id="">
+                                    <span><img src="../assets/images/svg/time.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Place Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control" placeholder="Enter City Name...."
+                                        id="">
+                                    <span><img src="../assets/images/svg/map1.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <a href="javascript:;" class="as_btn">find zodiac</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="as_footer_wrapper as_padderTop80">
+        <div class="container">
+            <div class="as_newsletter_wrapper as_padderBottom60">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                        <h1 class="as_heading">Our Newsletter</h1>
+                        <p>Get Your Daily Horoscope, Daily Lovescope and Daily<br> Tarot Directly In Your Inbox</p>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                        <div class="as_newsletter_box">
+                            <input type="text" name="" id="" class="form-control"
+                                placeholder="Enter your Email Here...">
+                            <a href="javascript:;" class="as_btn">subscribe now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="site-footer">
+                <script>
+                    fetch('../Footer2.html')
+                        .then(response => {
+                            if (!response.ok) throw new Error('Footer load error');
+                            return response.text();
+                        })
+                        .then(html => {
+                            const footerContainer = document.getElementById('site-footer');
+                            if (footerContainer) {
+                                footerContainer.innerHTML = html;
+                            }
+                        })
+                        .catch(err => console.error('Failed to load footer:', err));
+                </script>
+            </div>
+        </div>
+    </section>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

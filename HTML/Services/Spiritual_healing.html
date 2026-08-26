@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=" ../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="../assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('../header2.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Service Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_servicedetail_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+
+                <div class="col-lg-14">
+                    <p class="as_service_detail_inner">
+                        <img src="../assets/images/service_single.jpg" alt="" class="img-responsive">
+                        <br><br>
+                    <h2 class="as_subheading as_orange">Personalized Spiritual Healing for Emotional Balance, Inner
+                        Peace & Well-Being</h2>
+
+                    <p class="as_font14">
+                        Are you searching for Spiritual Healing in New York to find greater clarity, inner peace, and
+                        emotional balance? At Vikram Psychic Astrology in New York, we provide personalized spiritual
+                        guidance for individuals who are experiencing emotional challenges, life transitions,
+                        relationship concerns, or a desire for deeper spiritual connection.
+                        Our approach to emotional and spiritual healing focuses on understanding your personal concerns
+                        and offering traditional spiritual guidance in a private and supportive environment. Whether you
+                        are exploring spiritual practices for the first time or already follow a spiritual path, our
+                        consultations are designed around your individual needs and beliefs.
+                        Spiritual Healing in New York
+                    </p>
+                    <p class="as_font14">
+                        Finding the right Spiritual Healing service can be an important step when you are looking for
+                        personal reflection, spiritual guidance, and emotional support. At Vikram Psychic Astrology,
+                        our consultations provide a peaceful space where you can discuss your concerns and explore
+                        traditional spiritual practices.
+                        Our spiritual guidance may be helpful for people seeking support with:
+                    </p>
+                    <p class="as_font14">
+                        &#9762; Emotional challenges<br>
+                        &#9762; Relationship concerns<br>
+                        &#9762; Family difficulties<br>
+                        &#9762; Personal transitions<br>
+                        &#9762; Stress and uncertainty<br>
+                        &#9762; Spiritual growth<br>
+                        &#9762; Emotional challenges<br>
+                        &#9762; Relationship concerns<br>
+                        &#9762; Family difficulties<br>
+                        &#9762; Personal transitions<br>
+                        &#9762; Stress and uncertainty<br>
+                        &#9762; Spiritual growth<br>
+                        &#9762; Emotional challenges<br>
+                        &#9762; Relationship concerns<br>
+                        &#9762; Family difficulties<br>
+                        &#9762; Personal transitions<br>
+                        &#9762; Stress and uncertainty<br>
+                        &#9762; Spiritual growth<br>
+                        &#9762; Inner peace and self-reflection<br>
+                        &#9762; Personal energy and spiritual well-being<br>
+                    </p>
+                    <h2 class="as_subheading as_orange">Spiritual Healer Near Me in New York</h2>
+                    <p class="as_font14">
+                        If you are searching for a spiritual healer near me, location and personal connection can both
+                        matter when choosing a spiritual practitioner. Vikram Psychic Astrology in New York provides
+                        private spiritual consultations for clients in New York City and surrounding areas.
+                        We also offer online consultations, allowing clients throughout the USA to access personalized
+                        spiritual guidance without needing to travel.
+                    </p>
+                    <h2 class="as_subheading as_orange">Emotional and Spiritual Healing</h2>
+                    <p class="as_font14">
+                        Emotional and spiritual healing can involve practices that encourage self-reflection,
+                        mindfulness, spiritual connection, and personal growth. People may seek this type of guidance
+                        during difficult transitions, relationship changes, emotional uncertainty, or periods when they
+                        want to reconnect with themselves.
+                        Our consultations focus on supportive spiritual guidance rather than promising guaranteed
+                        outcomes. We encourage clients to combine spiritual practices with appropriate professional
+                        support whenever needed.
+                    </p>
+                    <h2 class="as_subheading as_orange">Spiritual Medicine and Traditional Practices</h2>
+                    <p class="as_font14">
+                        The term spiritual medicine is used in different cultures to describe traditional spiritual
+                        practices intended to support a person's sense of balance, connection, and well-being.
+                        At Vikram Psychic Astrology in New York, spiritual practices are approached as part of a
+                        traditional and personal spiritual journey. We discuss your beliefs and concerns before
+                        suggesting practices that may be appropriate for your circumstances.
+                        Spiritual practices should not be considered a substitute for medical treatment, medication, or
+                        professional mental-health care.
+                    </p>
+                    <h2 class="as_subheading as_orange">Natural Healers and Spiritual Wellness</h2>
+                    <p class="as_font14">
+                        People searching for natural healers may be interested in holistic approaches that support
+                        personal reflection and spiritual well-being. Spiritual guidance can be part of a broader
+                        wellness routine that includes healthy habits, mindfulness, meditation, community, and
+                        professional care when appropriate.
+                        Our approach respects individual beliefs and focuses on creating a calm, confidential
+                        environment for spiritual consultation.
+                    </p>
+                    <h2 class="as_subheading as_orange">Spiritual Wellness Retreats and Personal Growth</h2>
+                    <p class="as_font14">
+                        Spiritual wellness retreats are often chosen by people who want to step away from their daily
+                        routine and focus on reflection, mindfulness, spirituality, and personal development.
+                        If traveling to a retreat is not convenient, an individual spiritual consultation can provide an
+                        opportunity to focus on your personal goals from your home or preferred location. Vikram Psychic
+                        Astrology offers online spiritual guidance for clients throughout New York, the USA, and
+                        internationally.
+                    </p>
+                    <h2 class="as_subheading as_orange">What Can Spiritual Healing Help You Explore?</h2>
+                    <p class="as_font14">
+                        A spiritual healing consultation may help you explore:<br>
+                        &#9775; Personal purpose and direction<br>
+                        &#9775; Emotional and spiritual balance<br>
+                        &#9775; Relationship concerns<br>
+                        &#9775; Personal growth<br>
+                        &#9775; Spiritual practices<br>
+                        &#9775; Life transitions<br>
+                        &#9775; Inner peace<br>
+                        &#9775; Mindfulness and self-reflection<br>
+                        &#9775; Questions about your spiritual path<br>
+                    </p>
+                    <h2 class="as_subheading as_orange">Why Choose Vikram Psychic Astrology for Spiritual Healing?</h2>
+                    <p class="as_font14">
+                        Vikram Psychic Astrology in New York provides personalized spiritual consultations with an
+                        emphasis on privacy, respect, and individual guidance.
+                        Clients can receive:<br>
+                        &#9775; Personalized Spiritual Healing consultations<br>
+                        &#9775; Emotional and spiritual guidance<br>
+                        &#9775; Traditional spiritual practices<br>
+                        &#9775; Online consultations across the USA<br>
+                        &#9775; Private one-on-one sessions<br>
+                        &#9775; Spiritual wellness guidance<br>
+                        &#9775; Support for personal growth<br>
+                        &#9775; Convenient appointment options
+                    </p>
+
+                    <h2 class="as_subheading as_orange">Our goal is to provide a supportive environment where you can
+                        discuss your concerns openly and explore spiritual practices that align with your beliefs.</h2>
+                    <p class="as_font14">
+                        You do not need to live in New York to access our spiritual consultations. Vikram Psychic
+                        Astrology provides online sessions for clients throughout the USA and internationally.
+                        Whether you are searching for a spiritual healer near me in New York or prefer an online
+                        consultation from another state, you can schedule a private session from a convenient location.
+                    </p>
+
+                    <h2 class="as_subheading as_orange">Book a Spiritual Healing Consultation in New York</h2>
+                    <p class="as_font14">
+                        If you are searching for Spiritual Healing, emotional and spiritual healing, natural healers,
+                        spiritual medicine, or spiritual wellness retreats, Vikram Psychic Astrology in New York can
+                        provide personalized spiritual guidance based on your individual needs and beliefs.
+                        Contact us to schedule a private consultation and begin exploring your spiritual path with
+                        greater clarity, reflection, and confidence.
+                    </p>
+
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+    <section class="as_know_sign_wrapper as_padderBottom80 as_padderTop80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="as_heading as_heading_center">Know Your Zodiac Sign</h1>
+                    <p class="as_font14 as_margin0 as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod
+                        tempor incididuesdeentiut labore <br>etesde dolore magna aliquapspendisse and the gravida.
+                    </p>
+                    <div class="as_sign_form text-left">
+                        <ul>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Date Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_datepicker"
+                                        placeholder="DD/MM/YYYY" id="">
+                                    <span><img src="../assets/images/svg/date.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Time Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_timepicker" placeholder="08:00"
+                                        id="">
+                                    <span><img src="../assets/images/svg/time.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Place Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control" placeholder="Enter City Name...."
+                                        id="">
+                                    <span><img src="../assets/images/svg/map1.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <a href="javascript:;" class="as_btn">find zodiac</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="as_footer_wrapper as_padderTop80">
+        <div class="container">
+            <div class="as_newsletter_wrapper as_padderBottom60">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                        <h1 class="as_heading">Our Newsletter</h1>
+                        <p>Get Your Daily Horoscope, Daily Lovescope and Daily<br> Tarot Directly In Your Inbox</p>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                        <div class="as_newsletter_box">
+                            <input type="text" name="" id="" class="form-control"
+                                placeholder="Enter your Email Here...">
+                            <a href="javascript:;" class="as_btn">subscribe now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="site-footer">
+                <script>
+                    fetch('../Footer2.html')
+                        .then(response => {
+                            if (!response.ok) throw new Error('Footer load error');
+                            return response.text();
+                        })
+                        .then(html => {
+                            const footerContainer = document.getElementById('site-footer');
+                            if (footerContainer) {
+                                footerContainer.innerHTML = html;
+                            }
+                        })
+                        .catch(err => console.error('Failed to load footer:', err));
+                </script>
+            </div>
+        </div>
+    </section>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

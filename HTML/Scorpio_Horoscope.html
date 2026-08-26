@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Zodiac Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_zodiac_single_wrapper as_padderTop80 as_padderBottom60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="as_zodiac_single_inner">
+                            <div class="as_zodiac_heading as_padderBottom50">
+                                <span class="as_sign"><img src="assets/images/svg/sign1.svg" alt=""></span>
+                                Scorpio Horoscope Today
+                                <span>( Mar 21 - Apr 19 )</span>
+                            </div>
+
+                            <div class="as_tab_wrapper">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="today" role="tabpanel"
+                                        aria-labelledby="Today">
+
+
+                                        <p class="as_font14 as_padderBottom20">Scorpio Horoscope Today provides valuable
+                                            guidance for love, career, finances, and personal growth. As one of the most
+                                            passionate and determined signs of the zodiac, Scorpio is known for
+                                            emotional depth, resilience, and strong intuition. People born under the
+                                            Scorpio zodiac sign often possess a powerful personality and a natural
+                                            ability to remain focused on their goals.
+
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Ruled by Pluto and traditionally
+                                            associated with Mars, Scorpio individuals are driven, ambitious, and highly
+                                            perceptive. They often trust their instincts and prefer meaningful
+                                            experiences over superficial connections. Reading your daily horoscope
+                                            Scorpio forecast can help you understand current astrological influences and
+                                            make informed decisions throughout the day.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Scorpio Personality Traits</h3>
+
+                                        <p class="as_font14 as_padderBottom20">The Scorpio personality is often
+                                            described as loyal, confident, and emotionally intense. Scorpio natives
+                                            value honesty and commitment, especially in relationships and friendships.
+                                            Their determination allows them to overcome challenges and pursue goals with
+                                            remarkable focus.
+
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">One of Scorpio's greatest strengths is
+                                            their ability to remain resilient during difficult situations. They are
+                                            often highly intuitive and can understand people and circumstances on a
+                                            deeper level. While Scorpio is naturally passionate and dedicated, they may
+                                            sometimes become overly protective or guarded. Learning to trust and
+                                            communicate openly can strengthen personal and professional relationships.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Scorpio Compatibility</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Scorpio compatibility is often strongest
+                                            with signs that appreciate loyalty, emotional depth, and commitment. Cancer
+                                            and Scorpio compatibility is frequently admired because both signs value
+                                            strong emotional connections and trust. Scorpio and Pisces compatibility can
+                                            create a deeply supportive and intuitive relationship, while Scorpio and
+                                            Capricorn compatibility often develops through shared determination and
+                                            long-term goals.
+
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Other compatibility pairings include
+                                            Aries and Scorpio compatibility, Virgo and Scorpio compatibility, Taurus and
+                                            Scorpio compatibility, Gemini and Scorpio compatibility, Libra and Scorpio
+                                            compatibility, Leo and Scorpio compatibility, and Scorpio and Aquarius
+                                            compatibility. While each relationship has unique strengths and challenges,
+                                            mutual understanding and communication are essential for long-term success.
+
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Whether exploring Cancer Scorpio
+                                            compatibility, Gemini Scorpio compatibility, or Leo Scorpio compatibility,
+                                            astrology can provide valuable insight into relationship dynamics and
+                                            emotional connections.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Scorpio Horoscope Dates</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Scorpio horoscope dates fall between
+                                            October 23 and November 21. Represented by the Scorpion, Scorpio symbolizes
+                                            transformation, determination, and inner strength. As a water sign, Scorpio
+                                            is associated with intuition, emotional intelligence, and personal growth.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Understanding Scorpio horoscope dates can
+                                            help individuals gain deeper insight into the characteristics and qualities
+                                            commonly associated with this powerful zodiac sign.
+                                        </p>
+
+
+                                        <h3 class="as_subheading as_orange">Scorpio Horoscope Today for Love, Career,
+                                            and Money</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Scorpio Horoscope Today encourages focus,
+                                            confidence, and trust in your instincts. Career opportunities may arise when
+                                            you apply your determination and strategic thinking to important goals. In
+                                            relationships, honest communication can strengthen trust and create deeper
+                                            emotional connections.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Financially, thoughtful planning and
+                                            patience can help support long-term stability. By paying attention to your
+                                            Scorpio horoscope today, you can gain valuable insight into opportunities,
+                                            challenges, and important decisions affecting your future.
+
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Best Astrology Guidance in New York</h3>
+
+                                        <p class="as_font14 as_padderBottom20">If you are seeking personalized
+                                            astrological guidance, Vikram Astrologer & Psychic in New York offers
+                                            professional astrology and psychic consultations backed by more than 30
+                                            years of experience. Clients throughout New York and across the United
+                                            States seek guidance for horoscope readings, compatibility analysis,
+                                            spiritual consultations, and birth chart interpretations.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Many individuals searching for the best
+                                            psychic in New York, best astrology in New York, and best horoscope reading
+                                            in New York choose experienced astrology services for clarity regarding
+                                            relationships, career choices, finances, and future opportunities.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Explore More Horoscope Insights</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Scorpio Horoscope Today helps you
+                                            understand your strengths, opportunities, and daily influences through
+                                            astrology. Whether you are interested in the Scorpio zodiac sign, Scorpio
+                                            personality traits, Scorpio compatibility, or daily horoscope guidance,
+                                            astrology can provide valuable insight to support personal growth,
+                                            relationships, and future planning.
+
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Final Thoughts</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Virgo Horoscope Today helps you
+                                            understand your strengths, opportunities, and daily influences through
+                                            astrology. Whether you are interested in the Virgo zodiac sign, Virgo
+                                            personality traits, Virgo compatibility, or daily horoscope guidance,
+                                            astrology can provide valuable insight to support personal growth,
+                                            relationships, and future planning.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="as_zodiac_sidebar">
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign1.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Aries</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign2.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Taurus </h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign3.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Gemini</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign4.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Cancer</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign5.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Leo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign6.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Virgo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign7.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Libra</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign8.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Scorpio</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign9.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Sagittarius</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign10.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign11.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign12.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Pisces</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_tarotReading_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Your Daily Tarot Reading</h1>
+                        <p class="as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod tempor
+                            incididuesdeentiut labore <br> etesde dolore magna aliquapspendisse and the gravida.</p>
+
+                        <div class="row as_card_slider">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+
+
+
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
+
+
+</html>

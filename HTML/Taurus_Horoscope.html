@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Zodiac Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_zodiac_single_wrapper as_padderTop80 as_padderBottom60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="as_zodiac_single_inner">
+                            <div class="as_zodiac_heading as_padderBottom50">
+                                <span class="as_sign"><img src="assets/images/svg/sign1.svg" alt=""></span>
+                                Taurus Horoscope Today
+                                <span>( Mar 21 - Apr 19 )</span>
+                            </div>
+
+                            <div class="as_tab_wrapper">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="today" role="tabpanel"
+                                        aria-labelledby="Today">
+
+                                        <p class="as_font14 as_padderBottom20">Taurus Horoscope Today offers valuable
+                                            guidance for love, career, finances, and personal growth. As one of the most
+                                            reliable signs of the zodiac, Taurus is known for patience, determination,
+                                            and a practical approach to life. People born between April 20 and May 20
+                                            belong to the Taurus zodiac sign and are often recognized for their loyalty,
+                                            stability, and strong work ethic.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Ruled by Venus, the planet of love,
+                                            beauty, and abundance, Taurus individuals value comfort, security, and
+                                            meaningful relationships. Their steady nature helps them remain focused on
+                                            long-term goals, even when challenges arise. Reading your Taurus daily
+                                            horoscope can provide useful insight into current astrological influences
+                                            and help you make informed decisions throughout the day.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Taurus Personality Traits</h3>
+
+                                        <p class="as_font14 as_padderBottom20">The Taurus personality is grounded,
+                                            dependable, and hardworking. Taurus natives are known for their patience and
+                                            commitment, making them trustworthy friends, partners, and colleagues. They
+                                            prefer stability over uncertainty and often take a thoughtful approach when
+                                            making important decisions.
+                                            While Taurus is naturally loyal and persistent, they can sometimes be
+                                            resistant to change. Learning to embrace new opportunities while maintaining
+                                            their strong foundation helps Taurus individuals achieve personal growth and
+                                            long-term success.
+
+                                        </p>
+                                        <h3 class="as_subheading as_orange">Taurus Compatibility</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Taurus compatibility is often strongest
+                                            with signs that value trust, commitment, and emotional stability. Taurus and
+                                            Cancer compatibility is known for creating a caring and supportive
+                                            relationship, while Taurus and Taurus compatibility often results in a
+                                            dependable partnership built on shared values. Taurus and Gemini
+                                            compatibility may require balance due to different personalities, while
+                                            Taurus and Leo compatibility can create a relationship that combines
+                                            determination with passion.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Other relationships, including
+                                            Taurus and Capricorn compatibility, Taurus and Virgo compatibility, and
+                                            Taurus and Pisces compatibility, can also be rewarding when both
+                                            partners appreciate each other's strengths and communicate openly.
+                                            Understanding compatibility helps Taurus build stronger and more meaningful
+                                            connections.</p>
+
+                                        <h3 class="as_subheading as_orange">Taurus Horoscope Dates</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Taurus horoscope dates fall between April
+                                            20 and May 20. Represented by the Bull, Taurus symbolizes strength,
+                                            patience, and perseverance. As an earth sign, Taurus is associated with
+                                            stability, practicality, and a steady approach to achieving goals.</p>
+
+                                        <h3 class="as_subheading as_orange">Taurus Horoscope Today and Tomorrow</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Taurus Horoscope Today encourages focus,
+                                            patience, and thoughtful decision-making. Career opportunities may develop
+                                            when you remain consistent and dedicated to your goals. In relationships,
+                                            honest communication can strengthen connections and create greater
+                                            understanding. Financially, maintaining a balanced approach can support
+                                            long-term stability and growth.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Looking ahead to Taurus Horoscope Today
+                                            and Tomorrow, small efforts made today may contribute to future success.
+                                            Staying grounded and trusting your instincts can help you navigate
+                                            opportunities with confidence.</p>
+
+                                        <h3 class="as_subheading as_orange">Trusted Astrology Guidance in New York</h3>
+
+                                        <p class="as_font14 as_padderBottom20">If you are seeking deeper astrological
+                                            insight, Vikram Astrologer & Psychic in New York offers professional
+                                            astrology and psychic consultations backed by more than 30 years of
+                                            experience. Clients throughout New York and across the United States seek
+                                            guidance for horoscope readings, compatibility analysis, spiritual
+                                            consultations, and birth chart interpretations.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Many individuals searching for the best
+                                            psychic in New York, best astrology in New York, and best horoscope reading
+                                            in New York turn to experienced astrology services for clarity about
+                                            relationships, career choices, finances, and future opportunities.</p>
+
+                                        <h3 class="as_subheading as_orange">Explore More Horoscope Insights</h3>
+
+                                        <p class="as_font14 as_padderBottom20">After reading Taurus Horoscope Today, you
+                                            may also enjoy exploring Gemini Horoscope Today and Cancer Horoscope Today.
+                                            You can also learn more about Aries Horoscope Today, Leo Horoscope Today,
+                                            Virgo Horoscope Today, Libra Horoscope Today, Scorpio Horoscope Today,
+                                            Sagittarius Horoscope Today, Capricorn Horoscope Today, Aquarius Horoscope
+                                            Today, and Pisces Horoscope Today for additional zodiac insights and
+                                            compatibility guidance.</p>
+
+                                        <h3 class="as_subheading as_orange">Final Thoughts</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Taurus Horoscope Today helps you
+                                            understand your strengths, opportunities, and challenges through astrology.
+                                            Whether you are interested in Taurus personality traits, Taurus
+                                            compatibility,
+                                            or daily horoscope guidance, astrology can provide valuable insight to
+                                            support personal growth, relationships, and future planning.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="as_zodiac_sidebar">
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign1.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Aries</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign2.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Taurus </h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign3.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Gemini</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign4.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Cancer</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign5.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Leo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign6.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Virgo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign7.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Libra</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign8.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Scorpio</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign9.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Sagittarius</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign10.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign11.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign12.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Pisces</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_tarotReading_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Your Daily Tarot Reading</h1>
+                        <p class="as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod tempor
+                            incididuesdeentiut labore <br> etesde dolore magna aliquapspendisse and the gravida.</p>
+
+                        <div class="row as_card_slider">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
+
+
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div id="site-header">
+        <script>
+            fetch('/HTML/header.html')
+                .then(response => {
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return response.text();
+                })
+                .then(html => {
+                    const container = document.getElementById('site-header');
+                    if (container) {
+                        container.innerHTML = html;
+
+                        // 2. Improved logic to handle Vercel's clean URLs and root paths
+                        const currentPath = window.location.pathname;
+                        const currentPage = currentPath === '/' ? 'index.html' : currentPath.split('/').pop();
+
+                        const navLinks = container.querySelectorAll('.as_menu ul li a');
+                        navLinks.forEach(link => {
+                            const linkHref = link.getAttribute('href');
+                            if (!linkHref) return;
+
+                            const hrefFilename = linkHref.split('/').pop();
+
+                            // 3. Match links even if Vercel removes the '.html' from the URL
+                            if ((currentPath === '/' && hrefFilename === 'index.html') ||
+                                (hrefFilename.replace('.html', '') === currentPage.replace('.html', ''))) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                })
+                .catch(err => console.error('Header fetch error:', err));
+        </script>
+    </div>
+    <div class="as_main_wrapper">
+        <section class="as_banner_wrapper">
+            <div class="container-fluid">
+                <div class="row as_verticle_center">
+                    <div class="col-lg-6 order-lg-1 col-md-6 order-md-1 col-sm-12 order-sm-1 col-12 order-2">
+                        <div class="as_banner_slider">
+                            <div class="as_banner_detail">
+                                <h5 class="as_orange">What’s Your Sign?</h5>
+                                <h1> Best psychic in New York,USA</h1>
+                                <p> Find clarity and confidence with Vikram Astrologer & Psychic in New York. Expert
+                                    psychic readings and astrology consultations for love, career, relationships, and
+                                    your future.</p>
+                                <a href="javascript:;" class="as_btn">Read more</a>
+                            </div>
+                            <div class="as_banner_detail">
+                                <h5 class="as_orange">Find Your Path</h5>
+                                <h1>Best astrologer in New York, USA</h1>
+                                <p>Discover accurate astrology readings with Vikram Astrologer & Psychic in New York.
+                                    Get expert guidance for love, marriage, career, finances, and life challenges
+                                    through personalized astrological insights.</p>
+                                <a href="javascript:;" class="as_btn">Read more</a>
+                            </div>
+                            <div class="as_banner_detail">
+                                <h5 class="as_orange">Reveal the Hidden life</h5>
+                                <h1>Black Magic Solutions & Spiritual Guidance</h1>
+                                <p> Discover spiritual guidance for black magic concerns with Vikram Astrologer &
+                                    Psychic in New York. Get personalized insights and traditional spiritual guidance
+                                    for negative energy, spiritual obstacles, relationships, career, and life
+                                    challenges.</p>
+                                <a href="javascript:;" class="as_btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 col-md-6 order-md-2 col-sm-12 order-sm-2 col-12 order-1">
+                        <div class="as_banner_img text-center">
+                            <img src="assets/images/banner_image.png" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_about_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <div class="as_about_slider">
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="assets/images/about1.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="assets/images/about2.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="assets/images/about3.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="as_aboutimg text-right">
+                                    <img src="assets/images/about4.jpg" alt="" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                        <h1 class="as_heading">Know About Vikram Astrologer & Psychic in New York</h1>
+                        <p>Looking for a trusted psychic and astrologer in New York, New Jersey, or anywhere in the USA?
+                            With 30+ years of experience and 1,000+ satisfied clients across the United States and
+                            worldwide, Vikram Astrologer & Psychic has helped people gain clarity, confidence, and
+                            direction through accurate psychic readings and personalized astrology consultations.</p>
+                        <p>Specializing in love and relationship readings, marriage guidance, career insights, family
+                            matters, and spiritual healing, Vikram combines intuitive psychic abilities with traditional
+                            astrological wisdom to provide meaningful guidance tailored to each individual's unique
+                            situation. Every consultation is confidential, professional, and focused on helping clients
+                            overcome challenges and make informed life decisions.</p>
+                        <p>Clients trust Vikram Astrologer & Psychic for honest advice, accurate predictions, and
+                            compassionate support during life's most important moments. Whether you're seeking answers
+                            about love, career, finances, relationships, or personal growth, Vikram Astrologer & Psychic
+                            is dedicated to helping you move forward with confidence and a positive outlook for the
+                            future</p>
+                        <a href="javascript:;" class="as_btn">Read More</a>
+
+                        <div class="as_contact_expert">
+                            <span class="as_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    preserveAspectRatio="xMidYMid" width="20" height="20" viewBox="0 0 20 20">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #fff;
+                                                fill-rule: evenodd
+                                            }
+                                        </style>
+                                    </defs>
+                                    <path
+                                        d="M19.797,10.487 C19.668,10.616 19.493,10.689 19.310,10.689 C18.929,10.689 18.620,10.380 18.620,9.999 C18.615,5.241 14.759,1.385 10.000,1.379 C9.619,1.379 9.310,1.070 9.310,0.689 C9.310,0.308 9.619,-0.000 10.000,-0.000 C15.520,0.006 19.993,4.478 19.999,9.999 C19.999,10.183 19.927,10.358 19.797,10.487 ZM15.172,9.999 C15.169,7.144 12.855,4.830 10.000,4.827 C9.619,4.827 9.310,4.518 9.310,4.138 C9.310,3.757 9.619,3.448 10.000,3.448 C13.617,3.452 16.547,6.383 16.551,9.999 C16.551,10.380 16.243,10.689 15.862,10.689 C15.481,10.689 15.172,10.380 15.172,9.999 ZM12.864,14.155 C13.076,14.182 13.288,14.109 13.438,13.957 L14.982,12.413 C15.209,12.186 15.563,12.146 15.835,12.317 L19.655,14.775 C19.955,14.965 20.063,15.350 19.905,15.668 L18.045,19.616 C17.918,19.873 17.645,20.024 17.360,19.995 C15.394,19.789 10.563,18.932 5.815,14.183 C1.067,9.435 0.210,4.604 0.003,2.638 C-0.026,2.352 0.125,2.079 0.382,1.952 L4.331,0.093 C4.649,-0.067 5.036,0.043 5.224,0.344 L7.684,4.164 C7.854,4.436 7.814,4.790 7.586,5.017 L6.042,6.560 C5.890,6.711 5.818,6.924 5.845,7.135 C5.942,7.900 6.373,9.809 8.282,11.718 C10.191,13.627 12.099,14.057 12.864,14.155 Z"
+                                        class="cls-1" />
+                                </svg>
+                            </span>
+                            <div>
+                                <h5 class="as_white">Contact Our Expert Astrologers</h5>
+                                <h1 class="as_orange">+1 929-586-9234</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_service_wrapper as_padderTop50 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service1.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Black Magic Removal</h4>
+                            <p>Trusted Black Magic Removal in New York for Spiritual Protection and Positive Energy
+                            </p>
+                            <a href="../HTML/Services/BlackMagicRemoval.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service2.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Sarpa Dosham Pooja</h4>
+                            <p>Authentic Sarpa Dosham Pooja in New York for Spiritual Harmony and Positive Life Changes.
+                            </p>
+                            <a href="../HTML/Services/SarpaDosham.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service3.svg" alt="">
+                            </span>
+                            <br>
+                            <br>
+
+                            <h4>Psychic Reading Services</h4>
+                            <!-- <hr class="as_orange" size="6" width="50%" align="center"> -->
+                            <p>Accurate Online Psychic Reading for Love, Career, Relationships & Spiritual Guidance.
+                            </p>
+                            <a href="../HTML/Services/OnlinePsychicReading.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="../HTML/assets/images/svg/service4.svg" alt="">
+                            </span>
+                            <br>
+                            <br>
+                            <h4>Astrology Compatibility Birth</h4>
+                            <p>Accurate Astrology Compatibility Birth Chart in New York for Love, Marriage &
+                                Relationships.</p>
+                            <a href="../HTML/Services/AstrologyCompatibility.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="../HTML/assets/images/svg/service5.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Horoscope Reading</h4>
+                            <p>Accurate Horoscope Reading in New York for Clarity, Guidance & Success.</p>
+                            <a href="../HTML/Services/Horoscope.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="../HTML/assets/images/svg/service6.svg" alt="">
+                            </span>
+
+                            <h4>Vedic Astrology Services</h4>
+                            <p>Trusted Vedic Astrology Services in New York for Accurate Guidance and Spiritual Wisdom.
+                            </p>
+                            <a href="../HTML/Services/Vedic_Astrology.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="../HTML/assets/images/svg/service7.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Voodoo Priest Astrology</h4>
+                            <p>Consectetur adipiscing elit sed do <br>eiusmod tempor incididunt.</p>
+                            <a href="../HTML/Services/VoodooPriest.html" class="as_link">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service8.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Spiritual Healing</h4>
+                            <p>Consectetur adipiscing elit sed do <br>eiusmod tempor incididunt.</p>
+                            <a href="../HTML/Services/Spiritual_Healing.html" class="as_link">read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_zodiac_sign_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">choose zodiac sign</h1>
+                        <p class="as_font14 as_margin0">Explore your zodiac sign to learn more about your personality
+                            traits, strengths, and what the stars have in store for you.</p>
+                        <div class="as_zodiac_inner text-left">
+                            <div class="row as_verticle_center">
+                                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                                    <ul class="as_sign_ul">
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Aries_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign1.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Aries</h5>
+                                                    <p>Mar 21 - Apr 19</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Taurus_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign2.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Taurus</h5>
+                                                    <p>Apr 20 - May 20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Gemini_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign3.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Gemini</h5>
+                                                    <p>May 21 - Jun 20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Cancer_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign4.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Cancer</h5>
+                                                    <p>Jun 21 - Jul 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Leo_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign5.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Leo</h5>
+                                                    <p>Jul 23 - Aug 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Virgo_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign6.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Virgo</h5>
+                                                    <p>Aug 23 - Sep 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="as_sign_img text-center">
+                                        <img src="assets/images/zodiac.png" alt="" class="img-responsive">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+                                    <ul class="as_sign_ul as_sign_ul_right">
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Libra_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign7.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Libra</h5>
+                                                    <p>Sep 23 - Oct 22</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Scorpio_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign8.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Scorpio</h5>
+                                                    <p>Oct 23 - Nov 21</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Sagittarius_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign9.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Sagittarius</h5>
+                                                    <p>Nov 22 - Dec 21</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Capricorn_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign10.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Capricorn</h5>
+                                                    <p>Dec 22 - Jan 19</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Aquarius_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign11.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Aquarius</h5>
+                                                    <p>Jan 20 - Feb 18</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="as_sign_box">
+                                            <a href="../HTML/Pisces_Horoscope.html">
+                                                <span class="as_sign">
+                                                    <img src="assets/images/svg/sign12.svg" alt="">
+                                                </span>
+                                                <div>
+                                                    <h5>Pisces</h5>
+                                                    <p>Feb 19 - Mar 20</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_know_sign_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Know Your Zodiac Sign</h1>
+                        <p class="as_font14 as_margin0 as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod
+                            tempor incididuesdeentiut labore <br>etesde dolore magna aliquapspendisse and the gravida.
+                        </p>
+
+
+                        <div class="as_sign_form text-left">
+                            <ul>
+                                <li class="as_form_box">
+                                    <h3 class="as_subheading">Date Of Birth</h3>
+                                    <div class="as_input_feild">
+                                        <input type="text" name="" class="form-control as_datepicker"
+                                            placeholder="DD/MM/YYYY" id="">
+                                        <span><img src="assets/images/svg/date.svg" alt=""></span>
+                                    </div>
+                                </li>
+                                <li class="as_form_box">
+                                    <h3 class="as_subheading">Time Of Birth</h3>
+                                    <div class="as_input_feild">
+                                        <input type="text" name="" class="form-control as_timepicker"
+                                            placeholder="08:00" id="">
+                                        <span><img src="assets/images/svg/time.svg" alt=""></span>
+                                    </div>
+                                </li>
+                                <li class="as_form_box">
+                                    <h3 class="as_subheading">Place Of Birth</h3>
+                                    <div class="as_input_feild">
+                                        <input type="text" name="" class="form-control"
+                                            placeholder="Enter City Name...." id="">
+                                        <span><img src="assets/images/svg/map1.svg" alt=""></span>
+                                    </div>
+                                </li>
+                                <li class="as_form_box">
+                                    <a href="javascript:;" class="as_btn">find zodiac</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">What Our Customers Say</h1>
+                        <p class="as_font14 as_margin0 as_padderBottom50"> Real stories from people who found clarity,
+                            comfort, and direction through our astrology readings.
+                        </p>
+                    </div>
+
+                    <div class="row as_customer_slider">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer1.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">My reading was incredibly accurate and gave me the clarity I
+                                    needed to make a big career decision. The astrologer took the time to explain
+                                    everything in a way I could truly understand. </p>
+                                <h3>David Parker</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer2.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">I was skeptical at first, but the depth of insight into my birth
+                                    chart genuinely surprised me. It felt personal, not generic. I've booked another
+                                    session already. </p>
+                                <h3>John Parker</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer1.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">The team helped me understand my Manglik Dosha and suggested
+                                    simple remedies that brought real peace of mind before my wedding. Highly recommend
+                                    their services. </p>
+                                <h3>Meera Nair</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer2.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">Professional, warm, and remarkably precise. My birth journal
+                                    reading answered questions I'd had for years. Thank you for the guidance! </p>
+                                <h3>Priya Sharma</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="as_whychoose_wrapper as_padderTop80 as_padderBottom50">
+            <div class="container">
+                <div class="text-left">
+                    <h1 class="as_heading">Why you need to choose best psychic and astrology in us</h1>
+                    <p class="as_font14 as_margin0">Numbers that reflect the trust and experience behind every reading
+                        we provide.</p>
+                </div>
+                <br>
+                <div class="row as_verticle_center">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row as_verticle_center">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="512"
+                                                data-speed="5000">512</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Qualified Astrologers</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="62"
+                                                data-speed="5000">62</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Success Horoscope</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="94"
+                                                data-speed="5000">94</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Offices Worldwide</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="452"
+                                                data-speed="5000">452</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Trust by million clients</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="12"
+                                                data-speed="5000">12</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Year experience</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="652"
+                                                data-speed="5000">652+</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Type of horoscopes</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_blog_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Our Latest Blog</h1>
+                        <p class="as_font14 as_margin0 as_padderBottom20">Stay informed with the latest astrological
+                            insights, planetary updates, and expert tips from our team.</p>
+
+                        <div class="text-left">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                                    <div class="as_blog_box">
+                                        <div class="as_blog_img">
+                                            <a href="blog_detail.html"><img src="assets/images/blog1.jpg" alt=""
+                                                    class="img-responsive"></a>
+                                            <span class="as_btn">July 29, 2026</span>
+                                        </div>
+                                        <h4 class="as_subheading"><a href="../HTML/Blogs/blog_detail.html">Best Birth
+                                                Chart
+                                                Reading in New York, USA for Your Future.</a></h4>
+                                        <p class="as_font14 as_margin0">Discover what your birth chart reveals about
+                                            your future with accurate astrology readings, love guidance, career
+                                            insights, and spiritual advice.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                                    <div class="as_blog_box">
+                                        <div class="as_blog_img">
+                                            <a href="../HTML/Blogs/PsychicBlog_detail.html"><img
+                                                    src="assets/images/blog2.jpg" alt="" class="img-responsive"></a>
+                                            <span class="as_btn">July 29, 2026</span>
+                                        </div>
+                                        <h4 class="as_subheading"><a
+                                                href="../HTML/Blogs/PsychicBlog_detail.html">Psychic and Back Magic
+                                                in New York, USA for Your Future.</a></h4>
+                                        <p class="as_font14 as_margin0">Find a trusted psychic in New York for accurate
+                                            readings, Evil Eye Removal, Black Magic Removal, Love Back Remedies, and
+                                            spiritual guidance today now.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                                    <div class="as_blog_box">
+                                        <div class="as_blog_img">
+                                            <a href="../HTML/Blogs/BestPsychicBlog_detail.html"><img
+                                                    src="assets/images/blog3.jpg" alt="" class="img-responsive"></a>
+                                            <span class="as_btn">July 29, 2026</span>
+                                        </div>
+                                        <h4 class="as_subheading"><a
+                                                href="../HTML/Blogs/BestPsychicBlog_detail.html">Best Psychic Readings
+                                                in New York, USA for Accurate Guidance.</a></h4>
+                                        <p class="as_font14 as_margin0">Find the best psychic readings in New York for
+                                            evil eye removal, black magic removal, love back remedies, spiritual
+                                            guidance, and clarity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_product_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Our Latest Products</h1>
+                        <p class="as_font14 as_margin0 as_padderBottom20">Shop authentic gemstones and spiritual
+                            products,
+                            handpicked and energized by our expert astrologers.</p>
+
+                        <div class="row as_product_slider">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod1.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod2.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod3.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod4.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod1.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod2.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod3.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod4.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod1.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod2.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod3.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="as_product_box">
+                                    <div class="as_product_img">
+                                        <img src="assets/images/prod4.jpg" alt="" class="img-responsive">
+
+                                        <ul>
+                                            <li><a href="cart.html"><img src="assets/images/svg/wishlist.svg"
+                                                        alt=""></a>
+                                            </li>
+                                            <li><a href="cart.html"><img src="assets/images/svg/cart.svg"
+                                                        alt=""><span>Add
+                                                        To Card</span></a></li>
+                                            <li><a href="Social_Services.html"><img src="assets/images/svg/compare.svg"
+                                                        alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span><img src="assets/images/rating.png" alt=""></span>
+                                    <h4 class="as_subheading">Gemstone</h4>
+                                    <span class="as_price">$20 <del>$80</del> <span class="as_orange">(60%
+                                            off)</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_footer_wrapper as_padderTop80">
+            <div class="container">
+                <div class="as_newsletter_wrapper as_padderBottom60">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                            <h1 class="as_heading">Our Newsletter</h1>
+                            <p>Get Your Daily Horoscope, Daily Lovescope and Daily<br> Tarot Directly In Your Inbox</p>
+                        </div>
+                        <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                            <div class="as_newsletter_box">
+                                <input type="text" name="" id="" class="form-control"
+                                    placeholder="Enter your Email Here...">
+                                <a href="javascript:;" class="as_btn">subscribe now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="site-footer">
+                    <script>
+                        fetch('./Footer.html')
+                            .then(response => {
+                                if (!response.ok) throw new Error('Footer load error');
+                                return response.text();
+                            })
+                            .then(html => {
+                                const footerContainer = document.getElementById('site-footer');
+                                if (footerContainer) {
+                                    footerContainer.innerHTML = html;
+                                }
+                            })
+                            .catch(err => console.error('Failed to load footer:', err));
+                    </script>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/plugin/slick/slick.min.js"></script>
+    <script src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/plugin/select2/select2.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from demo.kamleshyadav.com/themeforest-html/astrology/version-2/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2026 12:21:42 GMT -->
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.kamleshyadav.com/themeforest-html/astrology/version-2/service.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2026 12:22:11 GMT -->
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper as_service_page">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Services</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_service_wrapper as_padderTop50 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service1.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Black Magic Removal</h4>
+                            <p>Trusted Black Magic Removal in New York for Spiritual Protection and Positive Energy
+                            </p>
+                            <a href="../HTML/Services/BlackMagicRemoval.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service2.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Sarpa Dosham Pooja</h4>
+                            <p>Authentic Sarpa Dosham Pooja in New York for Spiritual Harmony and Positive Life Changes.
+                            </p>
+                            <a href="../HTML/Services/SarpaDosham.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service3.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Psychic Reading</h4>
+                            <p>Accurate Online Psychic Reading for Love, Career, Relationships & Spiritual Guidance.
+                            </p>
+                            <a href="../HTML/Services/OnlinePsychicReading.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service4.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Astrology Compatibility Birth</h4>
+                            <p>Accurate Astrology Compatibility Birth Chart for Love, Marriage &
+                                Relationships.</p>
+                            <a href="../HTML/Services/AstrologyCompatibality.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service5.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Horoscope Reading</h4>
+                            <p>Accurate Horoscope Reading in New York for Clarity, Guidance & Success.</p>
+                            <a href="../HTML/Services/Horoscope.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service6.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Vedic Astrology</h4>
+                            <p>Trusted Vedic Astrology Services in New York for Accurate Guidance and Spiritual.
+                            </p>
+                            <a href="../HTML/Services/VedicAstrology.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service7.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Voodoo Priest Astrology</h4>
+                            <p>Trusted Voodoo Spiritual Guidance in New York.</p>
+                            <a href="../HTML/Services/VoodooPriest.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="as_service_box text-center">
+                            <span class="as_icon">
+                                <img src="assets/images/svg/service8.svg" alt="">
+                            </span>
+
+                            <h4 class="as_subheading">Spiritual Healing</h4>
+                            <p>Personalized Spiritual Healing for Emotional Balance, Inner Peace & Well-Being.</p>
+                            <a href="../HTML/Services/Spiritual_healing.html" class="as_link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_whychoose_wrapper as_padderTop80 as_padderBottom50">
+            <div class="container">
+                <div class="text-left">
+                    <h1 class="as_heading">Why you need to choose best psychic and astrology in us</h1>
+                    <p class="as_font14 as_margin0">Numbers that reflect the trust and experience behind every reading
+                        we provide.</p>
+                </div>
+                <br>
+                <div class="row as_verticle_center">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row as_verticle_center">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="512"
+                                                data-speed="5000">512</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4 class="as_orange">Qualified Astrologers</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="62"
+                                                data-speed="5000">62</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4 class="as_orange">Success Horoscope</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="94"
+                                                data-speed="5000">94</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4 class="as_orange">Offices Worldwide</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="452"
+                                                data-speed="5000">452</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Trust by million clients</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="12"
+                                                data-speed="5000">12</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4 class="as_orange">Year experience</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="652"
+                                                data-speed="5000">652+</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4 class="as_orange">Type of horoscopes</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+    </section>
+    </div>
+
+
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from demo.kamleshyadav.com/themeforest-html/astrology/version-2/service.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2026 12:22:11 GMT -->
+
+</html>

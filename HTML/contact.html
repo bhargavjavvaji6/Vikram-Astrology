@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .as_contact_wrapper_3d {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            padding: 80px 20px;
+        }
+
+        .contact-3d-container {
+            display: flex;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            background: transparent;
+            gap: 40px;
+            transform: perspective(1200px) rotateX(2deg) rotateY(-2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-3d-container:hover {
+            transform: perspective(1200px) rotateX(0deg) rotateY(0deg);
+        }
+
+        .contact-info-3d {
+            flex: 1;
+            padding: 20px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .contact-info-3d .subtitle {
+            color: #f35d2d;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-3d .title {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+
+        .contact-info-3d .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .contact-info-3d .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-info-3d .icon-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #f35d2d;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(243, 93, 45, 0.4);
+        }
+
+        .contact-info-3d .info-content h4 {
+            color: #ffffff;
+            /* Changed to white */
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info-3d .info-content p {
+            color: #cccccc;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .form-card-3d {
+            flex: 1.2;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.2),
+                -2px 5px 10px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            border-left: 1px solid rgba(255, 255, 255, 0.8);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .form-card-3d h2 {
+            color: #1a1a2e;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .form-card-3d .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-card-3d input,
+        .form-card-3d textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .form-card-3d input:focus,
+        .form-card-3d textarea:focus {
+            background-color: #fff;
+            border: 1px solid #dcdcdc;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .form-card-3d textarea {
+            grid-column: span 2;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-card-3d .recaptcha-mock {
+            grid-column: span 2;
+            display: inline-flex;
+            align-items: center;
+            background: #f9f9f9;
+            border: 1px solid #d3d3d3;
+            padding: 10px 15px;
+            border-radius: 3px;
+            width: max-content;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-card-3d .recaptcha-mock input {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .form-card-3d .recaptcha-mock span {
+            font-size: 14px;
+            color: #555;
+            margin-right: 30px;
+        }
+
+        .form-card-3d .recaptcha-mock img {
+            width: 30px;
+            opacity: 0.8;
+        }
+
+        .form-card-3d .submit-btn {
+            background: linear-gradient(135deg, #ff7a3d, #f35d2d);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(243, 93, 45, 0.4);
+        }
+
+        .form-card-3d .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 93, 45, 0.5);
+        }
+
+        #statusMessage {
+            margin-top: 15px;
+            font-weight: bold;
+            display: none;
+        }
+
+        @media (max-width: 900px) {
+            .contact-3d-container {
+                flex-direction: column;
+                transform: none;
+            }
+
+            .contact-3d-container:hover {
+                transform: none;
+            }
+
+            .form-card-3d .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card-3d textarea,
+            .form-card-3d .recaptcha-mock {
+                grid-column: span 1;
+            }
+        }
+
+        /* --- Premium 3D Map Section --- */
+        .as_map_wrapper_3d {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            padding: 0 20px 80px;
+            /* Spacing below the contact form */
+        }
+
+        .map-3d-container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            /* Subtle 3D lift */
+            transform: perspective(1200px) rotateX(2deg);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .map-3d-container:hover {
+            transform: perspective(1200px) rotateX(0deg);
+        }
+
+        .map-card-3d {
+            border-radius: 16px;
+            padding: 10px;
+            /* Creates a premium inner frame */
+            box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.25),
+                -2px 5px 10px rgba(0, 0, 0, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            /* Dark gradient matching your theme */
+            background: linear-gradient(145deg, rgba(30, 40, 55, 0.9), rgba(18, 32, 48, 0.9));
+        }
+
+        .map-card-3d iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(110%);
+            transition: filter 0.3s ease;
+        }
+
+        /* Slightly brighten on hover for interactivity */
+        .map-card-3d iframe:hover {
+            filter: invert(110%) hue-rotate(180deg) brightness(105%) contrast(115%);
+        }
+
+        @media (max-width: 900px) {
+            .map-3d-container {
+                transform: none;
+            }
+
+            .map-card-3d iframe {
+                height: 300px;
+                /* Smaller map on mobile */
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Contact Us</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_contact_section as_padderTop80">
+            <div class="container">
+                <div class="as_contact_info">
+                    <h1 class="as_heading as_orange">Contact Us | Vikram Astrologer & Psychic in New York</h1>
+                    <p class="as_font14 as_margin20 text-align">Looking for genuine guidance and clarity in your
+                        life? Vikram Astrologer & Psychic is here to help. With years of experience serving
+                        clients across New York, USA, and internationally, we offer authentic psychic readings
+                        and spiritual solutions to help you navigate love, career, family, and life's biggest
+                        challenges.
+                        Whether you need a psychic reading, astrology consultation, love and relationship
+                        guidance, or protection from negative and black magic energies, our services are
+                        designed to bring peace, clarity, and positive change into your life.
+                        Reach out today for a confidential consultation — in person, over the phone, or online.
+                    </p>
+                </div>
+
+                <section class="as_contact_wrapper_3d">
+                    <div class="contact-3d-container">
+
+                        <div class="contact-info-3d">
+                            <div class="subtitle">GET IN TOUCH</div>
+                            <h1 class="title">Contact Information</h1>
+
+                            <!-- Location Item -->
+                            <div class="info-item">
+                                <div class="icon-circle">
+                                    <svg fill="white" width="20" height="20" viewBox="0 0 384 512">
+                                        <path
+                                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Address:</h4>
+                                    <p>119-10 101st Ave, <br> South Richmond Hill, <br> NY 11419 United States</p>
+                                </div>
+                            </div>
+
+                            <!-- Email Item -->
+                            <div class="info-item">
+                                <div class="icon-circle">
+                                    <svg fill="white" width="20" height="20" viewBox="0 0 512 512">
+                                        <path
+                                            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4>E-mail id:</h4>
+                                    <p>vikrampsychic78@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone Item -->
+                            <div class="info-item">
+                                <div class="icon-circle">
+                                    <svg fill="white" width="20" height="20" viewBox="0 0 512 512">
+                                        <path
+                                            d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                                    </svg>
+                                </div>
+                                <div class="info-content">
+                                    <h4>Call us:</h4>
+                                    <p>+1 929-586-9234</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Contact Form -->
+                        <div class="form-card-3d">
+                            <h2>Send a Message</h2>
+                            <form id="dualSubmitForm">
+                                <div class="form-grid">
+                                    <input type="text" id="name" placeholder="Your name" required>
+                                    <input type="email" id="email" placeholder="Email id" required>
+                                    <input type="tel" id="phone" placeholder="Contact number" required>
+                                    <input type="text" id="subject" placeholder="Subject" required>
+                                    <textarea id="comment" placeholder="Leave a comment" required></textarea>
+                                </div>
+
+                                <!-- Mock reCAPTCHA based on image -->
+                                <div class="recaptcha-mock">
+                                    <input type="checkbox" required>
+                                    <span>I'm not a robot</span>
+                                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                                </div>
+
+                                <button type="submit" class="submit-btn">
+                                    Send Message &nbsp;
+                                    <svg fill="white" width="16" height="16" viewBox="0 0 448 512">
+                                        <path
+                                            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                                    </svg>
+                                </button>
+                                <div id="statusMessage"></div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="row">
+                    <h2 class="as_heading">How We Can Help You</h2>
+                    <h3 class="as_subheading as_orange">⭐ Psychic Reading (Our Primary Specialty)</h3>
+                    <p class="as_font18">Get honest, accurate insight into your past, present,
+                        and future. Our psychic readings help uncover hidden truths, clarify confusing
+                        situations, and guide you toward the right decisions in love, career, and life.</p>
+                    <h3 class="as_subheading as_orange">⭐ Astrology Consultation</h3>
+                    <p class="as_font18">Using traditional astrological methods, we analyze
+                        your birth chart, planetary positions, and life patterns to provide guidance on career,
+                        marriage, health, finance, and major life decisions.</p>
+                    <h3 class="as_subheading as_orange">❤️ Love & Relationship Guidance</h3>
+                    <p class="aas_font18">Struggling with a broken relationship, one-sided
+                        love, delayed marriage, or trust issues? We offer specialized love readings and remedies
+                        to help reunite couples, strengthen bonds, and restore harmony in relationships.</p>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8">
+                            <h3 class="as_subheading as_orange">🛡️ Black Magic Removal & Protection</h3>
+                            <p class="as_font18 text-align">If you feel affected by negative energy, curses, or
+                                black magic, our spiritual cleansing and protection rituals can help remove these
+                                influences and restore balance, health, and peace to your life.</p>
+                            <h3 class="as_subheading as_orange">🌙 Additional Spiritual Services</h3>
+                            <p class="as_font18 text-left">
+                                &#9784; Marriage & compatibility matching<br>
+                                &#9784; Career and business guidance<br>
+                                &#9784; Family and relationship conflict resolution<br>
+                                &#9784; Removal of obstacles and negative energy<br>
+                                &#9784; Spiritual healing and blessings<br>
+                            </p>
+                            <h3 class="as_subheading as_orange">Who Is Vikram Astrologer & Psychic?</h3>
+                            <p class="as_font18 text-left">
+                                Vikram Astrologer & Psychic is a New York–based spiritual guidance service specializing
+                                in psychic readings as its core offering, along with astrology, love and relationship
+                                remedies, and black magic removal. Based in South Richmond Hill, Queens, the practice
+                                serves
+                                walk-in clients locally and phone/online clients throughout the United States and
+                                internationally.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-8">
+                            <section class="as_map_wrapper_3d">
+                                <div class="map-3d-container">
+                                    <div class="map-card-3d">
+                                        <iframe
+                                            src="https://maps.google.com/maps?q=Vikram%20Astrologer%20%26%20Psychic,%20119-10%20101st%20Ave,%20South%20Richmond%20Hill,%20NY&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                            allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+
+    <section class="as_faq_wrapper as_padderTop80 as_padderBottom80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 offset-lg-1">
+                    <div class="as_faq_section">
+                        <div class="accordion as_accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                            aria-controls="panelsStayOpen-collapseOne">
+                                            How do I contact Vikram Astrologer & Psychic in New York?
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        you can call +1 929-586-9234, email vikrampsychic78@gmail.com, or visit the
+                                        office at
+                                        119-10 101st Ave, South Richmond Hill, NY 11419.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            What is the main specialty of Vikram Astrologer & Psychic?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="accordion-body">
+                                        psychic reading, offering insight into love, career, family, and life
+                                        decisions through accurate, honest readings.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            Does Vikram Astrologer & Psychic offer astrology services?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        Yes, In addition to psychic readings, the practice offers full astrology
+                                        consultations,
+                                        including birth chart analysis and compatibility matching.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                            Can Vikram Astrologer & Psychic help with black magic removal?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingFour">
+                                    <div class="accordion-body">
+                                        Yes, The practice offers spiritual cleansing and protection services to help
+                                        remove negative
+                                        energy and black magic influences.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                            Do you offer love and relationship guidance?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingFive">
+                                    <div class="accordion-body">
+                                        Yes. Specialized readings and remedies are available for reuniting couples,
+                                        resolving one-sided love, and restoring trust in relationships.
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingSix">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                            Is Vikram Astrologer & Psychic available outside New York?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingSix">
+                                    <div class="accordion-body">
+                                        Yes. While the office is located in South Richmond Hill, NY, phone and
+                                        online consultations are available to clients across the USA and
+                                        internationally.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="as_footer_wrapper as_padderTop80">
+        <div class="container">
+            <div class="as_newsletter_wrapper as_padderBottom60">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                        <h1 class="as_heading">Our Newsletter</h1>
+                        <p>Get Your Daily Horoscope, Daily Lovescope and Daily<br> Tarot Directly In Your Inbox</p>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                        <div class="as_newsletter_box">
+                            <input type="text" name="" id="" class="form-control"
+                                placeholder="Enter your Email Here...">
+                            <a href="javascript:;" class="as_btn">subscribe now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="site-footer">
+                <script>
+                    fetch('./Footer.html')
+                        .then(response => {
+                            if (!response.ok) throw new Error('Footer load error');
+                            return response.text();
+                        })
+                        .then(html => {
+                            const footerContainer = document.getElementById('site-footer');
+                            if (footerContainer) {
+                                footerContainer.innerHTML = html;
+                            }
+                        })
+                        .catch(err => console.error('Failed to load footer:', err));
+                </script>
+            </div>
+        </div>
+    </section>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        document.getElementById('dualSubmitForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const comment = document.getElementById('comment').value;
+
+            const statusText = document.getElementById('statusMessage');
+            const btn = document.querySelector('.submit-btn');
+            btn.innerHTML = "Sending... ";
+            btn.disabled = true;
+            fetch("https://formsubmit.co/ajax/vikrampsychic78@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    Name: name,
+                    Email: email,
+                    Phone: phone,
+                    Subject: subject,
+                    Message: comment
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Email sent successfully!");
+                    statusText.style.display = "block";
+                    statusText.style.color = "green";
+                    statusText.innerText = "Message processed successfully!";
+                    const waPhone = "+19295869234";
+                    const waText = `*New Contact Request!*\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n*Subject:* ${subject}\n*Message:* ${comment}`;
+                    const encodedWaText = encodeURIComponent(waText);
+                    const waUrl = `https://api.whatsapp.com/send?phone=${waPhone}&text=${encodedWaText}`;
+                    window.open(waUrl, '_blank');
+                    document.getElementById('dualSubmitForm').reset();
+                    btn.innerHTML = `Send Message &nbsp; <svg fill="white" width="16" height="16" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>`;
+                    btn.disabled = false;
+                })
+                .catch(error => {
+                    console.error("Error sending email:", error);
+                    statusText.style.display = "block";
+                    statusText.style.color = "red";
+                    statusText.innerText = "Oops! Something went wrong.";
+                    btn.innerHTML = `Send Message &nbsp; <svg fill="white" width="16" height="16" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>`;
+                    btn.disabled = false;
+                });
+        });
+    </script>
+</body>
+
+</html>

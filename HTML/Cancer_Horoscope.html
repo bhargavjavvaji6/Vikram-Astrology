@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Zodiac Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_zodiac_single_wrapper as_padderTop80 as_padderBottom60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="as_zodiac_single_inner">
+                            <div class="as_zodiac_heading as_padderBottom50">
+                                <span class="as_sign"><img src="assets/images/svg/sign1.svg" alt=""></span>
+                                Cancer Horoscope Today
+                                <span>( June 21 - July 22 )</span>
+                            </div>
+
+                            <div class="as_tab_wrapper">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="today" role="tabpanel"
+                                        aria-labelledby="Today">
+
+
+                                        <p class="as_font14 as_padderBottom20">Cancer Horoscope Today provides valuable
+                                            guidance for love, career, finances, and personal growth. As one of the most
+                                            intuitive and caring signs of the zodiac, Cancer is known for emotional
+                                            depth, loyalty, and strong family values. People born under the Cancer
+                                            zodiac sign are often compassionate individuals who prioritize meaningful
+                                            relationships and personal connections.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Ruled by the Moon, Cancer individuals are
+                                            deeply connected to their emotions and instincts. Their nurturing nature
+                                            allows them to support others while creating a sense of comfort and security
+                                            in their lives. Reading your Cancer daily horoscope can help you understand
+                                            current astrological influences and make thoughtful decisions throughout the
+                                            day.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Cancer Personality Traits</h3>
+
+                                        <p class="as_font14 as_padderBottom20">The Cancer personality is caring,
+                                            sensitive, and protective. Cancer natives often value emotional security and
+                                            enjoy building strong relationships with family, friends, and loved ones.
+                                            Their intuitive nature helps them understand the feelings of others, making
+                                            them supportive companions and trusted confidants.
+                                        </p>
+                                        <p class="as_font14 as_padderBottom20">One of Cancer's greatest strengths is
+                                            loyalty. Once they form meaningful connections, they are committed and
+                                            dependable. While Cancer is naturally compassionate, they may sometimes
+                                            become overly cautious or emotional. Learning to balance feelings with
+                                            practical decision-making can help Cancer achieve greater confidence and
+                                            personal growth.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Cancer Compatibility</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Cancer compatibility is often strongest
+                                            with signs that appreciate emotional connection, trust, and commitment.
+                                            Relationships built on honesty and understanding tend to bring out the best
+                                            in Cancer. Because Cancer values meaningful bonds, they often seek partners
+                                            who provide stability and emotional support.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Cancer can develop strong relationships
+                                            with many zodiac signs when communication and mutual respect are present.
+                                            Understanding compatibility helps Cancer individuals build healthier
+                                            relationships and gain greater insight into their emotional needs. Astrology
+                                            can provide useful guidance for navigating romantic connections,
+                                            friendships, and family relationships.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Cancer Horoscope Dates</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Cancer horoscope dates fall between June
+                                            21 and July 22. Represented by the Crab, Cancer symbolizes protection,
+                                            intuition, and emotional resilience. As a water sign, Cancer is associated
+                                            with empathy, sensitivity, and a deep connection to feelings and personal
+                                            relationships.</p>
+
+                                        <h3 class="as_subheading as_orange">Cancer Horoscope Today for Love, Career, and
+                                            Money</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Cancer Horoscope Today encourages you to
+                                            trust your intuition while remaining focused on your priorities. Career
+                                            opportunities may develop through patience, dedication, and collaboration
+                                            with others. In relationships, open communication can strengthen emotional
+                                            connections and create greater understanding.
+                                            .</p>
+
+                                        <p class="as_font14 as_padderBottom20">Many people search for a Cancer love
+                                            horoscope today for singles to gain insight into potential romantic
+                                            opportunities and emotional connections. Whether you are single or in a
+                                            relationship, astrology cancer horoscope guidance can help you better
+                                            understand your feelings and relationship dynamics. Financially, careful
+                                            planning and practical decisions can support long-term stability and growth.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">By following your Cancer zodiac horoscope
+                                            today, you can gain useful insight into upcoming opportunities and make more
+                                            confident decisions in different areas of life.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Trusted Astrology Guidance in New York</h3>
+
+                                        <p class="as_font14 as_padderBottom20">If you are seeking deeper astrological
+                                            insight, Vikram Astrologer & Psychic in New York offers professional
+                                            astrology and psychic consultations backed by more than 30 years of
+                                            experience. Clients throughout New York and across the United States seek
+                                            guidance for horoscope readings, spiritual consultations, compatibility
+                                            analysis, and birth chart interpretations.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Many individuals searching for the best
+                                            psychic in New York, best astrology in New York, and best horoscope reading
+                                            in New York choose experienced astrology services for clarity regarding
+                                            relationships, career choices, finances, and future opportunities.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Explore More Horoscope Insights</h3>
+
+                                        <p class="as_font14 as_padderBottom20">After reading Cancer Horoscope Today, you
+                                            may also enjoy exploring Leo Horoscope Today and Virgo Horoscope Today for
+                                            additional zodiac insights. You can also learn more about Aries Horoscope
+                                            Today, Taurus Horoscope Today, Gemini Horoscope Today, Libra Horoscope
+                                            Today, Scorpio Horoscope Today, Sagittarius Horoscope Today, Capricorn
+                                            Horoscope Today, Aquarius Horoscope Today, and Pisces Horoscope Today to
+                                            better understand compatibility and daily astrological influences.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Final Thoughts</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Cancer Horoscope Today helps you
+                                            understand your emotions, strengths, and opportunities through astrology.
+                                            Whether you are interested in Cancer astrology today, Cancer zodiac today
+                                            insights, Cancer horoscope dates, or daily horoscope guidance, astrology can
+                                            provide valuable support for personal growth, relationships, and future
+                                            planning.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="as_zodiac_sidebar">
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign1.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Aries</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign2.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Taurus </h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign3.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Gemini</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign4.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Cancer</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign5.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Leo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign6.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Virgo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign7.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Libra</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign8.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Scorpio</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign9.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Sagittarius</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign10.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign11.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign12.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Pisces</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_tarotReading_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Your Daily Tarot Reading</h1>
+                        <p class="as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod tempor
+                            incididuesdeentiut labore <br> etesde dolore magna aliquapspendisse and the gravida.</p>
+
+                        <div class="row as_card_slider">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+
+
+
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
+
+
+</html>

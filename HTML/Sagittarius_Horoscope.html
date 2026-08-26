@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Zodiac Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_zodiac_single_wrapper as_padderTop80 as_padderBottom60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <div class="as_zodiac_single_inner">
+                            <div class="as_zodiac_heading as_padderBottom50">
+                                <span class="as_sign"><img src="assets/images/svg/sign1.svg" alt=""></span>
+                                Sagittarius Horoscope Today
+                                <span>( Mar 21 - Apr 19 )</span>
+                            </div>
+
+                            <div class="as_tab_wrapper">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="today" role="tabpanel"
+                                        aria-labelledby="Today">
+
+
+                                        <p class="as_font14 as_padderBottom20">Sagittarius Horoscope Today provides
+                                            valuable guidance for love, career, finances, and personal growth. As one of
+                                            the most adventurous and optimistic signs of the zodiac, Sagittarius is
+                                            known for curiosity, independence, and a strong desire to explore new
+                                            opportunities. People born under the Sagittarius zodiac sign often enjoy
+                                            learning, traveling, and expanding their understanding of the world around
+                                            them.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Ruled by Jupiter, the planet associated
+                                            with growth, wisdom, and abundance, Sagittarius individuals are naturally
+                                            enthusiastic and forward-thinking. Their positive outlook helps them embrace
+                                            challenges with confidence and determination. Reading your daily horoscope
+                                            Sagittarius forecast can help you better understand current astrological
+                                            influences and make informed decisions throughout the day.</p>
+
+                                        <h3 class="as_subheading as_orange">Sagittarius Personality Traits</h3>
+
+                                        <p class="as_font14 as_padderBottom20">The Sagittarius personality is often
+                                            described as energetic, optimistic, and open-minded. Sagittarius natives
+                                            value freedom and enjoy pursuing experiences that encourage learning and
+                                            personal growth. Their honesty and enthusiasm often make them inspiring
+                                            friends, partners, and colleagues.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">One of Sagittarius' greatest strengths is
+                                            adaptability. They are willing to embrace change and explore new
+                                            possibilities when opportunities arise. While Sagittarius is naturally
+                                            adventurous and independent, they may sometimes act impulsively. Balancing
+                                            spontaneity with thoughtful planning can help them achieve greater success
+                                            in both personal and professional life.
+                                        </p>
+                                        <h3 class="as_subheading as_orange">Sagittarius Compatibility</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Sagittarius compatibility is often
+                                            strongest with signs that appreciate adventure, communication, and personal
+                                            freedom. Leo and Sagittarius compatibility is widely recognized because both
+                                            signs share enthusiasm, confidence, and a love of excitement. Aries and
+                                            Sagittarius compatibility often creates a dynamic relationship filled with
+                                            energy, motivation, and shared goals.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Sagittarius and Gemini compatibility can
+                                            be highly engaging because both signs enjoy learning, communication, and
+                                            exploring new ideas. Libra and Sagittarius compatibility often benefits from
+                                            balance and mutual respect, while Cancer and Sagittarius compatibility may
+                                            require patience and understanding due to different emotional approaches.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Understanding Sagittarius compatibility
+                                            can provide valuable insight into
+                                            relationship dynamics and help individuals build stronger personal
+                                            connections.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Sagittarius Symbol and Meaning</h3>
+
+                                        <p class="as_font14 as_padderBottom20">The Sagittarius symbol is the Archer,
+                                            representing vision, ambition, and the pursuit of knowledge. This powerful
+                                            symbol reflects Sagittarius' desire to aim high, seek truth, and
+                                            continuously grow through experience.
+                                        </p>
+                                        <p class="as_font14 as_padderBottom20">As a fire sign, Sagittarius is associated
+                                            with passion, confidence, and
+                                            action. The Sagittarius zodiac sign encourages individuals to embrace
+                                            opportunities, remain optimistic, and pursue meaningful goals with
+                                            determination.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Sagittarius Horoscope Today and Tomorrow
+                                        </h3>
+
+                                        <p class="as_font14 as_padderBottom20">Sagittarius Horoscope Today encourages
+                                            you to stay open to new possibilities and trust your instincts. Career
+                                            opportunities may arise through networking, learning, or exploring fresh
+                                            ideas. In relationships, honest communication can strengthen connections and
+                                            create greater understanding.</p>
+
+                                        <p class="as_font14 as_padderBottom20">Looking ahead to Sagittarius Horoscope
+                                            Today and Tomorrow, maintaining a positive outlook and remaining adaptable
+                                            can
+                                            help you navigate challenges successfully. Financially, careful planning
+                                            combined with confidence can support long-term growth and stability.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Trusted Astrology Guidance in New York
+                                        </h3>
+
+                                        <p class="as_font14 as_padderBottom20">If you are seeking deeper astrological
+                                            insight, Vikram Astrologer & Psychic in New York offers professional
+                                            astrology and psychic consultations backed by more than 30 years of
+                                            experience. Clients throughout New York and across the United States seek
+                                            guidance for horoscope readings, compatibility analysis, spiritual
+                                            consultations, and birth chart interpretations.
+                                        </p>
+
+                                        <p class="as_font14 as_padderBottom20">Many individuals searching for the best
+                                            psychic in New York, best astrology in New York, and best horoscope reading
+                                            in New York choose experienced astrology services for clarity regarding
+                                            relationships, career choices, finances, and future opportunities.
+                                        </p>
+
+                                        <h3 class="as_subheading as_orange">Explore More Horoscope Insights</h3>
+
+                                        <p class="as_font14 as_padderBottom20">After reading Sagittarius Horoscope
+                                            Today, you may also enjoy exploring Capricorn Horoscope Today and Aquarius
+                                            Horoscope Today for additional zodiac insights. You can also learn more
+                                            about Aries Horoscope Today, Taurus Horoscope Today, Gemini Horoscope Today,
+                                            Cancer Horoscope Today, Leo Horoscope Today, Virgo Horoscope Today, Libra
+                                            Horoscope Today, Scorpio Horoscope Today, and Pisces Horoscope Today to
+                                            better understand compatibility and daily astrological influences.</p>
+
+                                        <h3 class="as_subheading as_orange">Final Thoughts</h3>
+
+                                        <p class="as_font14 as_padderBottom20">Sagittarius Horoscope Today helps you
+                                            understand your strengths, opportunities, and daily influences through
+                                            astrology. Whether you are interested in the Sagittarius zodiac sign,
+                                            Sagittarius personality traits, Sagittarius compatibility, or daily
+                                            horoscope guidance, astrology can provide valuable insight to support
+                                            personal growth, relationships, and future planning.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="as_zodiac_sidebar">
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign1.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Aries</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign2.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Taurus </h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign3.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Gemini</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign4.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Cancer</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign5.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Leo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign6.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Virgo</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign7.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Libra</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign8.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Scorpio</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign9.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Sagittarius</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign10.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign11.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Capricorn</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                            <div class="as_sign_box">
+                                <span class="as_sign">
+                                    <img src="assets/images/svg/sign12.svg" alt="">
+                                </span>
+                                <div>
+                                    <h5>Pisces</h5>
+                                    <p>Mar 21 - Apr 19</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_tarotReading_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">Your Daily Tarot Reading</h1>
+                        <p class="as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod tempor
+                            incididuesdeentiut labore <br> etesde dolore magna aliquapspendisse and the gravida.</p>
+
+                        <div class="row as_card_slider">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card1.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card2.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card3.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="as_card_box">
+                                    <a href="javascript:;"><img src="assets/images/card4.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+
+
+
+
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
+
+
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="../assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('../header2.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Service Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_servicedetail_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+
+                <div class="col-lg-12">
+                    <div class="as_service_detail_inner">
+                        <img src="../assets/images/Black_Magic.jpg" alt="" class="img-responsive">
+
+                        <h1 class="as_orange">Trusted Black Magic Removal in New York for Spiritual Protection and
+                            Positive Energy
+                        </h1>
+                        <p class="as_font14">Are you experiencing unexplained obstacles, negative energy,
+                            relationship
+                            conflicts,
+                            financial losses, or persistent bad luck? At Vikram Psychic Astrology in New York, we
+                            offer trusted and confidential Black Magic Removal in New York using traditional
+                            spiritual
+                            practices and authentic astrological guidance. Our experienced astrologers help
+                            individuals
+                            and families overcome negative influences and restore peace, balance, and positivity in
+                            their lives. If you're searching for the best Black Magic Removal in New York or a
+                            trusted spiritual
+                            advisor in the USA, our personalized consultations are designed to identify spiritual
+                            imbalances and recommend suitable remedies based on your unique situation.</p>
+
+                        <h2 class="as_orange">What Is Black Magic Removal?</h2>
+                        <p class="text-align:justify">Black Magic Removal is a spiritual process that aims to remove
+                            negative energies, harmful influences, and spiritual disturbances that may be affecting
+                            different areas of your life. Using traditional astrology, spiritual guidance, and
+                            time-honored practices, our astrologers help restore positive energy and emotional
+                            well-being. At Vikram Psychic Astrology in New York, every consultation begins with
+                            understanding your concerns and providing personalized guidance based on your individual
+                            circumstances.
+                        </p>
+
+                        <h2 class="as_orange">Signs You May Need Black Magic Removal</h2>
+                        <p class="text-align:justify">While life naturally includes challenges, some people seek
+                            spiritual guidance when they
+                            experience ongoing difficulties that seem unusual or persistent.
+                            Common reasons people request a consultation include:<br>
+                            &#8669; Constant negative energy<br>
+                            &#8669; Repeated relationship problems<br>
+                            &#8669; Delays in marriage<br>
+                            &#8669; Career obstacles<br>
+                            &#8669; Business losses<br>
+                            &#8669; Financial instability<br>
+                            &#8669; Family conflicts<br>
+                            &#8669; Frequent bad luck<br>
+                            &#8669; Emotional stress and anxiety<br>
+                            &#8669; Lack of peace and happiness<br>
+                            &#8669; Unexplained fear or restlessness<br>
+                        </p>
+
+                        <h2 class="as_orange">Our Black Magic Removal Services</h2>
+                        <p>We provide personalized spiritual consultations for individuals seeking guidance in
+                            various areas of life, including:<br>
+                            &#8669; Black Magic Removal<br>
+                            &#8669; Negative Energy Cleansing<br>
+                            &#8669; Spiritual Protection Guidance<br>
+                            &#8669; Evil Eye Protection<br>
+                            &#8669; Relationship Healing<br>
+                            &#8669; Marriage Problem Guidance<br>
+                            &#8669; Career and Business Guidance<br>
+                            &#8669; Financial Prosperity Guidance<br>
+                            &#8669; Family Harmony Consultations<br>
+                            &#8669; Personal Spiritual Counseling<br>
+                            &#8669; Astrological Remedies<br>
+                            &#8669; Energy Balancing<br>
+                            Every consultation is confidential, respectful, and tailored to your unique needs.
+                        </p>
+
+                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p>When searching for the best Black Magic Removal in New York, choosing an experienced and
+                            trustworthy spiritual advisor is important. At Vikram Psychic Astrology in New York, we
+                            combine traditional spiritual knowledge with personalized astrology consultations to
+                            provide meaningful guidance.
+                            Why clients choose us:<br>
+                            &#8669;Experienced spiritual astrologers<br>
+                            &#8669; Personalized consultations<br>
+                            &#8669; Traditional spiritual practices<br>
+                            &#8669; Confidential and respectful service<br>
+                            &#8669; Practical astrological guidance<br>
+                            &#8669; Honest recommendations<br>
+                            &#8669; Online and in-person consultations<br>
+                            &#8669; Dedicated client support<br>
+                            &#8669; Trusted by clients across New York, USA<br>
+                            Our goal is to help you regain confidence, peace of mind, and a positive outlook on
+                            life.
+                        </p>
+
+                        <h2 class="as_orange">Who Can Benefit from Black Magic Removal?</h2>
+                        <p>Our spiritual guidance is suitable for individuals who are seeking clarity, protection,
+                            and emotional balance.
+                            People often contact us for guidance regarding:<br>
+                            &#8669; Love and relationship challenges<br>
+                            &#8669; Marriage delays<br>
+                            &#8669; Family disputes<br>
+                            &#8669; Career uncertainty<br>
+                            &#8669; Business difficulties<br>
+                            &#8669; Financial concerns<br>
+                            &#8669; Emotional well-being<br>
+                            &#8669; Spiritual growth<br>
+                            &#8669; Personal transformation<br>
+                            &#8669; Negative energy concerns<br>
+                            &#8669; Each consultation is personalized to your circumstances and spiritual goals.
+                        </p>
+
+                        <h2 class="as_orange">Why Clients Trust Vikram Psychic Astrology</h2>
+                        <p>Clients throughout New York, USA choose Vikram Psychic Astrology because of our
+                            compassionate approach, traditional spiritual knowledge, and commitment to
+                            providing ethical guidance. Every consultation is handled with complete
+                            confidentiality, respect, and care. Whether you visit us in person or choose an online
+                            consultation, we strive to help you move forward with greater confidence, hope, and peace of
+                            mind.
+                        </p>
+
+                        <h2 class="as_orange">Areas We Serve</h2>
+                        <p>We proudly provide Black Magic Removal in New York for clients across:<br>
+                            &#8669; Manhattan <br>
+                            &#8669; Brooklyn <br>
+                            &#8669; Queens <br>
+                            &#8669; Bronx <br>
+                            &#8669; Staten Island <br>
+                            &#8669; Long Island <br>
+                            &#8669; Greater New York Area <br>
+                            &#8669; We also offer secure online consultations for clients throughout the USA and
+                            internationally.
+                        </p>
+
+                        <h2 class="as_orange">Book the Best Black Magic Removal Consultation in New York</h2>
+                        <p>If you're looking for the best Black Magic Removal in New York, Vikram Psychic
+                            Astrology in New York is here to provide compassionate spiritual guidance
+                            tailored to your needs. Our experienced astrologers are committed to helping you
+                            overcome life's challenges through personalized consultations, traditional
+                            astrology, and spiritual wisdom. Schedule your consultation today and discover how
+                            professional spiritual guidance can help restore positivity, confidence, and balance in your
+                            life.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section class="as_know_sign_wrapper as_padderBottom80 as_padderTop80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="as_heading as_heading_center">Know Your Zodiac Sign</h1>
+                    <p class="as_font14 as_margin0 as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod
+                        tempor incididuesdeentiut labore <br>etesde dolore magna aliquapspendisse and the gravida.
+                    </p>
+
+
+                    <div class="as_sign_form text-left">
+                        <ul>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Date Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_datepicker"
+                                        placeholder="DD/MM/YYYY" id="">
+                                    <span><img src="../assets/images/svg/date.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Time Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_timepicker" placeholder="08:00"
+                                        id="">
+                                    <span><img src="../assets/images/svg/time.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Place Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control" placeholder="Enter City Name...."
+                                        id="">
+                                    <span><img src="../assets/images/svg/map1.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <a href="javascript:;" class="as_btn">find zodiac</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="as_footer_wrapper as_padderTop80">
+        <div class="container">
+            <div class="as_newsletter_wrapper as_padderBottom60">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                        <h1 class="as_heading">Our Newsletter</h1>
+                        <p>Get Your Daily Horoscope, Daily Lovescope and Daily<br> Tarot Directly In Your Inbox</p>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                        <div class="as_newsletter_box">
+                            <input type="text" name="" id="" class="form-control"
+                                placeholder="Enter your Email Here...">
+                            <a href="javascript:;" class="as_btn">subscribe now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="site-footer">
+                <script>
+                    fetch('../Footer2.html')
+                        .then(response => {
+                            if (!response.ok) throw new Error('Footer load error');
+                            return response.text();
+                        })
+                        .then(html => {
+                            const footerContainer = document.getElementById('site-footer');
+                            if (footerContainer) {
+                                footerContainer.innerHTML = html;
+                            }
+                        })
+                        .catch(err => console.error('Failed to load footer:', err));
+                </script>
+            </div>
+        </div>
+    </section>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>

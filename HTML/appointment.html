@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.kamleshyadav.com/themeforest-html/astrology/version-2/appointment.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2026 12:22:16 GMT -->
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .appointment-container {
+            background-image: url('https://t3.ftcdn.net/jpg/15/71/75/30/360_F_1571753033_MhXZSkROzVBBmHOMRO9ZGmcJHE1esGE6.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        /* Dark overlay for "dull mode" to ensure text clarity */
+        .appointment-overlay {
+            background-color: rgba(0, 0, 0, 0.85);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .appointment-form {
+            width: 100%;
+            max-width: 800px;
+            color: #ffffff;
+        }
+
+        .appointment-form h2 {
+            text-align: center;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            background-color: rgba(255, 255, 255, 0.15);
+            border: none;
+            border-bottom: 2px solid #3498db;
+            padding: 12px 15px;
+            color: #ffffff;
+            font-size: 16px;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #ff9800;
+            color: #ffffff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 40px auto 0;
+            display: block;
+            border-radius: 2px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #e68a00;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/plugin/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+
+            <script>
+                fetch('./header.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Appointment</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_appointment_wrapper as_padderTop80 as_padderBottom80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="as_subheading as_orange">Astrologer Consultation in New York.</h2>
+                        <p class="as_font14 as_padderBottom20 text-align">Looking for a trusted astrologer consultation
+                            in New York? Vikram Astrologer & Psychic and Pandith Sri Mohan Das Guruji provide
+                            professional astrology and psychic consultation services for clients throughout New York and
+                            across the USA. Whether you need guidance about relationships, marriage, career, finances,
+                            family matters, or future opportunities, our personalized consultations can help you gain
+                            clarity and confidence.
+                        </p>
+
+                        <div class="appointment-container">
+                            <div class="appointment-overlay">
+                                <!-- Form Action updated to send to your email -->
+                                <form action="https://formsubmit.co/vikrampsychic78@gmail.com" method="POST"
+                                    class="appointment-form">
+
+                                    <input type="hidden" name="_subject" value="New Appointment Request!">
+                                    <input type="hidden" name="_template" value="table">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <h2>Make an Appointment</h2>
+
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <label>Full Name *</label>
+                                            <!-- Added name="Full_Name" -->
+                                            <input type="text" name="Full_Name" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Phone Number *</label>
+                                            <!-- Added name="Phone_Number" -->
+                                            <input type="tel" name="Phone_Number" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Email (Optional)</label>
+                                            <input type="email" name="Email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Date of Birth *</label>
+                                            <input type="date" name="Date_of_Birth" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Birth Time *</label>
+                                            <input type="time" name="Birth_Time" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Place of Birth *</label>
+                                            <input type="text" name="Place_of_Birth" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Current Location *</label>
+                                            <input type="text" name="Current_Location" required>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="submit-btn">Make an appointment</button>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <h2 class="as_subheading as_orange">Professional Astrology Consultation</h2>
+
+                        <p class="as_font14 as_padderBottom20">Our astrology consultation services are
+                            designed to help you understand important life situations through detailed horoscope
+                            analysis and birth chart readings. We provide guidance for love, marriage, career growth,
+                            business decisions, finances, education, and personal development.
+                        </p>
+
+                        <p class="as_font14 as_padderBottom20">Whether you are seeking a New York astrology
+                            consultation, vedic astrology
+                            consultation, or an online astrology consultation, our experienced astrologers offer
+                            personalized insights based on your unique birth details.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">P sychic Reading and Consultation Services</h2>
+
+                        <p class="as_font14 as_padderBottom20">We also offer psychic consultation and psychic reading
+                            services for individuals seeking spiritual guidance and answers to important life questions.
+                            Many clients searching for a psychic reading near me or the best psychic in New York choose
+                            our
+                            services for honest, confidential, and personalized guidance.
+                        </p>
+
+                        <p class="as_font14 as_padderBottom20">Our psychic services help clients gain insight into
+                            relationships, career decisions, emotional concerns, family matters, and future
+                            possibilities.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Online Astrology Consultation Across the USA</h2>
+
+                        <p class="as_font14 as_padderBottom20">We provide online astrology consultation services for
+                            clients throughout New York and all 50 states. Whether you need relationship guidance,
+                            marriage
+                            compatibility analysis, future predictions, or spiritual advice, you can connect with our
+                            astrologers from anywhere. Clients looking for the best online astrology
+                            consultation, astrologer online appointment in New York, or astrology consultation near me
+                            can easily schedule a private session.
+                        </p>
+
+
+                        <h2 class="as_subheading as_orange">Here are 8 core astrology and psychic services for your
+                            page:</h2>
+                        <p class="as_font14 as_padderBottom20">
+                        <p>
+                            &#8669; Birth Chart Reading.<br>
+                            &#8669; Future prediction.<br>
+                            &#8669; Love Astrology Consultation.<br>
+                            &#8669; Marriage Compatibility Consultation.<br>
+                            &#8669; Career Astrology Guidance.<br>
+                            &#8669; Finance Astrology Consultation.<br>
+                            &#8669; Business Astrology Consultation.<br>
+                            &#8669; Black Magic Removal.<br>
+                        </p>
+
+                        <h3 class="as_orange as_padderBottom20">Why Choose Us?</h3>
+
+                        <p class="as_font14 as_padderBottom20">Vikram Astrologer & Psychic and Pandith Sri Mohan Das
+                            Guruji
+                            have helped clients for 30 years with astrology consultations, horoscope readings, psychic
+                            guidance, and spiritual counseling. Our goal is to provide practical insights and
+                            personalized
+                            recommendations that help you make informed decisions. Many clients searching for the best
+                            astrology in New York,
+                            best psychic in New York, horoscope reading in New York, and trusted psychic near me rely on
+                            our experience and professional approach.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_whychoose_wrapper as_padderTop80 as_padderBottom50">
+            <div class="container">
+                <div class="text-left">
+                    <h1 class="as_heading">Why you need to choose best psychic and astrology in us</h1>
+                    <p class="as_font14 as_margin0">Numbers that reflect the trust and experience behind every reading
+                        we provide.</p>
+                </div>
+                <br>
+                <div class="row as_verticle_center">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row as_verticle_center">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="512"
+                                                data-speed="5000">512</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Qualified Astrologers</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="62"
+                                                data-speed="5000">62</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Success Horoscope</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="94"
+                                                data-speed="5000">94</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Offices Worldwide</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="452"
+                                                data-speed="5000">452</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Trust by million clients</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="12"
+                                                data-speed="5000">12</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Year experience</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <div class="as_whychoose_box text-center">
+                                    <span class="as_number"><span><span data-from="0" data-to="652"
+                                                data-speed="5000">652+</span>+</span><img
+                                            src="assets/images/svg/shape.svg" alt=""></span>
+                                    <h4>Type of horoscopes</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="as_customer_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="as_heading as_heading_center">What Our Customers Say</h1>
+                        <p class="as_font14 as_margin0 as_padderBottom50"> Real stories from people who found clarity,
+                            comfort, and direction through our astrology readings.
+                        </p>
+                    </div>
+
+                    <div class="row as_customer_slider">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer1.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">My reading was incredibly accurate and gave me the clarity I
+                                    needed to make a big career decision. The astrologer took the time to explain
+                                    everything in a way I could truly understand. </p>
+                                <h3>David Parker</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer2.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">I was skeptical at first, but the depth of insight into my birth
+                                    chart genuinely surprised me. It felt personal, not generic. I've booked another
+                                    session already. </p>
+                                <h3>John Parker</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer1.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">The team helped me understand my Manglik Dosha and suggested
+                                    simple remedies that brought real peace of mind before my wedding. Highly recommend
+                                    their services. </p>
+                                <h3>Meera Nair</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="as_customer_box text-center">
+                                <span class="as_customer_img">
+                                    <img src="assets/images/customer2.jpg" alt="">
+                                    <span><img src="assets/images/svg/quote1.svg" alt=""></span>
+                                </span>
+                                <p class="as_margin0">Professional, warm, and remarkably precise. My birth journal
+                                    reading answered questions I'd had for years. Thank you for the guidance! </p>
+                                <h3>Priya Sharma</h3>
+                                <p class="as_margin0">Verified Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="site-footer">
+            <script>
+                fetch('./Footer.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            </script>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/select2/select2.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+<!-- Mirrored from demo.kamleshyadav.com/themeforest-html/astrology/version-2/appointment.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2026 12:22:16 GMT -->
+
+</html>

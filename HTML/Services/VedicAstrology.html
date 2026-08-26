@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Astrology</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href=" ../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="as_loader">
+        <img src="../assets/images/loader.png" alt="" class="img-responsive">
+    </div>
+    <div class="as_main_wrapper">
+        <div id="site-header">
+            <script>
+                fetch('../header2.html')
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const container = document.getElementById('site-header');
+                        if (container) {
+                            container.innerHTML = html;
+                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+                            navLinks.forEach(link => {
+                                const linkHref = link.getAttribute('href');
+                                if (linkHref === currentPage) {
+                                    link.classList.add('active');
+                                } else {
+                                    link.classList.remove('active');
+                                }
+                            });
+                        }
+                    })
+                    .catch(err => console.error('Header fetch error:', err));
+            </script>
+        </div>
+        <section class="as_breadcrum_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1>Service Details</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="as_servicedetail_wrapper as_padderBottom80 as_padderTop80">
+            <div class="container">
+
+                <div class="col-lg-14">
+                    <div class="as_service_detail_inner">
+                        <img src="../assets/images/service_single.jpg" alt="" class="img-responsive">
+                        <br><br>
+                        <h2 class="as_subheading as_orange">Trusted Vedic Astrology Services in New York for Accurate
+                            Guidance and Spiritual Wisdom</h2>
+                        <p class="as_font14"> Are you looking for authentic Vedic Astrology Services in New York to gain
+                            clarity about your
+                            future, relationships, career, marriage, finances, or personal growth? At Vikram Psychic
+                            Astrology in New York, we provide personalized Vedic astrology consultations based on your
+                            birth
+                            chart, planetary positions, and traditional Vedic principles. Our experienced astrologers
+                            help
+                            individuals and families understand life's challenges and opportunities through accurate
+                            horoscope analysis and time-tested astrological guidance.
+                            Whether you need answers about your career, marriage, business, health, or spiritual
+                            journey,
+                            our Vedic Astrology Services in New York are designed to provide meaningful insights and
+                            practical guidance tailored to your unique birth chart.</p>
+
+                        <h2 class="as_subheading as_orange">What Is Vedic Astrology?</h2>
+                        <p class="as_font14">
+                            Vedic Astrology, also known as Jyotish Shastra, is one of the oldest systems of astrology,
+                            originating in ancient India. It uses your date of birth, time of birth, and place of birth
+                            to
+                            create a detailed birth chart and analyze planetary influences throughout your life.
+                            Unlike general astrology, Vedic Astrology focuses on the precise positions of the planets,
+                            zodiac signs, houses, and planetary periods (Dashas) to provide personalized guidance about
+                            different aspects of life.
+                            At Vikram Psychic Astrology in New York, every consultation is based on traditional Vedic
+                            astrology principles combined with years of practical experience.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Our Vedic Astrology Services</h2>
+                        <p class="as_font14">
+                            We offer a complete range of Vedic Astrology Services in New York, including:<br>
+                            &#10175; Birth Chart (Kundli) Analysis<br>
+                            &#10175; Horoscope Reading<br>
+                            &#10175; Career Astrology Consultation<br>
+                            &#10175; Marriage & Relationship Astrology<br>
+                            &#10175; Love Compatibility Analysis<br>
+                            &#10175; Business Astrology<br>
+                            &#10175; Financial Astrology<br>
+                            &#10175; Health Astrology Guidance<br>
+                            &#10175; Family Astrology Consultation<br>
+                            &#10175; Child Astrology<br>
+                            &#10175; Career & Education Guidance<br>
+                            &#10175; Muhurat (Auspicious Timing)<br>
+                            &#10175; Gemstone Recommendations<br>
+                            &#10175; Dosha Analysis & Remedies<br>
+                            &#10175; Sarpa Dosha Consultation<br>
+                            &#10175; Manglik Dosha Analysis<br>
+                            &#10175; Online Vedic Astrology Consultation<br>
+                            Each consultation is personalized according to your horoscope and life goals.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Benefits of Vedic Astrology</h2>
+                        <p class="as_font14">
+                            Vedic Astrology helps you better understand yourself and the timing of important life
+                            events.Our consultations provide guidance for:<br>
+                            &#10175; Career planning<br>
+                            &#10175; Marriage and relationships<br>
+                            &#10175; Financial decisions<br>
+                            &#10175; Business growth<br>
+                            &#10175; Family harmony<br>
+                            &#10175; Health awareness<br>
+                            &#10175; Education planning<br>
+                            &#10175; Personal development<br>
+                            &#10175; Spiritual growth<br>
+                            &#10175; Future opportunities<br>
+                            Our goal is to help you make informed decisions with greater confidence and clarity.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                        <p class="as_font14">
+                            When searching for the best Vedic Astrology Services in New York, experience and
+                            authenticity matter. Vikram Psychic Astrology in New York is committed to providing
+                            professional,
+                            ethical, and personalized astrology consultations. Why clients trust us:<br>
+                            &#10175; Experienced Vedic astrologers<br>
+                            &#10175; Personalized horoscope analysis<br>
+                            &#10175; Traditional Jyotish consultation<br>
+                            &#10175; Detailed birth chart interpretation<br>
+                            &#10175; Honest and confidential guidance<br>
+                            &#10175; Online and in-person consultations<br>
+                            &#10175; Practical astrological remedies<br>
+                            &#10175; Friendly customer support<br>
+                            &#10175; Trusted by clients throughout New York and the USA<br>
+                            Every consultation is tailored to your individual horoscope rather than using generalized
+                            predictions.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Who Can Benefit from Vedic Astrology?</h2>
+                        <p class="as_font14">
+                            Our Vedic Astrology Services are ideal for individuals seeking guidance in various aspects
+                            of life, including:<br>
+                            &#10175; Career professionals<br>
+                            &#10175; Business owners<br>
+                            &#10175; Students<br>
+                            &#10175; Couples planning marriage<br>
+                            &#10175; Families<br>
+                            &#10175; Entrepreneurs<br>
+                            &#10175; Individuals facing life challenges<br>
+                            &#10175; Those seeking spiritual guidance<br>
+                            &#10175; Anyone interested in understanding their birth chart.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Areas We Serve</h2>
+                        <p class="as_font14">
+                            We proudly provide Vedic Astrology Services in New York for clients across:<br>
+                            &#10175; Manhattan<br>
+                            &#10175; Brooklyn<br>
+                            &#10175; Queens<br>
+                            &#10175; Bronx<br>
+                            &#10175; Staten Island<br>
+                            &#10175; Long Island<br>
+                            &#10175; Greater New York Area<br>
+                            We also offer secure online consultations for clients throughout the USA and worldwide.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Why Clients Choose Our Vedic Astrology Services</h2>
+                        <p class="as_font14">
+                            Clients rely on Vikram Psychic Astrology in New York because we focus on accuracy,
+                            personalized guidance, and traditional Vedic wisdom. Every consultation is conducted with
+                            professionalism, respect, and complete confidentiality.
+                            Our mission is to help individuals understand their life's path, overcome challenges, and
+                            make confident decisions through authentic Vedic Astrology.
+                        </p>
+
+                        <h2 class="as_subheading as_orange">Book the Best Vedic Astrology Services in New York Today
+                        </h2>
+                        <p class="as_font14">
+                            If you're looking for the best Vedic Astrology Services in New York, Vikram Psychic
+                            Astrology in
+                            New York is here to help. Whether you need a detailed birth chart analysis, horoscope
+                            reading, marriage guidance, career consultation, or spiritual advice, our experienced
+                            astrologers
+                            provide personalized consultations based on authentic Vedic astrology principles.
+                            Contact Vikram Psychic Astrology in New York today to schedule your consultation and
+                            discover how traditional Vedic Astrology can provide clarity, guidance, and confidence for
+                            every
+                            stage of life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section class="as_know_sign_wrapper as_padderBottom80 as_padderTop80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="as_heading as_heading_center">Know Your Zodiac Sign</h1>
+                    <p class="as_font14 as_margin0 as_padderBottom50">Consectetur adipiscing elit, sed do eiusmod
+                        tempor incididuesdeentiut labore <br>etesde dolore magna aliquapspendisse and the gravida.
+                    </p>
+
+
+                    <div class="as_sign_form text-left">
+                        <ul>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Date Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_datepicker"
+                                        placeholder="DD/MM/YYYY" id="">
+                                    <span><img src="../assets/images/svg/date.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Time Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control as_timepicker" placeholder="08:00"
+                                        id="">
+                                    <span><img src="../assets/images/svg/time.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <h3 class="as_subheading">Place Of Birth</h3>
+                                <div class="as_input_feild">
+                                    <input type="text" name="" class="form-control" placeholder="Enter City Name...."
+                                        id="">
+                                    <span><img src="../assets/images/svg/map1.svg" alt=""></span>
+                                </div>
+                            </li>
+                            <li class="as_form_box">
+                                <a href="javascript:;" class="as_btn">find zodiac</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="as_footer_wrapper as_padderTop80">
+        <div class="container">
+            <div class="as_newsletter_wrapper as_padderBottom60">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+                        <h1 class="as_heading">Our Newsletter</h1>
+                        <p>Get Your Daily Horoscope, Daily Lovescope and Daily<br> Tarot Directly In Your Inbox</p>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+                        <div class="as_newsletter_box">
+                            <input type="text" name="" id="" class="form-control"
+                                placeholder="Enter your Email Here...">
+                            <a href="javascript:;" class="as_btn">subscribe now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="site-footer">
+                <script>
+                    fetch('../Footer2.html')
+                        .then(response => {
+                            if (!response.ok) throw new Error('Footer load error');
+                            return response.text();
+                        })
+                        .then(html => {
+                            const footerContainer = document.getElementById('site-footer');
+                            if (footerContainer) {
+                                footerContainer.innerHTML = html;
+                            }
+                        })
+                        .catch(err => console.error('Failed to load footer:', err));
+                </script>
+            </div>
+        </div>
+    </section>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="../assets/js/custom.js"></script>
+</body>
+
+</html>
