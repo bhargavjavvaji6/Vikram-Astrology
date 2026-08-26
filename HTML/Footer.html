@@ -13,11 +13,11 @@
                         <div class="as_share_box">
                             <p>Follow Us</p>
                             <ul>
-                                <li><a href="javascript:;"><img src="assets/images/svg/facebook.svg" alt=""></a>
+                                <li><a href="https://www.facebook.com/profile.php?id=61589433500834"><img
+                                            src="assets/images/svg/facebook.svg" alt=""></a>
                                 </li>
-                                <li><a href="javascript:;"><img src="assets/images/svg/twitter.svg" alt=""></a>
-                                </li>
-                                <li><a href="javascript:;"><img src="assets/images/svg/google.svg" alt=""></a>
+                                <li><a href="https://www.instagram.com/astrologer__vikram/"><img
+                                            src="assets/images/svg/instagram.svg" alt=""></a>
                                 </li>
                                 <li><a href="javascript:;"><img src="assets/images/svg/youtube.svg" alt=""></a>
                                 </li>
@@ -120,28 +120,39 @@
                         <ul class="as_contact_list">
                             <li>
                                 <img src="assets/images/svg/map.svg" alt="">
-                                <p>Gotham Hall, 1356 Brodway squore,
-                                    NY 10018, California, USA</p>
+                                <p> 119-10 101st Ave, South Richmond Hill, NY 11419, United States</p>
                             </li>
                             <li>
                                 <img src="assets/images/svg/address.svg" alt="">
                                 <p>
-                                    <a href="javascript:;">astrology@example.com</a>
-                                    <a href="javascript:;">astro@example.com</a>
+                                    <a href="javascript:;">vikrampsychic78@gmail.com</a>
+                                    <a href="javascript:;">info@psychicastrologervikram.com</a>
                                 </p>
                             </li>
                             <li>
                                 <img src="assets/images/svg/call.svg" alt="">
                                 <p>
-                                    <a href="javascript:;">+ (91) 1800-124-105</a><br>
-                                    <a href="javascript:;">+ (91) 1800-326-324</a>
+                                    <a href="javascript:;">+1 929-586-9234</a><br>
+                                    <a href="javascript:;">+1 347-970-9240</a>
                                 </p>
                             </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
+
+<!-- Floating Widgets: WhatsApp + Chatbot (injected from floating-widgets.html) -->
+<div id="floating-widgets-container"></div>
+<script>
+(function loadFloatingWidgets() {
+    const pathParts = window.location.pathname.split('/');
+    const htmlIndex = pathParts.indexOf('HTML');
+    const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+    fetch(prefix + 'floating-widgets.html')
+        .then(r => r.ok ? r.text() : Promise.reject(r.status))
+        .then(html => {
+            const container = document.getElementById('floating-widgets-container');
+            if (container) container.innerHTML = html;
+        })
+        .catch(err => console.warn('Floating widgets load error:', err));
+})();
+</script>
