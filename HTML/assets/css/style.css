@@ -1755,9 +1755,6 @@ section.as_whychoose_wrapper.as_padderTop80 {
     border-radius: 100%;
 }
 
-.as_share_box ul li a:hover {
-    background-color: var(--secondary-color);
-}
 
 .as_share_box ul li {
     display: inline-flex;
