@@ -565,21 +565,28 @@
             </div>
 
             <div id="site-footer">
-                <script>
-                    fetch('./Footer.html')
-                        .then(response => {
-                            if (!response.ok) throw new Error('Footer load error');
-                            return response.text();
-                        })
-                        .then(html => {
-                            const footerContainer = document.getElementById('site-footer');
-                            if (footerContainer) {
-                                footerContainer.innerHTML = html;
-                            }
-                        })
-                        .catch(err => console.error('Failed to load footer:', err));
-                </script>
-            </div>
+        <script>
+            (function() {
+                const pathParts = window.location.pathname.split('/');
+                const htmlIndex = pathParts.indexOf('HTML');
+                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                const footerFile = 'Footer.html';
+
+                fetch(prefix + footerFile)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Footer load error');
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer = document.getElementById('site-footer');
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+                        }
+                    })
+                    .catch(err => console.error('Failed to load footer:', err));
+            })();
+        </script>
+    </div>
         </div>
     </section>
     </div>

@@ -25,8 +25,14 @@
     </div>
     <div class="as_main_wrapper">
         <div id="site-header">
-            <script>
-                fetch('./header.html')
+        <script>
+            (function() {
+                const pathParts = window.location.pathname.split('/');
+                const htmlIndex = pathParts.indexOf('HTML');
+                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                const headerFile = 'header.html';
+
+                fetch(prefix + headerFile)
                     .then(response => {
                         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                         return response.text();
@@ -35,21 +41,51 @@
                         const container = document.getElementById('site-header');
                         if (container) {
                             container.innerHTML = html;
-                            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-                            const navLinks = container.querySelectorAll('.as_menu ul li a');
+
+                            // Highlight active link supporting Clean URLs and subfolder matching
+                            const currentPath = window.location.pathname;
+                            let currentSegment = '';
+                            if (currentPath.includes('/Services/')) {
+                                currentSegment = 'service';
+                            } else if (currentPath.includes('/Blogs/')) {
+                                currentSegment = 'blog';
+                            } else {
+                                currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
+                                if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
+                                    currentSegment = 'index';
+                                }
+                            }
+
+                            const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
                             navLinks.forEach(link => {
                                 const linkHref = link.getAttribute('href');
-                                if (linkHref === currentPage) {
+                                if (!linkHref) return;
+
+                                let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
+                                if (linkSegment === '' || linkSegment === 'index') {
+                                    linkSegment = 'index';
+                                }
+
+                                if (linkSegment === currentSegment) {
                                     link.classList.add('active');
+                                    const parentLi = link.closest('li');
+                                    if (parentLi) {
+                                        parentLi.classList.add('active');
+                                    }
                                 } else {
                                     link.classList.remove('active');
+                                    const parentLi = link.closest('li');
+                                    if (parentLi) {
+                                        parentLi.classList.remove('active');
+                                    }
                                 }
                             });
                         }
                     })
                     .catch(err => console.error('Header fetch error:', err));
-            </script>
-        </div>
+            })();
+        </script>
+    </div>
         <section class="as_breadcrum_wrapper">
             <div class="container">
                 <div class="row">
@@ -399,8 +435,14 @@
             </div>
         </section>
         <div id="site-footer">
-            <script>
-                fetch('./Footer.html')
+        <script>
+            (function() {
+                const pathParts = window.location.pathname.split('/');
+                const htmlIndex = pathParts.indexOf('HTML');
+                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                const footerFile = 'Footer.html';
+
+                fetch(prefix + footerFile)
                     .then(response => {
                         if (!response.ok) throw new Error('Footer load error');
                         return response.text();
@@ -412,8 +454,9 @@
                         }
                     })
                     .catch(err => console.error('Failed to load footer:', err));
-            </script>
-        </div>
+            })();
+        </script>
+    </div>
     </div>
 
 
