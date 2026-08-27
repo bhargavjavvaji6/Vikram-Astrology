@@ -21,7 +21,7 @@
     </div>
     <div id="site-header">
         <script>
-            (function() {
+            (function () {
                 const pathParts = window.location.pathname.split('/');
                 const htmlIndex = pathParts.indexOf('HTML');
                 const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
@@ -36,13 +36,6 @@
                         const container = document.getElementById('site-header');
                         if (container) {
                             container.innerHTML = html;
-                            // Re-execute any <script> tags (innerHTML blocks script execution)
-                            container.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
 
                             // Highlight active link supporting Clean URLs and subfolder matching
                             const currentPath = window.location.pathname;
@@ -599,42 +592,18 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                                 <div class="as_whychoose_box text-center">
-                                    <span class="as_number"><span><span data-from="0" data-to="62"
-                                                data-speed="5000">62</span>+</span><img
-                                            src="assets/images/svg/shape.svg" alt=""></span>
-                                    <h4>Success Horoscope</h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                <div class="as_whychoose_box text-center">
-                                    <span class="as_number"><span><span data-from="0" data-to="94"
-                                                data-speed="5000">94</span>+</span><img
-                                            src="assets/images/svg/shape.svg" alt=""></span>
-                                    <h4>Offices Worldwide</h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                <div class="as_whychoose_box text-center">
                                     <span class="as_number"><span><span data-from="0" data-to="452"
-                                                data-speed="5000">452</span>+</span><img
+                                                data-speed="5000">1000</span>+</span><img
                                             src="assets/images/svg/shape.svg" alt=""></span>
-                                    <h4>Trust by million clients</h4>
+                                    <h4>Trust by many clients</h4>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                                 <div class="as_whychoose_box text-center">
-                                    <span class="as_number"><span><span data-from="0" data-to="12"
-                                                data-speed="5000">12</span>+</span><img
+                                    <span class="as_number"><span><span data-from="0" data-to="25"
+                                                data-speed="5000">35</span>+</span><img
                                             src="assets/images/svg/shape.svg" alt=""></span>
-                                    <h4>Year experience</h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                <div class="as_whychoose_box text-center">
-                                    <span class="as_number"><span><span data-from="0" data-to="652"
-                                                data-speed="5000">652+</span>+</span><img
-                                            src="assets/images/svg/shape.svg" alt=""></span>
-                                    <h4>Type of horoscopes</h4>
+                                    <h4>Years of Experience</h4>
                                 </div>
                             </div>
                         </div>
@@ -1014,55 +983,34 @@
 
 
                 <div id="site-footer">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const footerFile = 'Footer.html';
+                    <script>
+                        (function () {
+                            const pathParts = window.location.pathname.split('/');
+                            const htmlIndex = pathParts.indexOf('HTML');
+                            const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                            const footerFile = 'Footer.html';
 
-                fetch(prefix + footerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Footer load error');
-                        return response.text();
-                    })
-                    .then(html => {
-                        const footerContainer = document.getElementById('site-footer');
-                        if (footerContainer) {
-                            footerContainer.innerHTML = html;
-                            // Re-execute scripts (innerHTML blocks script execution)
-                            footerContainer.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-                            // Re-execute any <script> tags (innerHTML blocks script execution)
-                            container.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Failed to load footer:', err));
-            })();
-        </script>
-    </div>
-            </div>
-        </section>
-    </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/plugin.js"></script>
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Failed to load footer:', err));
-            })();
-        </script>
-    </div>
+                            fetch(prefix + footerFile)
+                                .then(response => {
+                                    if (!response.ok) throw new Error('Footer load error');
+                                    return response.text();
+                                })
+                                .then(html => {
+                                    const footerContainer = document.getElementById('site-footer');
+                                    if (footerContainer) {
+                                        footerContainer.innerHTML = html;
+                                        footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                            var newScript = document.createElement('script');
+                                            Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
+                                            newScript.textContent = oldScript.textContent;
+                                            oldScript.parentNode.replaceChild(newScript, oldScript);
+                                        });
+                                    }
+                                })
+                                .catch(err => console.error('Failed to load footer:', err));
+                        })();
+                    </script>
+                </div>
             </div>
         </section>
     </div>

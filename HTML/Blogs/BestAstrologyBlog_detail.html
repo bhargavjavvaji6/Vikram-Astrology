@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,74 +17,67 @@
 <body>
     <div class="as_main_wrapper">
         <div id="site-header">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const headerFile = 'header2.html';
+            <script>
+                (function () {
+                    const pathParts = window.location.pathname.split('/');
+                    const htmlIndex = pathParts.indexOf('HTML');
+                    const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                    const headerFile = 'header2.html';
 
-                fetch(prefix + headerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                        return response.text();
-                    })
-                    .then(html => {
-                        const container = document.getElementById('site-header');
-                        if (container) {
-                            container.innerHTML = html;
-                            // Re-execute any <script> tags (innerHTML blocks script execution)
-                            container.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
+                    fetch(prefix + headerFile)
+                        .then(response => {
+                            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                            return response.text();
+                        })
+                        .then(html => {
+                            const container = document.getElementById('site-header');
+                            if (container) {
+                                container.innerHTML = html;
 
-                            // Highlight active link supporting Clean URLs and subfolder matching
-                            const currentPath = window.location.pathname;
-                            let currentSegment = '';
-                            if (currentPath.includes('/Services/')) {
-                                currentSegment = 'service';
-                            } else if (currentPath.includes('/Blogs/')) {
-                                currentSegment = 'blog';
-                            } else {
-                                currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
-                                if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
-                                    currentSegment = 'index';
-                                }
-                            }
-
-                            const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
-                            navLinks.forEach(link => {
-                                const linkHref = link.getAttribute('href');
-                                if (!linkHref) return;
-
-                                let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
-                                if (linkSegment === '' || linkSegment === 'index') {
-                                    linkSegment = 'index';
-                                }
-
-                                if (linkSegment === currentSegment) {
-                                    link.classList.add('active');
-                                    const parentLi = link.closest('li');
-                                    if (parentLi) {
-                                        parentLi.classList.add('active');
-                                    }
+                                // Highlight active link supporting Clean URLs and subfolder matching
+                                const currentPath = window.location.pathname;
+                                let currentSegment = '';
+                                if (currentPath.includes('/Services/')) {
+                                    currentSegment = 'service';
+                                } else if (currentPath.includes('/Blogs/')) {
+                                    currentSegment = 'blog';
                                 } else {
-                                    link.classList.remove('active');
-                                    const parentLi = link.closest('li');
-                                    if (parentLi) {
-                                        parentLi.classList.remove('active');
+                                    currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
+                                    if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
+                                        currentSegment = 'index';
                                     }
                                 }
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Header fetch error:', err));
-            })();
-        </script>
-    </div>
+
+                                const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
+                                navLinks.forEach(link => {
+                                    const linkHref = link.getAttribute('href');
+                                    if (!linkHref) return;
+
+                                    let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
+                                    if (linkSegment === '' || linkSegment === 'index') {
+                                        linkSegment = 'index';
+                                    }
+
+                                    if (linkSegment === currentSegment) {
+                                        link.classList.add('active');
+                                        const parentLi = link.closest('li');
+                                        if (parentLi) {
+                                            parentLi.classList.add('active');
+                                        }
+                                    } else {
+                                        link.classList.remove('active');
+                                        const parentLi = link.closest('li');
+                                        if (parentLi) {
+                                            parentLi.classList.remove('active');
+                                        }
+                                    }
+                                });
+                            }
+                        })
+                        .catch(err => console.error('Header fetch error:', err));
+                })();
+            </script>
+        </div>
         <section class="as_breadcrum_wrapper">
             <div class="container">
                 <div class="row">
@@ -99,7 +92,9 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <div class="as_blog_box as_blog_single as_padderBottom80">
-                            <h1 class="as_heading as_orange">Can Astrology Help with Career Decisions and Financial
+
+                            <h1 class="as_heading as_orange">Can Astrology Help with Career Decisions and
+                                Financial
                                 Success?</h1>
                             <div class="as_blog_img">
                                 <img src="../assets/images/blog_single.jpg" alt="" class="img-responsive">
@@ -107,29 +102,43 @@
                                 <br>
                             </div>
                             <br><br>
-                            <p class="as_font14 as_margin0 as_padderBottom10">Many people seek guidance when making
-                                important career and financial decisions. Whether you are considering a job change,
+                            <p class="as_font14 as_margin0 as_padderBottom10">Many people seek guidance when
+                                making
+                                important career and financial decisions. Whether you are considering a job
+                                change,
                                 starting a business, pursuing a promotion, or planning your financial future,
-                                uncertainty can make decision-making challenging. This is why many individuals turn to
-                                astrology for additional insight. One of the most common questions people ask is: Can
+                                uncertainty can make decision-making challenging. This is why many individuals
+                                turn to
+                                astrology for additional insight. One of the most common questions people ask
+                                is: Can
                                 astrology help with career decisions and financial success?
-                                Astrology has been used for centuries to understand personality traits, strengths,
-                                opportunities, and life patterns. Through a detailed horoscope reading and birth chart
+                                Astrology has been used for centuries to understand personality traits,
+                                strengths,
+                                opportunities, and life patterns. Through a detailed horoscope reading and birth
+                                chart
                                 analysis, astrology can help individuals identify career potential, business
-                                opportunities, financial habits, and favorable periods for growth. While astrology does
-                                not guarantee success, it can provide valuable guidance that helps people make more
+                                opportunities, financial habits, and favorable periods for growth. While
+                                astrology does
+                                not guarantee success, it can provide valuable guidance that helps people make
+                                more
                                 informed decisions.
                             </p>
                             <br><br>
                             <h2 class="as_heading as_orange">How Astrology Relates to Career Success</h2>
-                            <p class="as_font14 as_margin0 as_padderBottom10"> A professional astrology consultation
-                                examines your birth chart to identify natural talents, communication skills, leadership
-                                qualities, and professional strengths. Different planetary influences may reveal which
+                            <p class="as_font14 as_margin0 as_padderBottom10"> A professional astrology
+                                consultation
+                                examines your birth chart to identify natural talents, communication skills,
+                                leadership
+                                qualities, and professional strengths. Different planetary influences may reveal
+                                which
                                 career paths align best with your personality and long-term goals.
                                 Many people seek career astrology guidance when they feel uncertain about their
-                                professional future. Astrology can help individuals understand whether they may thrive
-                                in business, management, creative fields, education, technology, healthcare, or other
-                                industries. Understanding these strengths can provide greater confidence when making
+                                professional future. Astrology can help individuals understand whether they may
+                                thrive
+                                in business, management, creative fields, education, technology, healthcare, or
+                                other
+                                industries. Understanding these strengths can provide greater confidence when
+                                making
                                 career decisions.
 
                             </p>
@@ -254,53 +263,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4">
-                <div class="as_blog_sidebar">
-
-                    <div class="as_service_widget as_padderBottom40">
-                        <h3 class="as_heading">Recent Posts</h3>
-
-                        <ul class="as_recentposts">
-                            <li>
-                                <a href="javascript:;">
-                                    <div class="as_img">
-                                        <img src="../assets/images/rpost1.jpg" alt="">
-                                    </div>
-                                    <div class="as_detail">
-                                        <h5>Consectetur adipicing esilit sedeiusm odtempor.</h5>
-                                        <span><img src="../assets/images/svg/calender1.svg" alt=""> July 29,
-                                            2026</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <div class="as_img">
-                                        <img src="../assets/images/rpost2.jpg" alt="">
-                                    </div>
-                                    <div class="as_detail">
-                                        <h5>Consectetur adipicing esilit sedeiusm odtempor.</h5>
-                                        <span><img src="../assets/images/svg/calender1.svg" alt=""> July 29,
-                                            2026</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <div class="as_img">
-                                        <img src="../assets/images/rpost3.jpg" alt="">
-                                    </div>
-                                    <div class="as_detail">
-                                        <h5>Consectetur adipicing esilit sedeiusm odtempor.</h5>
-                                        <span><img src="../assets/images/svg/calender1.svg" alt=""> July 29,
-                                            2026</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
     </div>
     </section>
     <section class="as_know_sign_wrapper as_padderBottom80 as_padderTop80">
@@ -333,42 +295,35 @@
             </div>
 
             <div id="site-footer">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const footerFile = 'Footer2.html';
+                <script>
+                    (function () {
+                        const pathParts = window.location.pathname.split('/');
+                        const htmlIndex = pathParts.indexOf('HTML');
+                        const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                        const footerFile = 'Footer2.html';
 
-                fetch(prefix + footerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Footer load error');
-                        return response.text();
-                    })
-                    .then(html => {
-                        const footerContainer = document.getElementById('site-footer');
-                        if (footerContainer) {
-                            footerContainer.innerHTML = html;
-                            // Re-execute scripts (innerHTML blocks script execution)
-                            footerContainer.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-                            // Re-execute any <script> tags (innerHTML blocks script execution)
-                            container.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Failed to load footer:', err));
-            })();
-        </script>
-    </div>
+                        fetch(prefix + footerFile)
+                            .then(response => {
+                                if (!response.ok) throw new Error('Footer load error');
+                                return response.text();
+                            })
+                            .then(html => {
+                                const footerContainer = document.getElementById('site-footer');
+                                if (footerContainer) {
+                                    footerContainer.innerHTML = html;
+                                    // Re-execute scripts (innerHTML blocks script execution)
+                                    footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                        var newScript = document.createElement('script');
+                                        Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
+                                        newScript.textContent = oldScript.textContent;
+                                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                                    });
+                                }
+                            })
+                            .catch(err => console.error('Failed to load footer:', err));
+                    })();
+                </script>
+            </div>
         </div>
     </section>
     </div>

@@ -116,24 +116,36 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="as_footer_widget">
                         <h3 class="as_footer_heading">Contact Us</h3>
-
                         <ul class="as_contact_list">
                             <li>
-                                <img src="assets/images/svg/map.svg" alt="">
+                                <img src="../assets/images/svg/map.svg" alt="">
                                 <p> 119-10 101st Ave, South Richmond Hill, NY 11419, United States</p>
                             </li>
                             <li>
-                                <img src="assets/images/svg/address.svg" alt="">
+                                <img src="../assets/images/svg/address.svg" alt="">
                                 <p>
-                                    <a href="javascript:;">vikrampsychic78@gmail.com</a>
-                                    <a href="javascript:;">info@psychicastrologervikram.com</a>
+                                    <a href="mailto:[EMAIL_ADDRESS]">vikrampsychic78@gmail.com</a>
                                 </p>
                             </li>
                             <li>
-                                <img src="assets/images/svg/call.svg" alt="">
+                                <img src="../assets/images/svg/address.svg" alt="">
                                 <p>
-                                    <a href="javascript:;">+1 929-586-9234</a><br>
-                                    <a href="javascript:;">+1 347-970-9240</a>
+                                    <a
+                                        href="mailto:info@psychicastrologervikram.com">info@psychicastrologervikram.com</a>
+                                </p>
+                            </li>
+                            <li>
+                                <img src="../assets/images/svg/call.svg" alt="">
+                                <p>
+                                    <a href="https://wa.me/19295869234" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Chat on WhatsApp">+1 929-586-9234</a>
+                                </p>
+                            </li>
+                            <li>
+                                <img src="../assets/images/svg/call.svg" alt="">
+                                <p>
+                                    <a href="https://wa.me/13479709240" target="_blank" rel="noopener noreferrer"
+                                        aria-label="Chat on WhatsApp">+1 347-970-9240</a>
                                 </p>
                             </li>
                         </ul>
@@ -149,58 +161,419 @@
      FLOATING WIDGETS: WhatsApp + AI Chatbot (Inline)
      ================================================ -->
 <style>
-.wa-float-btn{position:fixed;bottom:30px;right:28px;z-index:9990;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c3f);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.45);cursor:pointer;text-decoration:none;animation:wa-float 2.8s ease-in-out infinite;transition:transform .2s,box-shadow .2s}
-.wa-float-btn:hover{transform:scale(1.12)!important;box-shadow:0 10px 28px rgba(37,211,102,.6);animation-play-state:paused}
-.wa-float-btn svg{width:32px;height:32px;fill:#fff}
-.wa-float-btn::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:3px solid rgba(37,211,102,.5);animation:wa-pulse 2.8s ease-in-out infinite}
-.wa-tooltip{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:#fff;color:#128c3f;font-weight:700;font-size:13px;padding:6px 13px;border-radius:20px;white-space:nowrap;box-shadow:0 3px 12px rgba(0,0,0,.15);opacity:0;pointer-events:none;transition:opacity .25s;font-family:sans-serif}
-.wa-float-btn:hover .wa-tooltip{opacity:1}
-@keyframes wa-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes wa-pulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.18);opacity:0}}
-.chatbot-toggle{position:fixed;bottom:105px;right:28px;z-index:9990;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ff7a00,#c85000);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(255,122,0,.45);border:none;transition:transform .2s,box-shadow .2s}
-.chatbot-toggle:hover{transform:scale(1.1);box-shadow:0 10px 28px rgba(255,122,0,.6)}
-.chatbot-toggle svg{width:26px;height:26px;fill:#fff}
-.chatbot-window{position:fixed;bottom:175px;right:20px;z-index:9989;width:340px;max-width:calc(100vw - 30px);background:#fff;border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.22);display:flex;flex-direction:column;overflow:hidden;transform:scale(.85) translateY(20px);transform-origin:bottom right;opacity:0;pointer-events:none;transition:transform .3s cubic-bezier(.34,1.56,.64,1),opacity .3s ease}
-.chatbot-window.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all}
-.chatbot-header{background:linear-gradient(135deg,#092033,#1a4060);padding:14px 18px;display:flex;align-items:center;gap:12px}
-.chatbot-avatar{width:42px;height:42px;border-radius:50%;background:#ff7a00;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
-.chatbot-header-info h4{margin:0;color:#fff;font-size:15px;font-weight:700;font-family:sans-serif}
-.chatbot-header-info p{margin:0;color:#a8cfe0;font-size:12px;font-family:sans-serif}
-.chatbot-header-actions{margin-left:auto;display:flex;gap:8px}
-.chatbot-header-actions button{background:none;border:none;cursor:pointer;color:rgba(255,255,255,.6);font-size:18px;padding:2px 6px;border-radius:4px;transition:color .2s,background .2s}
-.chatbot-header-actions button:hover{color:#fff;background:rgba(255,255,255,.1)}
-.chatbot-messages{flex:1;min-height:200px;max-height:300px;overflow-y:auto;padding:18px 15px;display:flex;flex-direction:column;gap:12px;background:#f7f9fc}
-.chatbot-messages::-webkit-scrollbar{width:4px}
-.chatbot-messages::-webkit-scrollbar-thumb{background:#d0dde8;border-radius:4px}
-.chatbot-msg-bot{display:flex;gap:10px;align-items:flex-start}
-.cb-bot-av{width:34px;height:34px;border-radius:50%;background:#092033;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
-.cb-bot-bubble{background:#fff;border:1px solid #e4ebf2;border-radius:0 14px 14px 14px;padding:12px 14px;font-size:14px;color:#333;line-height:1.5;max-width:240px;box-shadow:0 2px 8px rgba(0,0,0,.06);font-family:sans-serif}
-.chatbot-msg-user{display:flex;justify-content:flex-end}
-.cb-user-bubble{background:linear-gradient(135deg,#ff7a00,#e05a00);border-radius:14px 14px 0 14px;padding:10px 14px;font-size:14px;color:#fff;max-width:220px;line-height:1.5;font-family:sans-serif}
-.chatbot-quick-replies{display:flex;flex-direction:column;gap:8px;margin-top:6px}
-.chatbot-qr-btn{background:#fff;border:1.5px solid #d0dce8;border-radius:22px;padding:9px 16px;font-size:13px;color:#1a4060;cursor:pointer;text-align:left;transition:all .2s;font-weight:500;display:flex;align-items:center;gap:8px;font-family:sans-serif}
-.chatbot-qr-btn::before{content:'○';color:#d0dce8;font-size:11px}
-.chatbot-qr-btn:hover{background:#fff4eb;border-color:#ff7a00;color:#ff7a00}
-.chatbot-qr-btn:hover::before{color:#ff7a00;content:'●'}
-.chatbot-ts{font-size:11px;color:#9aacbe;margin-top:4px;font-family:sans-serif}
-.chatbot-input-bar{padding:12px 14px;border-top:1px solid #e8eff6;display:flex;align-items:center;gap:8px;background:#fff}
-.chatbot-input-bar input{flex:1;border:1.5px solid #dce6f0;border-radius:22px;padding:9px 15px;font-size:14px;outline:none;transition:border-color .2s;font-family:sans-serif}
-.chatbot-input-bar input:focus{border-color:#ff7a00}
-.chatbot-input-bar input::placeholder{color:#aab8c8}
-.chatbot-send-btn{width:38px;height:38px;border-radius:50%;background:#ff7a00;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .15s;flex-shrink:0}
-.chatbot-send-btn:hover{background:#e05a00;transform:scale(1.08)}
-.chatbot-send-btn svg{width:17px;height:17px;fill:#fff}
-.chatbot-footer-bar{text-align:center;padding:6px;font-size:11px;color:#9aacbe;background:#f7f9fc;border-top:1px solid #e8eff6;font-family:sans-serif}
-@media(max-width:480px){.chatbot-window{right:10px;bottom:165px;width:calc(100vw - 20px)}.wa-float-btn{bottom:20px;right:18px}.chatbot-toggle{bottom:90px;right:18px}}
+    .wa-float-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 28px;
+        z-index: 9990;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #25d366, #128c3f);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, .45);
+        cursor: pointer;
+        text-decoration: none;
+        animation: wa-float 2.8s ease-in-out infinite;
+        transition: transform .2s, box-shadow .2s
+    }
+
+    .wa-float-btn:hover {
+        transform: scale(1.12) !important;
+        box-shadow: 0 10px 28px rgba(37, 211, 102, .6);
+        animation-play-state: paused
+    }
+
+    .wa-float-btn svg {
+        width: 32px;
+        height: 32px;
+        fill: #fff
+    }
+
+    .wa-float-btn::before {
+        content: '';
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 3px solid rgba(37, 211, 102, .5);
+        animation: wa-pulse 2.8s ease-in-out infinite
+    }
+
+    .wa-tooltip {
+        position: absolute;
+        right: 68px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        color: #128c3f;
+        font-weight: 700;
+        font-size: 13px;
+        padding: 6px 13px;
+        border-radius: 20px;
+        white-space: nowrap;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, .15);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s;
+        font-family: sans-serif
+    }
+
+    .wa-float-btn:hover .wa-tooltip {
+        opacity: 1
+    }
+
+    @keyframes wa-float {
+
+        0%,
+        100% {
+            transform: translateY(0)
+        }
+
+        50% {
+            transform: translateY(-10px)
+        }
+    }
+
+    @keyframes wa-pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+            opacity: .7
+        }
+
+        50% {
+            transform: scale(1.18);
+            opacity: 0
+        }
+    }
+
+    .chatbot-toggle {
+        position: fixed;
+        bottom: 105px;
+        right: 28px;
+        z-index: 9990;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #ff7a00, #c85000);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(255, 122, 0, .45);
+        border: none;
+        transition: transform .2s, box-shadow .2s
+    }
+
+    .chatbot-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 28px rgba(255, 122, 0, .6)
+    }
+
+    .chatbot-toggle svg {
+        width: 26px;
+        height: 26px;
+        fill: #fff
+    }
+
+    .chatbot-window {
+        position: fixed;
+        bottom: 175px;
+        right: 20px;
+        z-index: 9989;
+        width: 340px;
+        max-width: calc(100vw - 30px);
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, .22);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transform: scale(.85) translateY(20px);
+        transform-origin: bottom right;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform .3s cubic-bezier(.34, 1.56, .64, 1), opacity .3s ease
+    }
+
+    .chatbot-window.open {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+        pointer-events: all
+    }
+
+    .chatbot-header {
+        background: linear-gradient(135deg, #092033, #1a4060);
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px
+    }
+
+    .chatbot-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #ff7a00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 20px
+    }
+
+    .chatbot-header-info h4 {
+        margin: 0;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        font-family: sans-serif
+    }
+
+    .chatbot-header-info p {
+        margin: 0;
+        color: #a8cfe0;
+        font-size: 12px;
+        font-family: sans-serif
+    }
+
+    .chatbot-header-actions {
+        margin-left: auto;
+        display: flex;
+        gap: 8px
+    }
+
+    .chatbot-header-actions button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: rgba(255, 255, 255, .6);
+        font-size: 18px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        transition: color .2s, background .2s
+    }
+
+    .chatbot-header-actions button:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, .1)
+    }
+
+    .chatbot-messages {
+        flex: 1;
+        min-height: 200px;
+        max-height: 300px;
+        overflow-y: auto;
+        padding: 18px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: #f7f9fc
+    }
+
+    .chatbot-messages::-webkit-scrollbar {
+        width: 4px
+    }
+
+    .chatbot-messages::-webkit-scrollbar-thumb {
+        background: #d0dde8;
+        border-radius: 4px
+    }
+
+    .chatbot-msg-bot {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start
+    }
+
+    .cb-bot-av {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #092033;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 16px
+    }
+
+    .cb-bot-bubble {
+        background: #fff;
+        border: 1px solid #e4ebf2;
+        border-radius: 0 14px 14px 14px;
+        padding: 12px 14px;
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+        max-width: 240px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+        font-family: sans-serif
+    }
+
+    .chatbot-msg-user {
+        display: flex;
+        justify-content: flex-end
+    }
+
+    .cb-user-bubble {
+        background: linear-gradient(135deg, #ff7a00, #e05a00);
+        border-radius: 14px 14px 0 14px;
+        padding: 10px 14px;
+        font-size: 14px;
+        color: #fff;
+        max-width: 220px;
+        line-height: 1.5;
+        font-family: sans-serif
+    }
+
+    .chatbot-quick-replies {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 6px
+    }
+
+    .chatbot-qr-btn {
+        background: #fff;
+        border: 1.5px solid #d0dce8;
+        border-radius: 22px;
+        padding: 9px 16px;
+        font-size: 13px;
+        color: #1a4060;
+        cursor: pointer;
+        text-align: left;
+        transition: all .2s;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: sans-serif
+    }
+
+    .chatbot-qr-btn::before {
+        content: '○';
+        color: #d0dce8;
+        font-size: 11px
+    }
+
+    .chatbot-qr-btn:hover {
+        background: #fff4eb;
+        border-color: #ff7a00;
+        color: #ff7a00
+    }
+
+    .chatbot-qr-btn:hover::before {
+        color: #ff7a00;
+        content: '●'
+    }
+
+    .chatbot-ts {
+        font-size: 11px;
+        color: #9aacbe;
+        margin-top: 4px;
+        font-family: sans-serif
+    }
+
+    .chatbot-input-bar {
+        padding: 12px 14px;
+        border-top: 1px solid #e8eff6;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff
+    }
+
+    .chatbot-input-bar input {
+        flex: 1;
+        border: 1.5px solid #dce6f0;
+        border-radius: 22px;
+        padding: 9px 15px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color .2s;
+        font-family: sans-serif
+    }
+
+    .chatbot-input-bar input:focus {
+        border-color: #ff7a00
+    }
+
+    .chatbot-input-bar input::placeholder {
+        color: #aab8c8
+    }
+
+    .chatbot-send-btn {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #ff7a00;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .2s, transform .15s;
+        flex-shrink: 0
+    }
+
+    .chatbot-send-btn:hover {
+        background: #e05a00;
+        transform: scale(1.08)
+    }
+
+    .chatbot-send-btn svg {
+        width: 17px;
+        height: 17px;
+        fill: #fff
+    }
+
+    .chatbot-footer-bar {
+        text-align: center;
+        padding: 6px;
+        font-size: 11px;
+        color: #9aacbe;
+        background: #f7f9fc;
+        border-top: 1px solid #e8eff6;
+        font-family: sans-serif
+    }
+
+    @media(max-width:480px) {
+        .chatbot-window {
+            right: 10px;
+            bottom: 165px;
+            width: calc(100vw - 20px)
+        }
+
+        .wa-float-btn {
+            bottom: 20px;
+            right: 18px
+        }
+
+        .chatbot-toggle {
+            bottom: 90px;
+            right: 18px
+        }
+    }
 </style>
 
-<a class="wa-float-btn" href="https://wa.me/19295869234" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+<a class="wa-float-btn" href="https://wa.me/19295869234" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 448 512">
+        <path
+            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+    </svg>
     <span class="wa-tooltip">Chat on WhatsApp</span>
 </a>
 
 <button class="chatbot-toggle" id="chatbotToggle2" aria-label="Open chat" aria-expanded="false">
-    <svg viewBox="0 0 512 512"><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.4-2.8 5.9-1.5 8.9S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4C169.1 433.1 212.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 368c-39.4 0-78.2-9.6-112.2-27.8l-15.8-8.7-17.7 13.4C90.3 394.3 60.5 411.2 25.8 416.3c11.6-18 21.8-37.6 29.8-57.9l6.6-17-12.4-12.8C27.7 305.8 16 273.3 16 240c0-105.9 107.4-192 240-192s240 86.1 240 192-107.4 192-240 192z"/></svg>
+    <svg viewBox="0 0 512 512">
+        <path
+            d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.4-2.8 5.9-1.5 8.9S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4C169.1 433.1 212.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 368c-39.4 0-78.2-9.6-112.2-27.8l-15.8-8.7-17.7 13.4C90.3 394.3 60.5 411.2 25.8 416.3c11.6-18 21.8-37.6 29.8-57.9l6.6-17-12.4-12.8C27.7 305.8 16 273.3 16 240c0-105.9 107.4-192 240-192s240 86.1 240 192-107.4 192-240 192z" />
+    </svg>
 </button>
 
 <div class="chatbot-window" id="chatbotWindow2">
@@ -219,85 +592,88 @@
     <div class="chatbot-input-bar">
         <input type="text" id="chatbotInput2" placeholder="Type your message..." autocomplete="off">
         <button class="chatbot-send-btn" id="chatbotSend2">
-            <svg viewBox="0 0 512 512"><path d="M476.6 227.4L49.6 7.9C40.4 3.3 29.7 4.3 21.6 10.5S10 27.6 12.5 37.5L64 224H288c8.8 0 16 7.2 16 16s-7.2 16-16 16H64L12.5 474.5c-2.5 9.9 1 20.2 9.1 26.4s18.8 7.2 28 2.6l427-219.5c9.2-4.7 14.4-14.3 14.4-24.5s-5.2-19.7-14.4-24.6z"/></svg>
+            <svg viewBox="0 0 512 512">
+                <path
+                    d="M476.6 227.4L49.6 7.9C40.4 3.3 29.7 4.3 21.6 10.5S10 27.6 12.5 37.5L64 224H288c8.8 0 16 7.2 16 16s-7.2 16-16 16H64L12.5 474.5c-2.5 9.9 1 20.2 9.1 26.4s18.8 7.2 28 2.6l427-219.5c9.2-4.7 14.4-14.3 14.4-24.5s-5.2-19.7-14.4-24.6z" />
+            </svg>
         </button>
     </div>
     <div class="chatbot-footer-bar">Powered by ⚡ Vikram Astrology AI</div>
 </div>
 
 <script>
-(function(){
-    var toggle=document.getElementById('chatbotToggle2'),
-        win=document.getElementById('chatbotWindow2'),
-        closeBtn=document.getElementById('chatbotClose2'),
-        refreshBtn=document.getElementById('chatbotRefresh2'),
-        msgs=document.getElementById('chatbotMessages2'),
-        inp=document.getElementById('chatbotInput2'),
-        sendBtn=document.getElementById('chatbotSend2');
-    if(!toggle||!win)return;
-    var KB={
-        'psychic reading':'We offer Online Psychic Readings via call, chat, or video. <a href="../appointment.html" style="color:#ff7a00">Book a session →</a>',
-        'love':'Expert Love & Relationship readings reveal your cosmic compatibility. Book today!',
-        'career':'Career & Finance astrology helps find the best timings. <a href="../appointment.html" style="color:#ff7a00">Book now →</a>',
-        'horoscope':'We cover all 12 zodiac signs. Visit our <a href="../service.html" style="color:#ff7a00">Services page</a>!',
-        'contact':'Call: <a href="tel:+19295869234" style="color:#ff7a00">+1 929-586-9234</a> · Email: vikrampsychic78@gmail.com',
-        'appointment':'Book an appointment <a href="../appointment.html" style="color:#ff7a00">here</a>. Available 7 days a week!',
-        'black magic':'Black Magic Removal & Protection. <a href="../service.html" style="color:#ff7a00">Learn more →</a>',
-        'voodoo':'Voodoo Priest services available. <a href="../service.html" style="color:#ff7a00">Services page</a>.',
-        'vedic':'Authentic Vedic Astrology. <a href="../service.html" style="color:#ff7a00">Learn more →</a>',
-        'price':'Pricing varies. <a href="../contact.html" style="color:#ff7a00">Contact us</a> for a free consultation!',
-        'location':'Office: 119-10 101st Ave, South Richmond Hill, NY 11419.',
-        'spiritual':'Spiritual healing sessions. <a href="../service.html" style="color:#ff7a00">Book a session →</a>',
-        'hello':'Hello! 👋 How can I help you today?',
-        'hi':'Hi there! 🌟 How can I assist you?',
-        'thank':'You\'re welcome! ✨ Ask anything else.'
-    };
-    var QR=[
-        {l:'Psychic Reading',k:'psychic reading'},
-        {l:'Book Appointment',k:'appointment'},
-        {l:'Love Reading',k:'love'},
-        {l:'Vedic Astrology',k:'vedic'},
-        {l:'Contact Us',k:'contact'}
-    ];
-    function ts(){var n=new Date(),h=n.getHours(),m=n.getMinutes();return(h%12||12)+':'+(m<10?'0':'')+m+' '+(h<12?'AM':'PM');}
-    function addBot(html,qr){
-        var d=document.createElement('div');d.className='chatbot-msg-bot';
-        d.innerHTML='<div class="cb-bot-av">🔮</div><div><div class="cb-bot-bubble">'+html+'</div>'+(qr?'<div class="chatbot-quick-replies">'+QR.map(function(q){return '<button class="chatbot-qr-btn" data-key="'+q.k+'">'+q.l+'</button>';}).join('')+'</div>':'')+'<div class="chatbot-ts">'+ts()+'</div></div>';
-        msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
-    }
-    function addUser(t){
-        var d=document.createElement('div');d.className='chatbot-msg-user';
-        d.innerHTML='<div class="cb-user-bubble">'+t+'</div>';
-        msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
-    }
-    function getReply(msg){
-        var l=msg.toLowerCase();
-        for(var k in KB){if(l.indexOf(k)>-1)return KB[k];}
-        return 'I\'d love to help! Call <a href="tel:+19295869234" style="color:#ff7a00">+1 929-586-9234</a> or <a href="../appointment.html" style="color:#ff7a00">book an appointment</a>. ✨';
-    }
-    function startChat(){
-        msgs.innerHTML='';
-        addBot('Hi! 🔮 How may I help you today?');
-        setTimeout(function(){addBot('What are you looking for?',true);},600);
-    }
-    function send(t){
-        if(!t.trim())return;
-        addUser(t);inp.value='';
-        var ty=document.createElement('div');ty.className='chatbot-msg-bot';ty.id='cbTyping2';
-        ty.innerHTML='<div class="cb-bot-av">🔮</div><div class="cb-bot-bubble" style="color:#aab8c8;font-style:italic">Typing…</div>';
-        msgs.appendChild(ty);msgs.scrollTop=msgs.scrollHeight;
-        setTimeout(function(){var e=document.getElementById('cbTyping2');if(e)e.remove();addBot(getReply(t));},900);
-    }
-    msgs.addEventListener('click',function(e){
-        var btn=e.target.closest('.chatbot-qr-btn');if(!btn)return;
-        var qr=btn.closest('.chatbot-quick-replies');if(qr)qr.remove();
-        send(btn.textContent.trim());
-    });
-    sendBtn.addEventListener('click',function(){send(inp.value);});
-    inp.addEventListener('keydown',function(e){if(e.key==='Enter')send(inp.value);});
-    toggle.addEventListener('click',function(){var o=win.classList.toggle('open');toggle.setAttribute('aria-expanded',o);});
-    closeBtn.addEventListener('click',function(){win.classList.remove('open');toggle.setAttribute('aria-expanded','false');});
-    refreshBtn.addEventListener('click',startChat);
-    startChat();
-})();
-</script>
+    (function () {
+        var toggle = document.getElementById('chatbotToggle2'),
+            win = document.getElementById('chatbotWindow2'),
+            closeBtn = document.getElementById('chatbotClose2'),
+            refreshBtn = document.getElementById('chatbotRefresh2'),
+            msgs = document.getElementById('chatbotMessages2'),
+            inp = document.getElementById('chatbotInput2'),
+            sendBtn = document.getElementById('chatbotSend2');
+        if (!toggle || !win) return;
+        var KB = {
+            'psychic reading': 'We offer Online Psychic Readings via call, chat, or video. <a href="../appointment.html" style="color:#ff7a00">Book a session →</a>',
+            'love': 'Expert Love & Relationship readings reveal your cosmic compatibility. Book today!',
+            'career': 'Career & Finance astrology helps find the best timings. <a href="../appointment.html" style="color:#ff7a00">Book now →</a>',
+            'horoscope': 'We cover all 12 zodiac signs. Visit our <a href="../service.html" style="color:#ff7a00">Services page</a>!',
+            'contact': 'Call: <a href="tel:+19295869234" style="color:#ff7a00">+1 929-586-9234</a> · Email: vikrampsychic78@gmail.com',
+            'appointment': 'Book an appointment <a href="../appointment.html" style="color:#ff7a00">here</a>. Available 7 days a week!',
+            'black magic': 'Black Magic Removal & Protection. <a href="../service.html" style="color:#ff7a00">Learn more →</a>',
+            'voodoo': 'Voodoo Priest services available. <a href="../service.html" style="color:#ff7a00">Services page</a>.',
+            'vedic': 'Authentic Vedic Astrology. <a href="../service.html" style="color:#ff7a00">Learn more →</a>',
+            'price': 'Pricing varies. <a href="../contact.html" style="color:#ff7a00">Contact us</a> for a free consultation!',
+            'location': 'Office: 119-10 101st Ave, South Richmond Hill, NY 11419.',
+            'spiritual': 'Spiritual healing sessions. <a href="../service.html" style="color:#ff7a00">Book a session →</a>',
+            'hello': 'Hello! 👋 How can I help you today?',
+            'hi': 'Hi there! 🌟 How can I assist you?',
+            'thank': 'You\'re welcome! ✨ Ask anything else.'
+        };
+        var QR = [
+            { l: 'Psychic Reading', k: 'psychic reading' },
+            { l: 'Book Appointment', k: 'appointment' },
+            { l: 'Love Reading', k: 'love' },
+            { l: 'Vedic Astrology', k: 'vedic' },
+            { l: 'Contact Us', k: 'contact' }
+        ];
+        function ts() { var n = new Date(), h = n.getHours(), m = n.getMinutes(); return (h % 12 || 12) + ':' + (m < 10 ? '0' : '') + m + ' ' + (h < 12 ? 'AM' : 'PM'); }
+        function addBot(html, qr) {
+            var d = document.createElement('div'); d.className = 'chatbot-msg-bot';
+            d.innerHTML = '<div class="cb-bot-av">🔮</div><div><div class="cb-bot-bubble">' + html + '</div>' + (qr ? '<div class="chatbot-quick-replies">' + QR.map(function (q) { return '<button class="chatbot-qr-btn" data-key="' + q.k + '">' + q.l + '</button>'; }).join('') + '</div>' : '') + '<div class="chatbot-ts">' + ts() + '</div></div>';
+            msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+        }
+        function addUser(t) {
+            var d = document.createElement('div'); d.className = 'chatbot-msg-user';
+            d.innerHTML = '<div class="cb-user-bubble">' + t + '</div>';
+            msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+        }
+        function getReply(msg) {
+            var l = msg.toLowerCase();
+            for (var k in KB) { if (l.indexOf(k) > -1) return KB[k]; }
+            return 'I\'d love to help! Call <a href="tel:+19295869234" style="color:#ff7a00">+1 929-586-9234</a> or <a href="../appointment.html" style="color:#ff7a00">book an appointment</a>. ✨';
+        }
+        function startChat() {
+            msgs.innerHTML = '';
+            addBot('Hi! 🔮 How may I help you today?');
+            setTimeout(function () { addBot('What are you looking for?', true); }, 600);
+        }
+        function send(t) {
+            if (!t.trim()) return;
+            addUser(t); inp.value = '';
+            var ty = document.createElement('div'); ty.className = 'chatbot-msg-bot'; ty.id = 'cbTyping2';
+            ty.innerHTML = '<div class="cb-bot-av">🔮</div><div class="cb-bot-bubble" style="color:#aab8c8;font-style:italic">Typing…</div>';
+            msgs.appendChild(ty); msgs.scrollTop = msgs.scrollHeight;
+            setTimeout(function () { var e = document.getElementById('cbTyping2'); if (e) e.remove(); addBot(getReply(t)); }, 900);
+        }
+        msgs.addEventListener('click', function (e) {
+            var btn = e.target.closest('.chatbot-qr-btn'); if (!btn) return;
+            var qr = btn.closest('.chatbot-quick-replies'); if (qr) qr.remove();
+            send(btn.textContent.trim());
+        });
+        sendBtn.addEventListener('click', function () { send(inp.value); });
+        inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') send(inp.value); });
+        toggle.addEventListener('click', function () { var o = win.classList.toggle('open'); toggle.setAttribute('aria-expanded', o); });
+        closeBtn.addEventListener('click', function () { win.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); });
+        refreshBtn.addEventListener('click', startChat);
+        startChat();
+    })();
+</script>

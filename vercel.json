@@ -1,17 +1,28 @@
 {
-  "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/HTML/index.html" },
     { "source": "/about", "destination": "/HTML/about.html" },
+    { "source": "/about/", "destination": "/HTML/about.html" },
     { "source": "/appointment", "destination": "/HTML/appointment.html" },
+    { "source": "/appointment/", "destination": "/HTML/appointment.html" },
     { "source": "/service", "destination": "/HTML/service.html" },
+    { "source": "/service/", "destination": "/HTML/service.html" },
     { "source": "/services", "destination": "/HTML/service.html" },
     { "source": "/blog", "destination": "/HTML/blog.html" },
+    { "source": "/blog/", "destination": "/HTML/blog.html" },
     { "source": "/contact", "destination": "/HTML/contact.html" },
+    { "source": "/contact/", "destination": "/HTML/contact.html" },
     { "source": "/faq", "destination": "/HTML/faq.html" },
     { "source": "/astrologer", "destination": "/HTML/astrologer.html" },
     { "source": "/privacy-policy", "destination": "/HTML/privacy_policy.html" },
-    { "source": "/social-services", "destination": "/HTML/Social_Services.html" },
-    { "source": "/blog-detail", "destination": "/HTML/blog_left_detail.html" }
+    { "source": "/social-services", "destination": "/HTML/Social_Services.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
   ]
 }
