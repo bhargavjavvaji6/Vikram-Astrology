@@ -329,14 +329,14 @@
   ];
 
   /* ─────────────── DOM refs ─────────────── */
-  var launcher   = document.getElementById('vp-chat-launcher');
+  var launcher = document.getElementById('vp-chat-launcher');
   var chatWindow = document.getElementById('vp-chat-window');
-  var closeBtn   = document.getElementById('vp-chat-close');
-  var messages   = document.getElementById('vp-chat-messages');
-  var input      = document.getElementById('vp-chat-input');
-  var sendBtn    = document.getElementById('vp-chat-send');
-  var badge      = document.getElementById('vp-chat-badge');
-  var popup      = document.getElementById('vp-thankyou-popup');
+  var closeBtn = document.getElementById('vp-chat-close');
+  var messages = document.getElementById('vp-chat-messages');
+  var input = document.getElementById('vp-chat-input');
+  var sendBtn = document.getElementById('vp-chat-send');
+  var badge = document.getElementById('vp-chat-badge');
+  var popup = document.getElementById('vp-thankyou-popup');
   var popupClose = document.getElementById('vp-popup-close-btn');
 
   /* ─────────────── Helpers ─────────────── */
@@ -400,7 +400,7 @@
     if (digits.length === 11 && digits[0] === '1') digits = digits.slice(1);
     if (digits.length !== 10) return false;
     // NY area codes (partial list covering NYC metro)
-    var nyAreaCodes = ['212','332','347','516','551','607','631','646','680','716','718','838','845','914','917','929'];
+    var nyAreaCodes = ['212', '332', '347', '516', '551', '607', '631', '646', '680', '716', '718', '838', '845', '914', '917', '929'];
     var area = digits.slice(0, 3);
     return nyAreaCodes.indexOf(area) !== -1;
   }
@@ -431,7 +431,7 @@
         addBubble(text, 'user');
         state.name = text;
         state.step = STEP.ASK_PHONE;
-        botSay("Thank you, " + state.name.split(' ')[0] + "! 📞 Please enter your New York mobile number (e.g. 929-XXX-XXXX).", 900);
+        botSay("Thank you, " + state.name.split(' ')[0] + "! 📞 Please enter your mobile number (e.g. 929-XXX-XXXX).", 900);
         break;
 
       case STEP.ASK_PHONE:
