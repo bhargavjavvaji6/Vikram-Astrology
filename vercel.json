@@ -1,28 +1,120 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/HTML/index.html" },
-    { "source": "/about", "destination": "/HTML/about.html" },
-    { "source": "/about/", "destination": "/HTML/about.html" },
-    { "source": "/appointment", "destination": "/HTML/appointment.html" },
-    { "source": "/appointment/", "destination": "/HTML/appointment.html" },
-    { "source": "/service", "destination": "/HTML/service.html" },
-    { "source": "/service/", "destination": "/HTML/service.html" },
-    { "source": "/services", "destination": "/HTML/service.html" },
-    { "source": "/blog", "destination": "/HTML/blog.html" },
-    { "source": "/blog/", "destination": "/HTML/blog.html" },
-    { "source": "/contact", "destination": "/HTML/contact.html" },
-    { "source": "/contact/", "destination": "/HTML/contact.html" },
-    { "source": "/faq", "destination": "/HTML/faq.html" },
-    { "source": "/astrologer", "destination": "/HTML/astrologer.html" },
-    { "source": "/privacy-policy", "destination": "/HTML/privacy_policy.html" },
-    { "source": "/social-services", "destination": "/HTML/Social_Services.html" }
-  ],
-  "headers": [
     {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" }
-      ]
+      "source": "/",
+      "destination": "/HTML/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/HTML/about.html"
+    },
+    {
+      "source": "/appointment",
+      "destination": "/HTML/appointment.html"
+    },
+    {
+      "source": "/appointment/",
+      "destination": "/HTML/appointment.html"
+    },
+    {
+      "source": "/service",
+      "destination": "/HTML/service.html"
+    },
+    {
+      "source": "/service/",
+      "destination": "/HTML/service.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/HTML/service.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/HTML/blog.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/HTML/blog.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/HTML/contact.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/HTML/contact.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/HTML/faq.html"
+    },
+    {
+      "source": "/astrologer",
+      "destination": "/HTML/astrologer.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/HTML/privacy_policy.html"
+    },
+    {
+      "source": "/social-services",
+      "destination": "/HTML/Social_Services.html"
+    },
+    {
+      "source": "/blog/birth-chart",
+      "destination": "/HTML/Blogs/blog_detail.html"
+    },
+    {
+      "source": "/blog/psychic-new-york",
+      "destination": "/HTML/Blogs/PsychicBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-psychic",
+      "destination": "/HTML/Blogs/BestPsychicBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-horoscope",
+      "destination": "/HTML/Blogs/BestHoroscopeBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-astrology",
+      "destination": "/HTML/Blogs/BestAstrologyBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-indian-astrologer",
+      "destination": "/HTML/Blogs/BestIndianAstrologerBlog_detail.html"
+    },
+    {
+      "source": "/service/black-magic",
+      "destination": "/HTML/Services/BlackMagicRemoval.html"
+    },
+    {
+      "source": "/service/sarpa-dosham",
+      "destination": "/HTML/Services/SarpaDosham.html"
+    },
+    {
+      "source": "/service/psychic-reading",
+      "destination": "/HTML/Services/OnlinePsychicReading.html"
+    },
+    {
+      "source": "/service/vedic-astrology",
+      "destination": "/HTML/Services/VedicAstrology.html"
+    },
+    {
+      "source": "/service/spiritual-healing",
+      "destination": "/HTML/Services/Spiritual_healing.html"
+    },
+    {
+      "source": "/service/voodoo",
+      "destination": "/HTML/Services/VoodooPriest.html"
+    },
+    {
+      "source": "/service/compatibility",
+      "destination": "/HTML/Services/AstrologyCompatibality.html"
+    },
+    {
+      "source": "/service/horoscope",
+      "destination": "/HTML/Services/Horoscope.html"
     }
   ]
 }
