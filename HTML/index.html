@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,6 +36,16 @@
                         const container = document.getElementById('site-header');
                         if (container) {
                             container.innerHTML = html;
+
+                            // Re-execute script tags (innerHTML doesn't run them)
+                            container.querySelectorAll('script').forEach(function (oldScript) {
+                                var newScript = document.createElement('script');
+                                Array.from(oldScript.attributes).forEach(function (attr) {
+                                    newScript.setAttribute(attr.name, attr.value);
+                                });
+                                newScript.textContent = oldScript.textContent;
+                                oldScript.parentNode.replaceChild(newScript, oldScript);
+                            });
 
                             // Highlight active link supporting Clean URLs and subfolder matching
                             const currentPath = window.location.pathname;
@@ -980,39 +990,37 @@
                         </div>
                     </div>
                 </div>
-
-
-                <div id="site-footer">
-                    <script>
-                        (function () {
-                            const pathParts = window.location.pathname.split('/');
-                            const htmlIndex = pathParts.indexOf('HTML');
-                            const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                            const footerFile = 'Footer.html';
-
-                            fetch(prefix + footerFile)
-                                .then(response => {
-                                    if (!response.ok) throw new Error('Footer load error');
-                                    return response.text();
-                                })
-                                .then(html => {
-                                    const footerContainer = document.getElementById('site-footer');
-                                    if (footerContainer) {
-                                        footerContainer.innerHTML = html;
-                                        footerContainer.querySelectorAll('script').forEach(function (oldScript) {
-                                            var newScript = document.createElement('script');
-                                            Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
-                                            newScript.textContent = oldScript.textContent;
-                                            oldScript.parentNode.replaceChild(newScript, oldScript);
-                                        });
-                                    }
-                                })
-                                .catch(err => console.error('Failed to load footer:', err));
-                        })();
-                    </script>
-                </div>
             </div>
         </section>
+        <div id="site-footer">
+            <script>
+                (function () {
+                    const pathParts = window.location.pathname.split('/');
+                    const htmlIndex = pathParts.indexOf('HTML');
+                    const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                    const footerFile = 'Footer.html';
+
+                    fetch(prefix + footerFile)
+                        .then(response => {
+                            if (!response.ok) throw new Error('Footer load error');
+                            return response.text();
+                        })
+                        .then(html => {
+                            const footerContainer = document.getElementById('site-footer');
+                            if (footerContainer) {
+                                footerContainer.innerHTML = html;
+                                footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                    var newScript = document.createElement('script');
+                                    Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
+                                    newScript.textContent = oldScript.textContent;
+                                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                                });
+                            }
+                        })
+                        .catch(err => console.error('Failed to load footer:', err));
+                })();
+            </script>
+        </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
