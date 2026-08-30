@@ -1,0 +1,104 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/appointment",
+      "destination": "/appointment.html"
+    },
+    {
+      "source": "/service",
+      "destination": "/service.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/service.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html"
+    },
+    {
+      "source": "/astrologer",
+      "destination": "/astrologer.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy_policy.html"
+    },
+    {
+      "source": "/social-services",
+      "destination": "/Social_Services.html"
+    },
+    {
+      "source": "/blog/birth-chart",
+      "destination": "/Blogs/blog_detail.html"
+    },
+    {
+      "source": "/blog/psychic-new-york",
+      "destination": "/Blogs/PsychicBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-psychic",
+      "destination": "/Blogs/BestPsychicBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-horoscope",
+      "destination": "/Blogs/BestHoroscopeBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-astrology",
+      "destination": "/Blogs/BestAstrologyBlog_detail.html"
+    },
+    {
+      "source": "/blog/best-indian-astrologer",
+      "destination": "/Blogs/BestIndianAstrologerBlog_detail.html"
+    },
+    {
+      "source": "/service/black-magic",
+      "destination": "/Services/BlackMagicRemoval.html"
+    },
+    {
+      "source": "/service/sarpa-dosham",
+      "destination": "/Services/SarpaDosham.html"
+    },
+    {
+      "source": "/service/psychic-reading",
+      "destination": "/Services/OnlinePsychicReading.html"
+    },
+    {
+      "source": "/service/vedic-astrology",
+      "destination": "/Services/VedicAstrology.html"
+    },
+    {
+      "source": "/service/spiritual-healing",
+      "destination": "/Services/Spiritual_healing.html"
+    },
+    {
+      "source": "/service/voodoo",
+      "destination": "/Services/VoodooPriest.html"
+    },
+    {
+      "source": "/service/compatibility",
+      "destination": "/Services/AstrologyCompatibality.html"
+    },
+    {
+      "source": "/service/horoscope",
+      "destination": "/Services/Horoscope.html"
+    }
+  ]
+}
