@@ -133,67 +133,77 @@
     </div>
     <div class="as_main_wrapper">
         <div id="site-header">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const headerFile = 'header.html';
+            <script>
+                (function () {
+                    const pathParts = window.location.pathname.split('/');
+                    const htmlIndex = pathParts.indexOf('HTML');
+                    const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                    const headerFile = 'header.html';
 
-                fetch(prefix + headerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                        return response.text();
-                    })
-                    .then(html => {
-                        const container = document.getElementById('site-header');
-                        if (container) {
-                            container.innerHTML = html;
+                    fetch(prefix + headerFile)
+                        .then(response => {
+                            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                            return response.text();
+                        })
+                        .then(html => {
+                            const container = document.getElementById('site-header');
+                            if (container) {
+                                container.innerHTML = html;
 
-                            // Highlight active link supporting Clean URLs and subfolder matching
-                            const currentPath = window.location.pathname;
-                            let currentSegment = '';
-                            if (currentPath.includes('/Services/')) {
-                                currentSegment = 'service';
-                            } else if (currentPath.includes('/Blogs/')) {
-                                currentSegment = 'blog';
-                            } else {
-                                currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
-                                if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
-                                    currentSegment = 'index';
-                                }
-                            }
+                                // Re-execute script tags (innerHTML doesn't run them)
+                                container.querySelectorAll('script').forEach(function (oldScript) {
+                                    var newScript = document.createElement('script');
+                                    Array.from(oldScript.attributes).forEach(function (attr) {
+                                        newScript.setAttribute(attr.name, attr.value);
+                                    });
+                                    newScript.textContent = oldScript.textContent;
+                                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                                });
 
-                            const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
-                            navLinks.forEach(link => {
-                                const linkHref = link.getAttribute('href');
-                                if (!linkHref) return;
-
-                                let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
-                                if (linkSegment === '' || linkSegment === 'index') {
-                                    linkSegment = 'index';
-                                }
-
-                                if (linkSegment === currentSegment) {
-                                    link.classList.add('active');
-                                    const parentLi = link.closest('li');
-                                    if (parentLi) {
-                                        parentLi.classList.add('active');
-                                    }
+                                // Highlight active link supporting Clean URLs and subfolder matching
+                                const currentPath = window.location.pathname;
+                                let currentSegment = '';
+                                if (currentPath.includes('/Services/')) {
+                                    currentSegment = 'service';
+                                } else if (currentPath.includes('/Blogs/')) {
+                                    currentSegment = 'blog';
                                 } else {
-                                    link.classList.remove('active');
-                                    const parentLi = link.closest('li');
-                                    if (parentLi) {
-                                        parentLi.classList.remove('active');
+                                    currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
+                                    if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
+                                        currentSegment = 'index';
                                     }
                                 }
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Header fetch error:', err));
-            })();
-        </script>
-    </div>
+
+                                const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
+                                navLinks.forEach(link => {
+                                    const linkHref = link.getAttribute('href');
+                                    if (!linkHref) return;
+
+                                    let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
+                                    if (linkSegment === '' || linkSegment === 'index') {
+                                        linkSegment = 'index';
+                                    }
+
+                                    if (linkSegment === currentSegment) {
+                                        link.classList.add('active');
+                                        const parentLi = link.closest('li');
+                                        if (parentLi) {
+                                            parentLi.classList.add('active');
+                                        }
+                                    } else {
+                                        link.classList.remove('active');
+                                        const parentLi = link.closest('li');
+                                        if (parentLi) {
+                                            parentLi.classList.remove('active');
+                                        }
+                                    }
+                                });
+                            }
+                        })
+                        .catch(err => console.error('Header fetch error:', err));
+                })();
+            </script>
+        </div>
         <section class="as_breadcrum_wrapper">
             <div class="container">
                 <div class="row">
@@ -219,8 +229,8 @@
                         <div class="appointment-container">
                             <div class="appointment-overlay">
                                 <!-- Form Action updated to send to your email -->
-                                <form id="apptForm" action="https://formsubmit.co/ajax/vikrampsychic78@gmail.com" method="POST"
-                                    class="appointment-form">
+                                <form id="apptForm" action="https://formsubmit.co/ajax/vikrampsychic78@gmail.com"
+                                    method="POST" class="appointment-form">
 
                                     <input type="hidden" name="_subject" value="New Appointment Request!">
                                     <input type="hidden" name="_template" value="table">
@@ -477,35 +487,35 @@
         </section>
 
         <div id="site-footer">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const footerFile = 'Footer.html';
+            <script>
+                (function () {
+                    const pathParts = window.location.pathname.split('/');
+                    const htmlIndex = pathParts.indexOf('HTML');
+                    const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                    const footerFile = 'Footer.html';
 
-                fetch(prefix + footerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Footer load error');
-                        return response.text();
-                    })
-                    .then(html => {
-                        const footerContainer = document.getElementById('site-footer');
-                        if (footerContainer) {
-                            footerContainer.innerHTML = html;
-                            // Re-execute scripts (innerHTML blocks script execution)
-                            footerContainer.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Failed to load footer:', err));
-            })();
-        </script>
-    </div>
+                    fetch(prefix + footerFile)
+                        .then(response => {
+                            if (!response.ok) throw new Error('Footer load error');
+                            return response.text();
+                        })
+                        .then(html => {
+                            const footerContainer = document.getElementById('site-footer');
+                            if (footerContainer) {
+                                footerContainer.innerHTML = html;
+                                // Re-execute scripts (innerHTML blocks script execution)
+                                footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                    var newScript = document.createElement('script');
+                                    Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
+                                    newScript.textContent = oldScript.textContent;
+                                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                                });
+                            }
+                        })
+                        .catch(err => console.error('Failed to load footer:', err));
+                })();
+            </script>
+        </div>
     </div>
     <!-- javascript -->
     <script src="assets/js/jquery.min.js"></script>
@@ -532,97 +542,138 @@
             animation: apptPopIn 0.4s cubic-bezier(.34,1.56,.64,1);
         ">
             <style>
-                @keyframes apptPopIn { from { opacity:0; transform:scale(0.8) translateY(30px); } to { opacity:1; transform:scale(1) translateY(0); } }
-                #appt-success-overlay .appt-check { font-size:60px; margin-bottom:12px; display:block; }
-                #appt-success-overlay h2 { color:#0a2a45; margin:0 0 10px; font-size:24px; font-weight:700; }
-                #appt-success-overlay p { color:#555; font-size:15px; line-height:1.6; margin:0 0 20px; }
-                #appt-success-overlay .appt-ok-btn {
-                    background:linear-gradient(135deg,#ff9800,#e65c00);
-                    color:#fff; border:none; padding:12px 32px;
-                    border-radius:50px; font-size:15px;
-                    font-weight:bold; cursor:pointer;
-                    transition:opacity 0.2s;
+                @keyframes apptPopIn {
+                    from {
+                        opacity: 0;
+                        transform: scale(0.8) translateY(30px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: scale(1) translateY(0);
+                    }
                 }
-                #appt-success-overlay .appt-ok-btn:hover { opacity:0.88; }
-                #appt-success-overlay .appt-timer { font-size:12px; color:#999; margin-top:10px; }
+
+                #appt-success-overlay .appt-check {
+                    font-size: 60px;
+                    margin-bottom: 12px;
+                    display: block;
+                }
+
+                #appt-success-overlay h2 {
+                    color: #0a2a45;
+                    margin: 0 0 10px;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+
+                #appt-success-overlay p {
+                    color: #555;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    margin: 0 0 20px;
+                }
+
+                #appt-success-overlay .appt-ok-btn {
+                    background: linear-gradient(135deg, #ff9800, #e65c00);
+                    color: #fff;
+                    border: none;
+                    padding: 12px 32px;
+                    border-radius: 50px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: opacity 0.2s;
+                }
+
+                #appt-success-overlay .appt-ok-btn:hover {
+                    opacity: 0.88;
+                }
+
+                #appt-success-overlay .appt-timer {
+                    font-size: 12px;
+                    color: #999;
+                    margin-top: 10px;
+                }
             </style>
             <span class="appt-check">🎉</span>
             <h2>Appointment Submitted!</h2>
-            <p>Thank you! Your appointment request has been received.<br>Our team will contact you shortly to confirm your session.</p>
+            <p>Thank you! Your appointment request has been received.<br>Our team will contact you shortly to confirm
+                your session.</p>
             <button class="appt-ok-btn" id="apptOkBtn">Got it!</button>
             <p class="appt-timer" id="apptTimer">This message will close in <strong>5</strong>s</p>
         </div>
     </div>
 
     <script>
-    (function () {
-        var form    = document.getElementById('apptForm');
-        var overlay = document.getElementById('appt-success-overlay');
-        var okBtn   = document.getElementById('apptOkBtn');
-        var timerEl = document.getElementById('apptTimer');
+        (function () {
+            var form = document.getElementById('apptForm');
+            var overlay = document.getElementById('appt-success-overlay');
+            var okBtn = document.getElementById('apptOkBtn');
+            var timerEl = document.getElementById('apptTimer');
 
-        if (!form) return;
+            if (!form) return;
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
 
-            var submitBtn = form.querySelector('button[type="submit"]');
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending…';
-            }
-
-            var data = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(function (res) { return res.json(); })
-            .then(function (json) {
-                showSuccessPopup();
-                form.reset();
-            })
-            .catch(function () {
-                // Even on network hiccup, still show success (formsubmit may block CORS preflight)
-                showSuccessPopup();
-                form.reset();
-            })
-            .finally(function () {
+                var submitBtn = form.querySelector('button[type="submit"]');
                 if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Make an appointment';
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending…';
                 }
-            });
-        });
 
-        function showSuccessPopup() {
-            overlay.style.display = 'flex';
-            var count = 5;
-            var interval = setInterval(function () {
-                count--;
-                var strong = timerEl.querySelector('strong');
-                if (strong) strong.textContent = count;
-                if (count <= 0) {
+                var data = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                })
+                    .then(function (res) { return res.json(); })
+                    .then(function (json) {
+                        showSuccessPopup();
+                        form.reset();
+                    })
+                    .catch(function () {
+                        // Even on network hiccup, still show success (formsubmit may block CORS preflight)
+                        showSuccessPopup();
+                        form.reset();
+                    })
+                    .finally(function () {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Make an appointment';
+                        }
+                    });
+            });
+
+            function showSuccessPopup() {
+                overlay.style.display = 'flex';
+                var count = 5;
+                var interval = setInterval(function () {
+                    count--;
+                    var strong = timerEl.querySelector('strong');
+                    if (strong) strong.textContent = count;
+                    if (count <= 0) {
+                        clearInterval(interval);
+                        closePopup();
+                    }
+                }, 1000);
+
+                okBtn.addEventListener('click', function () {
                     clearInterval(interval);
                     closePopup();
-                }
-            }, 1000);
+                }, { once: true });
+            }
 
-            okBtn.addEventListener('click', function () {
-                clearInterval(interval);
-                closePopup();
-            }, { once: true });
-        }
-
-        function closePopup() {
-            overlay.style.display = 'none';
-            // Scroll back to top of appointment form
-            var formEl = document.querySelector('.appointment-container');
-            if (formEl) formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    })();
+            function closePopup() {
+                overlay.style.display = 'none';
+                // Scroll back to top of appointment form
+                var formEl = document.querySelector('.appointment-container');
+                if (formEl) formEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        })();
     </script>
 </body>
 

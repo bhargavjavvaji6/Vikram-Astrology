@@ -37,6 +37,16 @@
                             if (container) {
                                 container.innerHTML = html;
 
+                                // Re-execute script tags (innerHTML doesn't run them)
+                                container.querySelectorAll('script').forEach(function (oldScript) {
+                                    var newScript = document.createElement('script');
+                                    Array.from(oldScript.attributes).forEach(function (attr) {
+                                        newScript.setAttribute(attr.name, attr.value);
+                                    });
+                                    newScript.textContent = oldScript.textContent;
+                                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                                });
+
                                 // Highlight active link supporting Clean URLs and subfolder matching
                                 const currentPath = window.location.pathname;
                                 let currentSegment = '';
@@ -195,7 +205,7 @@
                                 problems, and future predictions through horoscope readings, birth chart analysis, and
                                 astrology consultations.
                                 Guidance for negative energy, jealousy, evil eye concerns, spiritual disturbances, toxic
-                                relationships, brujería, hechicería, obeah, voodoo, witchcraft concerns, spiritual
+                                relationships, brujerï¿½a, hechicerï¿½a, obeah, voodoo, witchcraft concerns, spiritual
                                 protection, prayer support, psychic readings, and traditional spiritual consultations
                                 for clients across New York and the USA.
                             </p>

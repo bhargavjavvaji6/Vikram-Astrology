@@ -20,67 +20,77 @@
     </div>
     <div class="as_main_wrapper">
         <div id="site-header">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const headerFile = 'header2.html';
+            <script>
+                (function () {
+                    const pathParts = window.location.pathname.split('/');
+                    const htmlIndex = pathParts.indexOf('HTML');
+                    const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                    const headerFile = 'header2.html';
 
-                fetch(prefix + headerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                        return response.text();
-                    })
-                    .then(html => {
-                        const container = document.getElementById('site-header');
-                        if (container) {
-                            container.innerHTML = html;
+                    fetch(prefix + headerFile)
+                        .then(response => {
+                            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                            return response.text();
+                        })
+                        .then(html => {
+                            const container = document.getElementById('site-header');
+                            if (container) {
+                                container.innerHTML = html;
 
-                            // Highlight active link supporting Clean URLs and subfolder matching
-                            const currentPath = window.location.pathname;
-                            let currentSegment = '';
-                            if (currentPath.includes('/Services/')) {
-                                currentSegment = 'service';
-                            } else if (currentPath.includes('/Blogs/')) {
-                                currentSegment = 'blog';
-                            } else {
-                                currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
-                                if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
-                                    currentSegment = 'index';
-                                }
-                            }
+                                // Re-execute script tags (innerHTML doesn't run them)
+                                container.querySelectorAll('script').forEach(function (oldScript) {
+                                    var newScript = document.createElement('script');
+                                    Array.from(oldScript.attributes).forEach(function (attr) {
+                                        newScript.setAttribute(attr.name, attr.value);
+                                    });
+                                    newScript.textContent = oldScript.textContent;
+                                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                                });
 
-                            const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
-                            navLinks.forEach(link => {
-                                const linkHref = link.getAttribute('href');
-                                if (!linkHref) return;
-
-                                let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
-                                if (linkSegment === '' || linkSegment === 'index') {
-                                    linkSegment = 'index';
-                                }
-
-                                if (linkSegment === currentSegment) {
-                                    link.classList.add('active');
-                                    const parentLi = link.closest('li');
-                                    if (parentLi) {
-                                        parentLi.classList.add('active');
-                                    }
+                                // Highlight active link supporting Clean URLs and subfolder matching
+                                const currentPath = window.location.pathname;
+                                let currentSegment = '';
+                                if (currentPath.includes('/Services/')) {
+                                    currentSegment = 'service';
+                                } else if (currentPath.includes('/Blogs/')) {
+                                    currentSegment = 'blog';
                                 } else {
-                                    link.classList.remove('active');
-                                    const parentLi = link.closest('li');
-                                    if (parentLi) {
-                                        parentLi.classList.remove('active');
+                                    currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
+                                    if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
+                                        currentSegment = 'index';
                                     }
                                 }
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Header fetch error:', err));
-            })();
-        </script>
-    </div>
+
+                                const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
+                                navLinks.forEach(link => {
+                                    const linkHref = link.getAttribute('href');
+                                    if (!linkHref) return;
+
+                                    let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
+                                    if (linkSegment === '' || linkSegment === 'index') {
+                                        linkSegment = 'index';
+                                    }
+
+                                    if (linkSegment === currentSegment) {
+                                        link.classList.add('active');
+                                        const parentLi = link.closest('li');
+                                        if (parentLi) {
+                                            parentLi.classList.add('active');
+                                        }
+                                    } else {
+                                        link.classList.remove('active');
+                                        const parentLi = link.closest('li');
+                                        if (parentLi) {
+                                            parentLi.classList.remove('active');
+                                        }
+                                    }
+                                });
+                            }
+                        })
+                        .catch(err => console.error('Header fetch error:', err));
+                })();
+            </script>
+        </div>
         <section class="as_breadcrum_wrapper">
             <div class="container">
                 <div class="row">
@@ -92,142 +102,147 @@
         </section>
         <section class="as_servicedetail_wrapper as_padderBottom80 as_padderTop80">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="as_service_detail_inner">
+                            <h1 class="as_orange">Trusted Black Magic Removal in New York for Spiritual Protection and
+                                Positive Energy
+                            </h1>
+                            <br>
+                            <div class="as_blog_img">
+                                <img src="../assets/images/Black_Magic.jpg" alt="" class="img-responsive">
+                            </div>
+                            <p class="as_font14">Are you experiencing unexplained obstacles, negative energy,
+                                relationship
+                                conflicts,
+                                financial losses, or persistent bad luck? At Vikram Psychic Astrology in New York, we
+                                offer trusted and confidential Black Magic Removal in New York using traditional
+                                spiritual
+                                practices and authentic astrological guidance. Our experienced astrologers help
+                                individuals
+                                and families overcome negative influences and restore peace, balance, and positivity in
+                                their lives. If you're searching for the best Black Magic Removal in New York or a
+                                trusted spiritual
+                                advisor in the USA, our personalized consultations are designed to identify spiritual
+                                imbalances and recommend suitable remedies based on your unique situation.</p>
 
-                <div class="col-lg-12">
-                    <div class="as_service_detail_inner">
-                        <img src="../assets/images/Black_Magic.jpg" alt="" class="img-responsive">
+                            <h2 class="as_orange">What Is Black Magic Removal?</h2>
+                            <p class="text-align:justify">Black Magic Removal is a spiritual process that aims to remove
+                                negative energies, harmful influences, and spiritual disturbances that may be affecting
+                                different areas of your life. Using traditional astrology, spiritual guidance, and
+                                time-honored practices, our astrologers help restore positive energy and emotional
+                                well-being. At Vikram Psychic Astrology in New York, every consultation begins with
+                                understanding your concerns and providing personalized guidance based on your individual
+                                circumstances.
+                            </p>
 
-                        <h1 class="as_orange">Trusted Black Magic Removal in New York for Spiritual Protection and
-                            Positive Energy
-                        </h1>
-                        <p class="as_font14">Are you experiencing unexplained obstacles, negative energy,
-                            relationship
-                            conflicts,
-                            financial losses, or persistent bad luck? At Vikram Psychic Astrology in New York, we
-                            offer trusted and confidential Black Magic Removal in New York using traditional
-                            spiritual
-                            practices and authentic astrological guidance. Our experienced astrologers help
-                            individuals
-                            and families overcome negative influences and restore peace, balance, and positivity in
-                            their lives. If you're searching for the best Black Magic Removal in New York or a
-                            trusted spiritual
-                            advisor in the USA, our personalized consultations are designed to identify spiritual
-                            imbalances and recommend suitable remedies based on your unique situation.</p>
+                            <h2 class="as_orange">Signs You May Need Black Magic Removal</h2>
+                            <p class="text-align:justify">While life naturally includes challenges, some people seek
+                                spiritual guidance when they
+                                experience ongoing difficulties that seem unusual or persistent.
+                                Common reasons people request a consultation include:<br>
+                                &#8669; Constant negative energy<br>
+                                &#8669; Repeated relationship problems<br>
+                                &#8669; Delays in marriage<br>
+                                &#8669; Career obstacles<br>
+                                &#8669; Business losses<br>
+                                &#8669; Financial instability<br>
+                                &#8669; Family conflicts<br>
+                                &#8669; Frequent bad luck<br>
+                                &#8669; Emotional stress and anxiety<br>
+                                &#8669; Lack of peace and happiness<br>
+                                &#8669; Unexplained fear or restlessness<br>
+                            </p>
 
-                        <h2 class="as_orange">What Is Black Magic Removal?</h2>
-                        <p class="text-align:justify">Black Magic Removal is a spiritual process that aims to remove
-                            negative energies, harmful influences, and spiritual disturbances that may be affecting
-                            different areas of your life. Using traditional astrology, spiritual guidance, and
-                            time-honored practices, our astrologers help restore positive energy and emotional
-                            well-being. At Vikram Psychic Astrology in New York, every consultation begins with
-                            understanding your concerns and providing personalized guidance based on your individual
-                            circumstances.
-                        </p>
+                            <h2 class="as_orange">Our Black Magic Removal Services</h2>
+                            <p>We provide personalized spiritual consultations for individuals seeking guidance in
+                                various areas of life, including:<br>
+                                &#8669; Black Magic Removal<br>
+                                &#8669; Negative Energy Cleansing<br>
+                                &#8669; Spiritual Protection Guidance<br>
+                                &#8669; Evil Eye Protection<br>
+                                &#8669; Relationship Healing<br>
+                                &#8669; Marriage Problem Guidance<br>
+                                &#8669; Career and Business Guidance<br>
+                                &#8669; Financial Prosperity Guidance<br>
+                                &#8669; Family Harmony Consultations<br>
+                                &#8669; Personal Spiritual Counseling<br>
+                                &#8669; Astrological Remedies<br>
+                                &#8669; Energy Balancing<br>
+                                Every consultation is confidential, respectful, and tailored to your unique needs.
+                            </p>
 
-                        <h2 class="as_orange">Signs You May Need Black Magic Removal</h2>
-                        <p class="text-align:justify">While life naturally includes challenges, some people seek
-                            spiritual guidance when they
-                            experience ongoing difficulties that seem unusual or persistent.
-                            Common reasons people request a consultation include:<br>
-                            &#8669; Constant negative energy<br>
-                            &#8669; Repeated relationship problems<br>
-                            &#8669; Delays in marriage<br>
-                            &#8669; Career obstacles<br>
-                            &#8669; Business losses<br>
-                            &#8669; Financial instability<br>
-                            &#8669; Family conflicts<br>
-                            &#8669; Frequent bad luck<br>
-                            &#8669; Emotional stress and anxiety<br>
-                            &#8669; Lack of peace and happiness<br>
-                            &#8669; Unexplained fear or restlessness<br>
-                        </p>
+                            <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
+                            <p>When searching for the best Black Magic Removal in New York, choosing an experienced and
+                                trustworthy spiritual advisor is important. At Vikram Psychic Astrology in New York, we
+                                combine traditional spiritual knowledge with personalized astrology consultations to
+                                provide meaningful guidance.
+                                Why clients choose us:<br>
+                                &#8669;Experienced spiritual astrologers<br>
+                                &#8669; Personalized consultations<br>
+                                &#8669; Traditional spiritual practices<br>
+                                &#8669; Confidential and respectful service<br>
+                                &#8669; Practical astrological guidance<br>
+                                &#8669; Honest recommendations<br>
+                                &#8669; Online and in-person consultations<br>
+                                &#8669; Dedicated client support<br>
+                                &#8669; Trusted by clients across New York, USA<br>
+                                Our goal is to help you regain confidence, peace of mind, and a positive outlook on
+                                life.
+                            </p>
 
-                        <h2 class="as_orange">Our Black Magic Removal Services</h2>
-                        <p>We provide personalized spiritual consultations for individuals seeking guidance in
-                            various areas of life, including:<br>
-                            &#8669; Black Magic Removal<br>
-                            &#8669; Negative Energy Cleansing<br>
-                            &#8669; Spiritual Protection Guidance<br>
-                            &#8669; Evil Eye Protection<br>
-                            &#8669; Relationship Healing<br>
-                            &#8669; Marriage Problem Guidance<br>
-                            &#8669; Career and Business Guidance<br>
-                            &#8669; Financial Prosperity Guidance<br>
-                            &#8669; Family Harmony Consultations<br>
-                            &#8669; Personal Spiritual Counseling<br>
-                            &#8669; Astrological Remedies<br>
-                            &#8669; Energy Balancing<br>
-                            Every consultation is confidential, respectful, and tailored to your unique needs.
-                        </p>
+                            <h2 class="as_orange">Who Can Benefit from Black Magic Removal?</h2>
+                            <p>Our spiritual guidance is suitable for individuals who are seeking clarity, protection,
+                                and emotional balance.
+                                People often contact us for guidance regarding:<br>
+                                &#8669; Love and relationship challenges<br>
+                                &#8669; Marriage delays<br>
+                                &#8669; Family disputes<br>
+                                &#8669; Career uncertainty<br>
+                                &#8669; Business difficulties<br>
+                                &#8669; Financial concerns<br>
+                                &#8669; Emotional well-being<br>
+                                &#8669; Spiritual growth<br>
+                                &#8669; Personal transformation<br>
+                                &#8669; Negative energy concerns<br>
+                                &#8669; Each consultation is personalized to your circumstances and spiritual goals.
+                            </p>
 
-                        <h2 class="as_orange">Why Choose Vikram Psychic Astrology in New York?</h2>
-                        <p>When searching for the best Black Magic Removal in New York, choosing an experienced and
-                            trustworthy spiritual advisor is important. At Vikram Psychic Astrology in New York, we
-                            combine traditional spiritual knowledge with personalized astrology consultations to
-                            provide meaningful guidance.
-                            Why clients choose us:<br>
-                            &#8669;Experienced spiritual astrologers<br>
-                            &#8669; Personalized consultations<br>
-                            &#8669; Traditional spiritual practices<br>
-                            &#8669; Confidential and respectful service<br>
-                            &#8669; Practical astrological guidance<br>
-                            &#8669; Honest recommendations<br>
-                            &#8669; Online and in-person consultations<br>
-                            &#8669; Dedicated client support<br>
-                            &#8669; Trusted by clients across New York, USA<br>
-                            Our goal is to help you regain confidence, peace of mind, and a positive outlook on
-                            life.
-                        </p>
+                            <h2 class="as_orange">Why Clients Trust Vikram Psychic Astrology</h2>
+                            <p>Clients throughout New York, USA choose Vikram Psychic Astrology because of our
+                                compassionate approach, traditional spiritual knowledge, and commitment to
+                                providing ethical guidance. Every consultation is handled with complete
+                                confidentiality, respect, and care. Whether you visit us in person or choose an online
+                                consultation, we strive to help you move forward with greater confidence, hope, and
+                                peace of
+                                mind.
+                            </p>
 
-                        <h2 class="as_orange">Who Can Benefit from Black Magic Removal?</h2>
-                        <p>Our spiritual guidance is suitable for individuals who are seeking clarity, protection,
-                            and emotional balance.
-                            People often contact us for guidance regarding:<br>
-                            &#8669; Love and relationship challenges<br>
-                            &#8669; Marriage delays<br>
-                            &#8669; Family disputes<br>
-                            &#8669; Career uncertainty<br>
-                            &#8669; Business difficulties<br>
-                            &#8669; Financial concerns<br>
-                            &#8669; Emotional well-being<br>
-                            &#8669; Spiritual growth<br>
-                            &#8669; Personal transformation<br>
-                            &#8669; Negative energy concerns<br>
-                            &#8669; Each consultation is personalized to your circumstances and spiritual goals.
-                        </p>
+                            <h2 class="as_orange">Areas We Serve</h2>
+                            <p>We proudly provide Black Magic Removal in New York for clients across:<br>
+                                &#8669; Manhattan <br>
+                                &#8669; Brooklyn <br>
+                                &#8669; Queens <br>
+                                &#8669; Bronx <br>
+                                &#8669; Staten Island <br>
+                                &#8669; Long Island <br>
+                                &#8669; Greater New York Area <br>
+                                &#8669; We also offer secure online consultations for clients throughout the USA and
+                                internationally.
+                            </p>
 
-                        <h2 class="as_orange">Why Clients Trust Vikram Psychic Astrology</h2>
-                        <p>Clients throughout New York, USA choose Vikram Psychic Astrology because of our
-                            compassionate approach, traditional spiritual knowledge, and commitment to
-                            providing ethical guidance. Every consultation is handled with complete
-                            confidentiality, respect, and care. Whether you visit us in person or choose an online
-                            consultation, we strive to help you move forward with greater confidence, hope, and peace of
-                            mind.
-                        </p>
+                            <h2 class="as_orange">Book the Best Black Magic Removal Consultation in New York</h2>
+                            <p>If you're looking for the best Black Magic Removal in New York, Vikram Psychic
+                                Astrology in New York is here to provide compassionate spiritual guidance
+                                tailored to your needs. Our experienced astrologers are committed to helping you
+                                overcome life's challenges through personalized consultations, traditional
+                                astrology, and spiritual wisdom. Schedule your consultation today and discover how
+                                professional spiritual guidance can help restore positivity, confidence, and balance in
+                                your
+                                life.
+                            </p>
 
-                        <h2 class="as_orange">Areas We Serve</h2>
-                        <p>We proudly provide Black Magic Removal in New York for clients across:<br>
-                            &#8669; Manhattan <br>
-                            &#8669; Brooklyn <br>
-                            &#8669; Queens <br>
-                            &#8669; Bronx <br>
-                            &#8669; Staten Island <br>
-                            &#8669; Long Island <br>
-                            &#8669; Greater New York Area <br>
-                            &#8669; We also offer secure online consultations for clients throughout the USA and
-                            internationally.
-                        </p>
-
-                        <h2 class="as_orange">Book the Best Black Magic Removal Consultation in New York</h2>
-                        <p>If you're looking for the best Black Magic Removal in New York, Vikram Psychic
-                            Astrology in New York is here to provide compassionate spiritual guidance
-                            tailored to your needs. Our experienced astrologers are committed to helping you
-                            overcome life's challenges through personalized consultations, traditional
-                            astrology, and spiritual wisdom. Schedule your consultation today and discover how
-                            professional spiritual guidance can help restore positivity, confidence, and balance in your
-                            life.
-                        </p>
-
+                        </div>
                     </div>
                 </div>
             </div>
@@ -278,6 +293,144 @@
             </div>
         </div>
     </section>
+
+    <section class="as_faq_wrapper as_padderTop80 as_padderBottom80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 offset-lg-1">
+                    <div class="as_faq_section">
+                        <div class="accordion as_accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                            aria-controls="panelsStayOpen-collapseOne">
+                                            How do I know if I need a Black Magic Removal consultation?
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        People seek a Black Magic Removal consultation when they experience persistent
+                                        challenges such as repeated obstacles, unexplained negative energy, relationship
+                                        conflicts, career setbacks, financial difficulties, or emotional distress. An
+                                        experienced astrologer can assess your situation and recommend whether spiritual
+                                        guidance or traditional remedies may be appropriate.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            How does Black Magic Removal work?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="accordion-body">
+                                        Black Magic Removal is a traditional spiritual practice that may involve
+                                        astrological analysis, prayers, rituals, and personalized remedies based on your
+                                        individual circumstances. The consultation is designed to identify possible
+                                        spiritual imbalances and provide guidance using traditional Vedic astrology
+                                        principles.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                            Can Black Magic Removal help with relationship and marriage problems?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        Many people seek Black Magic Removal guidance when facing relationship
+                                        difficulties, marriage delays, or family conflicts. Our astrologers carefully
+                                        evaluate your birth chart and personal circumstances before recommending
+                                        suitable spiritual guidance and traditional remedies.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                            Do I need my date of birth for a Black Magic Removal consultation?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingFour">
+                                    <div class="accordion-body">
+                                        Providing your date of birth, time of birth, and place of birth helps our
+                                        astrologers prepare a detailed birth chart and offer more personalized guidance.
+                                        If complete birth details are unavailable, you can still discuss your concerns
+                                        during the consultation.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                            Can I book an online Black Magic Removal consultation?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingFive">
+                                    <div class="accordion-body">
+                                        Yes. Vikram Psychic Astrology offers secure online consultations for clients
+                                        across New York, the USA, and internationally. Online consultations provide the
+                                        same personalized guidance and confidentiality as in-person appointments.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="panelsStayOpen-headingSix">
+                                    <h2 class="mb-0">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                                            Why choose Vikram Psychic Astrology for Black Magic Removal in New York?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                                    aria-labelledby="panelsStayOpen-headingSix">
+                                    <div class="accordion-body">
+                                        Vikram Psychic Astrology provides personalized astrology consultations,
+                                        traditional spiritual guidance, confidential sessions, and recommendations based
+                                        on Vedic astrology principles. Every consultation is tailored to your individual
+                                        situation rather than using generalized advice.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="as_footer_wrapper as_padderTop80">
         <div class="container">
             <div class="as_newsletter_wrapper as_padderBottom60">
@@ -296,35 +449,35 @@
                 </div>
             </div>
             <div id="site-footer">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const footerFile = 'Footer2.html';
+                <script>
+                    (function () {
+                        const pathParts = window.location.pathname.split('/');
+                        const htmlIndex = pathParts.indexOf('HTML');
+                        const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                        const footerFile = 'Footer2.html';
 
-                fetch(prefix + footerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Footer load error');
-                        return response.text();
-                    })
-                    .then(html => {
-                        const footerContainer = document.getElementById('site-footer');
-                        if (footerContainer) {
-                            footerContainer.innerHTML = html;
-                            // Re-execute scripts (innerHTML blocks script execution)
-                            footerContainer.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Failed to load footer:', err));
-            })();
-        </script>
-    </div>
+                        fetch(prefix + footerFile)
+                            .then(response => {
+                                if (!response.ok) throw new Error('Footer load error');
+                                return response.text();
+                            })
+                            .then(html => {
+                                const footerContainer = document.getElementById('site-footer');
+                                if (footerContainer) {
+                                    footerContainer.innerHTML = html;
+                                    // Re-execute scripts (innerHTML blocks script execution)
+                                    footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                        var newScript = document.createElement('script');
+                                        Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
+                                        newScript.textContent = oldScript.textContent;
+                                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                                    });
+                                }
+                            })
+                            .catch(err => console.error('Failed to load footer:', err));
+                    })();
+                </script>
+            </div>
         </div>
     </section>
     </div>

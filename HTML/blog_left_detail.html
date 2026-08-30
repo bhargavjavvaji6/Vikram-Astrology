@@ -8,23 +8,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <!-- stylesheet -->
-
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <!-- favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
-    <!-- <div class="as_loader">
+    <div class="as_loader">
         <img src="assets/images/loader.png" alt="" class="img-responsive">
-    </div> -->
+    </div>
     <div class="as_main_wrapper">
         <section class="as_header_wrapper">
             <div class="as_logo">
@@ -565,35 +560,35 @@
             </div>
 
             <div id="site-footer">
-        <script>
-            (function() {
-                const pathParts = window.location.pathname.split('/');
-                const htmlIndex = pathParts.indexOf('HTML');
-                const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                const footerFile = 'Footer.html';
+                <script>
+                    (function () {
+                        const pathParts = window.location.pathname.split('/');
+                        const htmlIndex = pathParts.indexOf('HTML');
+                        const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
+                        const footerFile = 'Footer.html';
 
-                fetch(prefix + footerFile)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Footer load error');
-                        return response.text();
-                    })
-                    .then(html => {
-                        const footerContainer = document.getElementById('site-footer');
-                        if (footerContainer) {
-                            footerContainer.innerHTML = html;
-                            // Re-execute scripts (innerHTML blocks script execution)
-                            footerContainer.querySelectorAll('script').forEach(function(oldScript) {
-                                var newScript = document.createElement('script');
-                                Array.from(oldScript.attributes).forEach(function(attr) { newScript.setAttribute(attr.name, attr.value); });
-                                newScript.textContent = oldScript.textContent;
-                                oldScript.parentNode.replaceChild(newScript, oldScript);
-                            });
-                        }
-                    })
-                    .catch(err => console.error('Failed to load footer:', err));
-            })();
-        </script>
-    </div>
+                        fetch(prefix + footerFile)
+                            .then(response => {
+                                if (!response.ok) throw new Error('Footer load error');
+                                return response.text();
+                            })
+                            .then(html => {
+                                const footerContainer = document.getElementById('site-footer');
+                                if (footerContainer) {
+                                    footerContainer.innerHTML = html;
+                                    // Re-execute scripts (innerHTML blocks script execution)
+                                    footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                        var newScript = document.createElement('script');
+                                        Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
+                                        newScript.textContent = oldScript.textContent;
+                                        oldScript.parentNode.replaceChild(newScript, oldScript);
+                                    });
+                                }
+                            })
+                            .catch(err => console.error('Failed to load footer:', err));
+                    })();
+                </script>
+            </div>
         </div>
     </section>
     </div>

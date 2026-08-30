@@ -37,6 +37,16 @@
                             if (container) {
                                 container.innerHTML = html;
 
+                                // Re-execute script tags (innerHTML doesn't run them)
+                                container.querySelectorAll('script').forEach(function (oldScript) {
+                                    var newScript = document.createElement('script');
+                                    Array.from(oldScript.attributes).forEach(function (attr) {
+                                        newScript.setAttribute(attr.name, attr.value);
+                                    });
+                                    newScript.textContent = oldScript.textContent;
+                                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                                });
+
                                 // Highlight active link supporting Clean URLs and subfolder matching
                                 const currentPath = window.location.pathname;
                                 let currentSegment = '';
@@ -203,7 +213,7 @@
                                 horoscope readings and birth chart analysis.
                                 Specialized spiritual consultations for negative energy concerns, toxic relationships,
                                 evil eye beliefs, spiritual protection, psychic guidance, and traditional spiritual
-                                practices including brujería, obeah, and related cultural traditions.
+                                practices including brujerï¿½a, obeah, and related cultural traditions.
                             </p>
 
                             <p class="as_font14 as_margin0 as_padderBottom10">Many people searching for the best
