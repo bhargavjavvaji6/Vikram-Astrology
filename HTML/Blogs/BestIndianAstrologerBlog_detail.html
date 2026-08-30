@@ -22,7 +22,7 @@
         <div id="site-header">
             <script>
                 (function () {
-                    fetch('/HTML/header2.html')
+                    fetch('/header2.html')
                         .then(response => {
                             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                             return response.text();
@@ -292,30 +292,40 @@
             <div id="site-footer">
                 <script>
                     (function () {
-                        const pathParts = window.location.pathname.split('/');
-                        const htmlIndex = pathParts.indexOf('HTML');
-                        const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                        const footerFile = 'Footer2.html';
-
-                        fetch(prefix + footerFile)
+                        fetch('/Footer2.html')
                             .then(response => {
-                                if (!response.ok) throw new Error('Footer load error');
+                                if (!response.ok) {
+                                    throw new Error(`Footer HTTP error: ${response.status}`);
+                                }
+
                                 return response.text();
                             })
                             .then(html => {
-                                const footerContainer = document.getElementById('site-footer');
+                                const footerContainer =
+                                    document.getElementById('site-footer');
+
                                 if (footerContainer) {
                                     footerContainer.innerHTML = html;
-                                    // Re-execute scripts (innerHTML blocks script execution)
+
                                     footerContainer.querySelectorAll('script').forEach(function (oldScript) {
                                         var newScript = document.createElement('script');
-                                        Array.from(oldScript.attributes).forEach(function (attr) { newScript.setAttribute(attr.name, attr.value); });
+
+                                        Array.from(oldScript.attributes).forEach(function (attr) {
+                                            newScript.setAttribute(attr.name, attr.value);
+                                        });
+
                                         newScript.textContent = oldScript.textContent;
-                                        oldScript.parentNode.replaceChild(newScript, oldScript);
+
+                                        oldScript.parentNode.replaceChild(
+                                            newScript,
+                                            oldScript
+                                        );
                                     });
                                 }
                             })
-                            .catch(err => console.error('Failed to load footer:', err));
+                            .catch(err => {
+                                console.error('Failed to load Footer2:', err);
+                            });
                     })();
                 </script>
             </div>

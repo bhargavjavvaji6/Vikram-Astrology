@@ -67,7 +67,7 @@
     {
       "source": "/blog/best-indian-astrologer",
       "destination": "/Blogs/BestIndianAstrologerBlog_detail.html"
-    },
+    }
     {
       "source": "/service/black-magic",
       "destination": "/Services/BlackMagicRemoval.html"
@@ -81,24 +81,24 @@
       "destination": "/Services/OnlinePsychicReading.html"
     },
     {
-      "source": "/service/vedic-astrology",
-      "destination": "/Services/VedicAstrology.html"
-    },
-    {
-      "source": "/service/spiritual-healing",
-      "destination": "/Services/Spiritual_healing.html"
-    },
-    {
-      "source": "/service/voodoo",
-      "destination": "/Services/VoodooPriest.html"
-    },
-    {
       "source": "/service/compatibility",
       "destination": "/Services/AstrologyCompatibality.html"
     },
     {
       "source": "/service/horoscope",
       "destination": "/Services/Horoscope.html"
+    },
+    {
+      "source": "/service/vedic-astrology",
+      "destination": "/Services/VedicAstrology.html"
+    },
+    {
+      "source": "/service/voodoo",
+      "destination": "/Services/VoodooPriest.html"
+    },
+    {
+      "source": "/service/spiritual-healing",
+      "destination": "/Services/Spiritual_healing.html"
     }
   ]
 }
