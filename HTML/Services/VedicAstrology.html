@@ -22,12 +22,7 @@
         <div id="site-header">
             <script>
                 (function () {
-                    const pathParts = window.location.pathname.split('/');
-                    const htmlIndex = pathParts.indexOf('HTML');
-                    const prefix = htmlIndex !== -1 ? pathParts.slice(0, htmlIndex + 1).join('/') + '/' : './HTML/';
-                    const headerFile = 'header2.html';
-
-                    fetch(prefix + headerFile)
+                    fetch('/HTML/header2.html')
                         .then(response => {
                             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                             return response.text();
