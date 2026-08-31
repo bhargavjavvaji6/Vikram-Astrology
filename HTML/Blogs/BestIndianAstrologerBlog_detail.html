@@ -288,49 +288,48 @@
                     </div>
                 </div>
             </div>
-
-            <div id="site-footer">
-                <script>
-                    (function () {
-                        fetch('/Footer2.html')
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error(`Footer HTTP error: ${response.status}`);
-                                }
-
-                                return response.text();
-                            })
-                            .then(html => {
-                                const footerContainer =
-                                    document.getElementById('site-footer');
-
-                                if (footerContainer) {
-                                    footerContainer.innerHTML = html;
-
-                                    footerContainer.querySelectorAll('script').forEach(function (oldScript) {
-                                        var newScript = document.createElement('script');
-
-                                        Array.from(oldScript.attributes).forEach(function (attr) {
-                                            newScript.setAttribute(attr.name, attr.value);
-                                        });
-
-                                        newScript.textContent = oldScript.textContent;
-
-                                        oldScript.parentNode.replaceChild(
-                                            newScript,
-                                            oldScript
-                                        );
-                                    });
-                                }
-                            })
-                            .catch(err => {
-                                console.error('Failed to load Footer2:', err);
-                            });
-                    })();
-                </script>
-            </div>
         </div>
     </section>
+    <div id="site-footer">
+        <script>
+            (function () {
+                fetch('/Footer2.html')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Footer HTTP error: ${response.status}`);
+                        }
+
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer =
+                            document.getElementById('site-footer');
+
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+
+                            footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                var newScript = document.createElement('script');
+
+                                Array.from(oldScript.attributes).forEach(function (attr) {
+                                    newScript.setAttribute(attr.name, attr.value);
+                                });
+
+                                newScript.textContent = oldScript.textContent;
+
+                                oldScript.parentNode.replaceChild(
+                                    newScript,
+                                    oldScript
+                                );
+                            });
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Failed to load Footer2:', err);
+                    });
+            })();
+        </script>
+    </div>
     </div>
 
     <script src="../assets/js/jquery.min.js"></script>

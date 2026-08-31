@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/plugin/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="assets/js/plugin/airdatepicker/datepicker.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/js/plugin/airdatepicker/datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -100,7 +100,7 @@
 
                 <div class="col-lg-12 col-md-12">
                     <div class="as_service_detail_inner">
-                        <img src="assets/images/service_single.jpg" alt="" class="img-responsive">
+                        <img src="../assets/images/service_single.jpg" alt="" class="img-responsive">
 
                         <h1 class="as_orange">Trusted Black Magic Removal in New York for Spiritual Protection and
                             Positive Energy
@@ -255,7 +255,7 @@
                                 <div class="as_input_feild">
                                     <input type="text" name="" class="form-control as_datepicker"
                                         placeholder="DD/MM/YYYY" id="">
-                                    <span><img src="assets/images/svg/date.svg" alt=""></span>
+                                    <span><img src="../assets/images/svg/date.svg" alt=""></span>
                                 </div>
                             </li>
                             <li class="as_form_box">
@@ -263,7 +263,7 @@
                                 <div class="as_input_feild">
                                     <input type="text" name="" class="form-control as_timepicker" placeholder="08:00"
                                         id="">
-                                    <span><img src="assets/images/svg/time.svg" alt=""></span>
+                                    <span><img src="../assets/images/svg/time.svg" alt=""></span>
                                 </div>
                             </li>
                             <li class="as_form_box">
@@ -271,7 +271,7 @@
                                 <div class="as_input_feild">
                                     <input type="text" name="" class="form-control" placeholder="Enter City Name...."
                                         id="">
-                                    <span><img src="assets/images/svg/map1.svg" alt=""></span>
+                                    <span><img src="..assets/images/svg/map1.svg" alt=""></span>
                                 </div>
                             </li>
                             <li class="as_form_box">
@@ -300,56 +300,56 @@
                     </div>
                 </div>
             </div>
-            <div id="site-footer">
-                <script>
-                    (function () {
-                        fetch('/Footer2.html')
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error(`Footer HTTP error: ${response.status}`);
-                                }
-
-                                return response.text();
-                            })
-                            .then(html => {
-                                const footerContainer =
-                                    document.getElementById('site-footer');
-
-                                if (footerContainer) {
-                                    footerContainer.innerHTML = html;
-
-                                    footerContainer.querySelectorAll('script').forEach(function (oldScript) {
-                                        var newScript = document.createElement('script');
-
-                                        Array.from(oldScript.attributes).forEach(function (attr) {
-                                            newScript.setAttribute(attr.name, attr.value);
-                                        });
-
-                                        newScript.textContent = oldScript.textContent;
-
-                                        oldScript.parentNode.replaceChild(
-                                            newScript,
-                                            oldScript
-                                        );
-                                    });
-                                }
-                            })
-                            .catch(err => {
-                                console.error('Failed to load Footer2:', err);
-                            });
-                    })();
-                </script>
-            </div>
         </div>
     </section>
+    <div id="site-footer">
+        <script>
+            (function () {
+                fetch('/Footer2.html')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Footer HTTP error: ${response.status}`);
+                        }
+
+                        return response.text();
+                    })
+                    .then(html => {
+                        const footerContainer =
+                            document.getElementById('site-footer');
+
+                        if (footerContainer) {
+                            footerContainer.innerHTML = html;
+
+                            footerContainer.querySelectorAll('script').forEach(function (oldScript) {
+                                var newScript = document.createElement('script');
+
+                                Array.from(oldScript.attributes).forEach(function (attr) {
+                                    newScript.setAttribute(attr.name, attr.value);
+                                });
+
+                                newScript.textContent = oldScript.textContent;
+
+                                oldScript.parentNode.replaceChild(
+                                    newScript,
+                                    oldScript
+                                );
+                            });
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Failed to load Footer2:', err);
+                    });
+            })();
+        </script>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugin/slick/slick.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugin/countto/jquery.countTo.js"></script>
-    <script type="text/javascript" src="assets/js/plugin/airdatepicker/datepicker.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
-    <script src="assets/js/custom.js"></script>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/countto/jquery.countTo.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/datepicker.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugin/airdatepicker/i18n/datepicker.en.js"></script>
+    <script src="../assets/js/custom.js"></script>
 </body>
 
 </html>
