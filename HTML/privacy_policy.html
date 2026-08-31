@@ -31,51 +31,26 @@
                 (function () {
                     fetch('/header2.html')
                         .then(response => {
-                            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! status: ${response.status}`);
+                            }
                             return response.text();
                         })
                         .then(html => {
                             const container = document.getElementById('site-header');
+
                             if (container) {
                                 container.innerHTML = html;
 
-                                // Highlight active link supporting Clean URLs and subfolder matching
-                                const currentPath = window.location.pathname;
-                                let currentSegment = '';
-                                if (currentPath.includes('/Services/')) {
-                                    currentSegment = 'service';
-                                } else if (currentPath.includes('/Blogs/')) {
-                                    currentSegment = 'blog';
-                                } else {
-                                    currentSegment = currentPath.split('/').pop().replace('.html', '').toLowerCase();
-                                    if (currentSegment === '' || currentSegment === 'html' || currentSegment === 'index') {
-                                        currentSegment = 'index';
-                                    }
-                                }
+                                container.querySelectorAll('script').forEach(function (oldScript) {
+                                    var newScript = document.createElement('script');
 
-                                const navLinks = container.querySelectorAll('.as_header_nav ul li a, .as_menu ul li a');
-                                navLinks.forEach(link => {
-                                    const linkHref = link.getAttribute('href');
-                                    if (!linkHref) return;
+                                    Array.from(oldScript.attributes).forEach(function (attr) {
+                                        newScript.setAttribute(attr.name, attr.value);
+                                    });
 
-                                    let linkSegment = linkHref.split('/').pop().replace('.html', '').toLowerCase();
-                                    if (linkSegment === '' || linkSegment === 'index') {
-                                        linkSegment = 'index';
-                                    }
-
-                                    if (linkSegment === currentSegment) {
-                                        link.classList.add('active');
-                                        const parentLi = link.closest('li');
-                                        if (parentLi) {
-                                            parentLi.classList.add('active');
-                                        }
-                                    } else {
-                                        link.classList.remove('active');
-                                        const parentLi = link.closest('li');
-                                        if (parentLi) {
-                                            parentLi.classList.remove('active');
-                                        }
-                                    }
+                                    newScript.textContent = oldScript.textContent;
+                                    oldScript.parentNode.replaceChild(newScript, oldScript);
                                 });
                             }
                         })
