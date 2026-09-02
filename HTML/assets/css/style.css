@@ -4063,8 +4063,8 @@ textarea.form-control {
 
 .as_footer_logo .vikram_footer_logo {
     display: block;
-    width: 260px;
-    height: 120px;
+    width: 340px;
+    height: 260px;
     max-width: 100%;
     object-fit: contain;
     object-position: center;
@@ -4090,15 +4090,15 @@ textarea.form-control {
     }
 
     .vikram_footer_logo {
-        width: 220px;
-        height: 105px;
+        width: 290px;
+        height: 250px;
     }
 }
 
 /* Small mobile */
 @media (max-width: 480px) {
     .vikram_footer_logo {
-        width: 200px;
-        height: 95px;
+        width: 260px;
+        height: 150px;
     }
 }
