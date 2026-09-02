@@ -4044,3 +4044,52 @@ textarea.form-control {
         line-height: 1.6;
     }
 }
+
+/* =========================================================
+   VIKRAM FOOTER LOGO
+   ========================================================= */
+
+.as_footer_logo {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.as_footer_logo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.as_footer_logo .vikram_footer_logo {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .as_footer_logo .vikram_footer_logo {
+        width: 200px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .as_footer_logo {
+        text-align: center;
+    }
+
+    .as_footer_logo .vikram_footer_logo {
+        width: 190px;
+        margin: 0 auto;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .as_footer_logo .vikram_footer_logo {
+        width: 170px;
+    }
+}
