@@ -505,10 +505,25 @@ span.select2-dropdown.select2-dropdown--above,
 }
 
 .as_logo {
-    padding: 35px 150px;
+    width: 295px;
+    min-width: 295px;
+    height: 120px;
+    padding: 10px 25px;
     border-right: 1px solid rgb(255 255 255 / 10%);
     display: flex;
     align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #07273c;
+}
+
+.as_logo img {
+    width: 225px;
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
 }
 
 .as_menu ul {
@@ -4050,14 +4065,17 @@ textarea.form-control {
    ========================================================= */
 
 .as_footer_logo {
-    display: block;
     width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 25px;
 }
 
 .as_footer_logo a {
-    display: block;
-    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
     text-decoration: none;
 }
 
@@ -4068,6 +4086,30 @@ textarea.form-control {
     max-width: 100%;
     object-fit: contain;
     object-position: center;
+}
+
+.vikram_footer_logo {
+    width: 225px;
+    height: auto;
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+    border: 0;
+    outline: none;
+}
+
+.vikram_footer_logo {
+    width: 225px;
+    height: auto;
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+    border: 0;
+    outline: none;
 }
 
 /* Tablet */
