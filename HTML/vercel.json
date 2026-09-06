@@ -33,6 +33,10 @@
       "destination": "/blog.html"
     },
     {
+      "source": "/location",
+      "destination": "/Location.html"
+    },
+    {
       "source": "/contact",
       "destination": "/contact.html"
     },
