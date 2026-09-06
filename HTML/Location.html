@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Locations | Vikram Astrology & Psychic</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           LOCATION PAGE
+        ========================================================= */
+
+        .vk_locations_section {
+            background: #2c2840;
+            padding: 100px 0 120px;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .vk_locations_container {
+            width: 100%;
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+        /* =========================================================
+           HEADING
+        ========================================================= */
+
+        .vk_locations_heading {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 60px;
+        }
+
+        .vk_locations_heading .vk_small_title {
+            color: #ff7010;
+            font-family: "Philosopher", sans-serif;
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .vk_locations_heading h1 {
+            color: #ffffff;
+            font-family: "Philosopher", sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin: 0 0 20px;
+        }
+
+        .vk_locations_heading p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           GRID
+        ========================================================= */
+
+        .vk_locations_grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            align-items: stretch;
+        }
+
+
+        /* =========================================================
+           CARD
+        ========================================================= */
+
+        .vk_location_card {
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 15px;
+            overflow: hidden;
+
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.20);
+
+            opacity: 0;
+            transform: translateY(70px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease,
+                box-shadow 0.3s ease;
+
+            will-change: transform, opacity;
+        }
+
+        .vk_location_card.is-visible {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .vk_location_card:hover {
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.30);
+            transform: translateY(-8px);
+        }
+
+
+        /* =========================================================
+           IMAGE
+        ========================================================= */
+
+        .vk_location_image {
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #eeeeee;
+        }
+
+        .vk_location_image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            object-fit: cover;
+            object-position: center;
+
+            transition: transform 0.6s ease;
+        }
+
+        .vk_location_card:hover .vk_location_image img {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================================================
+           CONTENT
+        ========================================================= */
+
+        .vk_location_content {
+            padding: 25px 15px 20px;
+        }
+
+        .vk_location_content h3 {
+            color: #2c2840;
+            font-family: "Philosopher", sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+            line-height: 1.3;
+
+            margin: 0 0 18px;
+        }
+
+        .vk_location_item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            margin-bottom: 14px;
+        }
+
+        .vk_location_item i {
+            color: #ff7010;
+            font-size: 18px;
+
+            width: 20px;
+            min-width: 20px;
+
+            margin-top: 4px;
+            text-align: center;
+        }
+
+        .vk_location_item span,
+        .vk_location_item a {
+            color: #555555;
+            font-size: 15px;
+            line-height: 1.6;
+            text-decoration: none;
+        }
+
+        .vk_location_item a:hover {
+            color: #ff7010;
+        }
+
+
+        /* =========================================================
+           ANIMATION 1
+           BOTTOM → TOP
+        ========================================================= */
+
+        .vk_location_up {
+            transform: translateY(100px);
+        }
+
+
+        /* =========================================================
+           ANIMATION 2
+           TOP → BOTTOM
+        ========================================================= */
+
+        .vk_location_down {
+            transform: translateY(-100px);
+        }
+
+
+        /* =========================================================
+           ANIMATION 3
+           LEFT → RIGHT
+        ========================================================= */
+
+        .vk_location_left {
+            transform: translateX(-120px);
+        }
+
+
+        /* =========================================================
+           ANIMATION 4
+           RIGHT → LEFT
+        ========================================================= */
+
+        .vk_location_right {
+            transform: translateX(120px);
+        }
+
+
+        /* =========================================================
+           STAGGER DELAY
+        ========================================================= */
+
+        .vk_location_card:nth-child(1) {
+            transition-delay: 0.10s;
+        }
+
+        .vk_location_card:nth-child(2) {
+            transition-delay: 0.25s;
+        }
+
+        .vk_location_card:nth-child(3) {
+            transition-delay: 0.40s;
+        }
+
+        .vk_location_card:nth-child(4) {
+            transition-delay: 0.55s;
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 991px) {
+
+            .vk_locations_section {
+                padding: 80px 0 90px;
+            }
+
+            .vk_locations_heading h1 {
+                font-size: 44px;
+            }
+
+            .vk_locations_grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .vk_location_image {
+                height: 230px;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 767px) {
+
+            .vk_locations_section {
+                padding: 65px 0 75px;
+            }
+
+            .vk_locations_container {
+                padding: 0 15px;
+            }
+
+            .vk_locations_heading {
+                margin-bottom: 40px;
+            }
+
+            .vk_locations_heading .vk_small_title {
+                font-size: 17px;
+            }
+
+            .vk_locations_heading h1 {
+                font-size: 36px;
+            }
+
+            .vk_locations_heading p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .vk_locations_grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .vk_location_image {
+                height: 230px;
+            }
+
+            .vk_location_content h3 {
+                font-size: 25px;
+            }
+
+            .vk_location_card {
+                padding: 12px;
+                border-radius: 20px;
+            }
+
+            .vk_location_image {
+                border-radius: 16px;
+            }
+
+
+            /* Mobile animation distances */
+
+            .vk_location_up {
+                transform: translateY(60px);
+            }
+
+            .vk_location_down {
+                transform: translateY(-60px);
+            }
+
+            .vk_location_left {
+                transform: translateX(-70px);
+            }
+
+            .vk_location_right {
+                transform: translateX(70px);
+            }
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .vk_location_card {
+                opacity: 1;
+                transform: none !important;
+                transition: none;
+            }
+
+            .vk_location_card:hover {
+                transform: none;
+            }
+
+            .vk_location_image img {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <div id="vk_header"></div>
+
+
+    <!-- =========================================================
+         LOCATION SECTION
+    ========================================================= -->
+
+    <section class="vk_locations_section">
+
+        <div class="vk_locations_container">
+
+
+            <!-- Heading -->
+
+            <div class="vk_locations_heading">
+
+                <div class="vk_small_title">
+                    Vikram Astrology & Psychic
+                </div>
+
+                <h1>
+                    Our Locations
+                </h1>
+
+                <p>
+                    Connect with Vikram Astrology & Psychic for spiritual
+                    guidance, astrology consultations, psychic readings
+                    and personalized services.
+                </p>
+
+            </div>
+
+
+            <!-- =====================================================
+                 LOCATION GRID
+            ===================================================== -->
+
+            <div class="vk_locations_grid">
+
+
+                <!-- =================================================
+                     CARD 1
+                     BOTTOM → TOP
+                ================================================== -->
+
+                <article class="vk_location_card vk_location_up">
+
+                    <div class="vk_location_image">
+
+                        <img src="assets/images/about1.jpg" alt="Vikram Astrology Vijayawada Office">
+
+                    </div>
+
+
+                    <div class="vk_location_content">
+
+                        <h3>
+                            Vijayawada Office
+                        </h3>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-map-marker"></i>
+
+                            <span>
+                                Vijayawada, Andhra Pradesh, India
+                            </span>
+
+                        </div>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-phone"></i>
+
+                            <a href="tel:+19295869234">
+                                +1 (929) 586-9234
+                            </a>
+
+                        </div>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-envelope"></i>
+
+                            <a href="mailto:info@vikramastrology.com">
+                                info@vikramastrology.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     CARD 2
+                     TOP → BOTTOM
+                ================================================== -->
+
+                <article class="vk_location_card vk_location_down">
+
+                    <div class="vk_location_image">
+
+                        <img src="assets/images/about2.jpg" alt="Vikram Astrology New York Office">
+
+                    </div>
+
+
+                    <div class="vk_location_content">
+
+                        <h3>
+                            New York Consultation
+                        </h3>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-map-marker"></i>
+
+                            <span>
+                                New York, USA
+                            </span>
+
+                        </div>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-phone"></i>
+
+                            <a href="tel:+19295869234">
+                                +1 (929) 586-9234
+                            </a>
+
+                        </div>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-envelope"></i>
+
+                            <a href="mailto:info@vikramastrology.com">
+                                info@vikramastrology.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     CARD 3
+                     LEFT → RIGHT
+                ================================================== -->
+
+                <article class="vk_location_card vk_location_left">
+
+                    <div class="vk_location_image">
+
+                        <img src="assets/images/about3.jpg" alt="Vikram Astrology Online Consultation">
+
+                    </div>
+
+
+                    <div class="vk_location_content">
+
+                        <h3>
+                            Online Consultation
+                        </h3>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-globe"></i>
+
+                            <span>
+                                Available Worldwide
+                            </span>
+
+                        </div>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-phone"></i>
+
+                            <a href="tel:+19295869234">
+                                +1 (929) 586-9234
+                            </a>
+
+                        </div>
+
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-envelope"></i>
+
+                            <a href="mailto:info@vikramastrology.com">
+                                info@vikramastrology.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     CARD 4
+                     RIGHT → LEFT
+
+                     Uncomment this card when you have a 4th location.
+                ================================================== -->
+
+                <!--
+
+                <article class="vk_location_card vk_location_right">
+
+                    <div class="vk_location_image">
+
+                        <img src="assets/images/about4.jpg"
+                            alt="Vikram Astrology Location">
+
+                    </div>
+
+                    <div class="vk_location_content">
+
+                        <h3>
+                            Additional Location
+                        </h3>
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-map-marker"></i>
+
+                            <span>
+                                Your Location Address
+                            </span>
+
+                        </div>
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-phone"></i>
+
+                            <a href="tel:+19295869234">
+                                +1 (929) 586-9234
+                            </a>
+
+                        </div>
+
+                        <div class="vk_location_item">
+
+                            <i class="fa fa-envelope"></i>
+
+                            <a href="mailto:info@vikramastrology.com">
+                                info@vikramastrology.com
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <div id="vk_footer"></div>
+
+
+    <!-- =========================================================
+         HEADER / FOOTER LOAD
+    ========================================================= -->
+
+    <script>
+
+        /* Load Header */
+
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("vk_header").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Header loading failed:", error);
+            });
+
+
+        /* Load Footer */
+
+        fetch("Footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("vk_footer").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Footer loading failed:", error);
+            });
+
+    </script>
+
+
+    <!-- =========================================================
+         SCROLL ANIMATION
+    ========================================================= -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const locationCards =
+                document.querySelectorAll(".vk_location_card");
+
+
+            /* Intersection Observer */
+
+            const observer = new IntersectionObserver(
+
+                function (entries, observer) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("is-visible");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.15,
+                    rootMargin: "0px 0px -50px 0px"
+                }
+
+            );
+
+
+            locationCards.forEach(function (card) {
+
+                observer.observe(card);
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
