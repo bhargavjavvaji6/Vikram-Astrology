@@ -9,6 +9,14 @@
       "destination": "/about.html"
     },
     {
+      "source": "/astrologer",
+      "destination": "/astrologer.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html"
+    },
+    {
       "source": "/appointment",
       "destination": "/appointment.html"
     },
