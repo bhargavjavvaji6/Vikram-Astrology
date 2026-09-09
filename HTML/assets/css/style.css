@@ -4144,3 +4144,128 @@ textarea.form-control {
         height: 150px;
     }
 }
+
+/* =========================================================
+   FIX FOOTER HORIZONTAL DESKTOP LAYOUT
+   ========================================================= */
+
+.as_footer_wrapper {
+    width: 100%;
+    display: block;
+    clear: both;
+    position: relative;
+}
+
+.as_footer_wrapper .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.as_footer_inner {
+    width: 100%;
+}
+
+.as_footer_inner>.row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.as_footer_inner>.row>[class*="col-"] {
+    position: relative;
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+   ========================================================= */
+
+.as_footer_logo {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+.vikram_footer_logo {
+    width: 225px;
+    max-width: 100%;
+    height: auto;
+    max-height: 110px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+
+/* =========================================================
+   FOOTER WIDGET
+   ========================================================= */
+
+.as_footer_widget {
+    width: 100%;
+}
+
+.as_footer_heading {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   DESKTOP - 4 COLUMNS
+   ========================================================= */
+
+@media (min-width: 992px) {
+
+    .as_footer_inner>.row>.col-lg-3 {
+        width: 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET - 2 COLUMNS
+   ========================================================= */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .as_footer_inner>.row>[class*="col-"] {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE - 1 COLUMN
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .as_footer_inner>.row>[class*="col-"] {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .vikram_footer_logo {
+        width: 200px;
+        max-height: 100px;
+    }
+
+}
