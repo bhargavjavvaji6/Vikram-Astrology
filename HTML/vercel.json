@@ -111,6 +111,18 @@
     {
       "source": "/service/spiritual-healing-new-york",
       "destination": "/Services/Spiritual_healing.html"
+    },
+    {
+      "source": "/location/psychic-in-new-jersey",
+      "destination": "/Locations/NewJersey.html"
+    },
+    {
+      "source": "/location/psychic-in-texas",
+      "destination": "/Locations/TexasLocation.html"
+    },
+    {
+      "source": "/location/psychic-in-florida",
+      "destination": "/Locations/Florida.html"
     }
   ]
 }
