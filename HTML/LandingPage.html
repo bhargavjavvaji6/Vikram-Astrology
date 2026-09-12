@@ -19,15 +19,17 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <style>
         :root {
-            --bg: #080615;
-            --panel: #110c25;
-            --panel2: #17102f;
-            --ink: #f7efe4;
-            --muted: #afa6be;
-            --gold: #d9aa4d;
-            --gold2: #f4d488;
-            --violet: #9e7be8;
-            --line: rgba(255, 255, 255, .10);
+            --bg: #f8f6f1;
+            --panel: #ffffff;
+            --panel2: #f2eef8;
+            --ink: #211b2d;
+            --muted: #6f6878;
+            --gold: #c79a3b;
+            --gold2: #e2bb66;
+            --violet: #7153a6;
+            --navy: #22203b;
+            --line: rgba(34, 32, 59, .12);
+            --soft: #eee9f4;
             --max: 1240px
         }
 
@@ -54,7 +56,7 @@
         }
 
         .lp {
-            background: radial-gradient(circle at 83% 8%, rgba(158, 123, 232, .17), transparent 28%), radial-gradient(circle at 15% 28%, rgba(217, 170, 77, .08), transparent 24%), var(--bg)
+            background: radial-gradient(circle at 84% 8%, rgba(113, 83, 166, .13), transparent 25%), radial-gradient(circle at 12% 28%, rgba(226, 187, 102, .10), transparent 22%), linear-gradient(180deg, #fbfaf7 0%, #f8f6f1 42%, #f5f1f8 100%)
         }
 
         .wrap {
@@ -68,7 +70,7 @@
             inset: 0 0 auto;
             height: 78px;
             z-index: 9999;
-            background: rgba(8, 6, 21, .78);
+            background: rgba(255, 255, 255, .86);
             border-bottom: 1px solid var(--line);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px)
@@ -86,7 +88,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            color: #fff
+            color: var(--navy)
         }
 
         .brand img {
@@ -104,7 +106,7 @@
         .brand small {
             display: block;
             margin-top: 4px;
-            color: #a9a0b7;
+            color: #766e81;
             font-size: 8px;
             letter-spacing: .2em;
             text-transform: uppercase
@@ -117,7 +119,7 @@
         }
 
         .nav-links a {
-            color: #eae4ef;
+            color: #312b3d;
             font-size: 13px;
             font-weight: 600;
             padding: 11px 12px;
@@ -145,8 +147,8 @@
             height: 41px;
             border: 1px solid var(--line);
             border-radius: 11px;
-            background: #ffffff08;
-            color: #fff
+            background: #ffffff;
+            color: var(--navy)
         }
 
         .mobile-nav {
@@ -173,7 +175,7 @@
         }
 
         .eyebrow {
-            color: var(--gold2);
+            color: #a27825;
             font-size: 11px;
             font-weight: 800;
             letter-spacing: .22em;
@@ -199,12 +201,12 @@
         .hero h1 em,
         .section-title em {
             font-family: 'Playfair Display', serif;
-            color: var(--gold2)
+            color: #a27825
         }
 
         .hero-copy {
             max-width: 690px;
-            color: #c4bbd2;
+            color: #60586c;
             font-size: 18px;
             line-height: 1.8
         }
@@ -262,8 +264,8 @@
             border-radius: 999px;
             padding: 9px 12px;
             font-size: 11px;
-            color: #d2c9dc;
-            background: #ffffff04
+            color: #5d5668;
+            background: rgba(255, 255, 255, .70)
         }
 
         .hero-art {
@@ -279,9 +281,9 @@
             border-radius: 50%;
             display: grid;
             place-items: center;
-            background: radial-gradient(circle, #35254b 0 30%, #17102f 31% 55%, #0d0920 56%);
-            border: 1px solid #f4d48825;
-            box-shadow: 0 0 0 18px #ffffff03, 0 30px 90px #0008;
+            background: radial-gradient(circle, #f6eedb 0 30%, #e9e1f0 31% 55%, #ddd5e6 56%);
+            border: 1px solid rgba(34, 32, 59, .12);
+            box-shadow: 0 0 0 18px rgba(34, 32, 59, .03), 0 30px 70px rgba(34, 32, 59, .15);
             animation: float 7s ease-in-out infinite
         }
 
@@ -296,11 +298,11 @@
             position: absolute;
             padding: 10px 13px;
             border: 1px solid var(--line);
-            background: #0c091cdd;
+            background: rgba(255, 255, 255, .92);
             backdrop-filter: blur(12px);
             border-radius: 13px;
             font-size: 11px;
-            color: #ece4ef;
+            color: #383143;
             box-shadow: 0 15px 35px #0007
         }
 
@@ -362,8 +364,8 @@
         }
 
         .alt {
-            background: #ffffff03;
-            border-block: 1px solid #ffffff08
+            background: linear-gradient(180deg, rgba(113, 83, 166, .055), rgba(226, 187, 102, .05));
+            border-block: 1px solid var(--line)
         }
 
         .section-title {
@@ -374,7 +376,7 @@
 
         .lead {
             max-width: 760px;
-            color: #aaa0b9;
+            color: #696173;
             font-size: 16px;
             line-height: 1.8
         }
@@ -442,7 +444,7 @@
         }
 
         .copy p {
-            color: #b4abc0;
+            color: #625a6b;
             line-height: 1.9
         }
 
@@ -457,7 +459,7 @@
             padding: 17px;
             border: 1px solid var(--line);
             border-radius: 17px;
-            background: #ffffff05
+            background: rgba(255, 255, 255, .78)
         }
 
         .stat b {
@@ -467,7 +469,7 @@
         }
 
         .stat span {
-            color: #a69cad;
+            color: #756d7d;
             font-size: 10px
         }
 
@@ -492,15 +494,15 @@
             padding: 27px;
             border-radius: 23px;
             border: 1px solid var(--line);
-            background: linear-gradient(145deg, #ffffff09, #ffffff02);
+            background: linear-gradient(145deg, rgba(255, 255, 255, .92), rgba(245, 241, 249, .92));
             overflow: hidden;
             transition: .3s
         }
 
         .service:hover {
             transform: translateY(-8px);
-            border-color: #f4d48855;
-            box-shadow: 0 25px 65px #0008
+            border-color: #c79a3b88;
+            box-shadow: 0 25px 65px rgba(34, 32, 59, .12)
         }
 
         .icon {
@@ -523,7 +525,7 @@
 
         .service p {
             margin: 0;
-            color: #a79eb6;
+            color: #6b6374;
             font-size: 13px;
             line-height: 1.7
         }
@@ -532,7 +534,7 @@
             position: absolute;
             right: 20px;
             bottom: 18px;
-            color: #847b92
+            color: #786f80
         }
 
         /* JOURNEY */
@@ -556,7 +558,7 @@
             padding: 17px;
             border: 1px solid var(--line);
             border-radius: 18px;
-            background: #ffffff04
+            background: rgba(255, 255, 255, .82)
         }
 
         .step-num {
@@ -578,7 +580,7 @@
 
         .step p {
             margin: 0;
-            color: #a79eb6;
+            color: #6c6474;
             font-size: 12px;
             line-height: 1.7
         }
@@ -586,9 +588,9 @@
         .quote {
             padding: 45px;
             border-radius: 26px;
-            background: linear-gradient(145deg, #1b1339, #0e0920);
-            border: 1px solid #f4d4882b;
-            box-shadow: 0 25px 70px #0008
+            background: linear-gradient(145deg, #fffdf8, #eee8f4);
+            border: 1px solid rgba(199, 154, 59, .25);
+            box-shadow: 0 25px 70px rgba(34, 32, 59, .12)
         }
 
         .quote p {
@@ -616,7 +618,7 @@
             overflow: hidden;
             border-radius: 21px;
             border: 1px solid var(--line);
-            background: #110c25;
+            background: #fff;
             transition: .3s
         }
 
@@ -658,13 +660,13 @@
         }
 
         .blog p {
-            color: #9e95ae;
+            color: #6d6577;
             font-size: 12px;
             line-height: 1.7
         }
 
         .blog a {
-            color: #eee6f2;
+            color: #463d52;
             font-size: 11px;
             font-weight: 700
         }
@@ -685,7 +687,7 @@
 
         .contact-card {
             padding: 33px;
-            background: #ffffff04
+            background: rgba(255, 255, 255, .78)
         }
 
         .contact-card h3,
@@ -698,7 +700,7 @@
             display: flex;
             gap: 12px;
             padding: 17px 0;
-            border-bottom: 1px solid #ffffff0b
+            border-bottom: 1px solid rgba(34, 32, 59, .08)
         }
 
         .item:last-child {
@@ -724,7 +726,7 @@
 
         .item span,
         .item a {
-            color: #a49aaf;
+            color: #6a6272;
             font-size: 12px;
             line-height: 1.6
         }
@@ -784,11 +786,363 @@
             font-weight: 700
         }
 
+        /* FAQ */
+        .faq-section {
+            padding: 105px 0;
+            background: linear-gradient(180deg, #f8f6f1 0%, #f2eef7 100%)
+        }
+
+        .faq-wrap {
+            max-width: 930px;
+            margin: 0 auto
+        }
+
+        .faq-list {
+            margin-top: 34px;
+            border-top: 1px solid var(--line)
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--line);
+            background: rgba(255, 255, 255, .55)
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 21px 20px;
+            border: 0;
+            background: transparent;
+            color: #2c2738;
+            text-align: left;
+            font: 600 18px/1.45 Inter, Arial, sans-serif;
+            cursor: pointer
+        }
+
+        .faq-question:hover {
+            background: rgba(113, 83, 166, .045)
+        }
+
+        .faq-plus {
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(199, 154, 59, .35);
+            border-radius: 50%;
+            color: #9f7627;
+            font-size: 24px;
+            font-weight: 400;
+            transition: .25s
+        }
+
+        .faq-item.open .faq-plus {
+            transform: rotate(45deg);
+            background: #d9aa4c;
+            color: #211b2d
+        }
+
+        .faq-answer {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows .35s ease
+        }
+
+        .faq-answer-inner {
+            overflow: hidden;
+            padding: 0 20px;
+            color: #6b6372;
+            font-size: 14px;
+            line-height: 1.8
+        }
+
+        .faq-item.open .faq-answer {
+            grid-template-rows: 1fr
+        }
+
+        .faq-item.open .faq-answer-inner {
+            padding: 0 20px 20px
+        }
+
+        /* Floating contact tools */
+        .float-tools {
+            position: fixed;
+            right: 22px;
+            bottom: 24px;
+            z-index: 9998;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: flex-end
+        }
+
+        .float-btn {
+            width: 57px;
+            height: 57px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            border: 0;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(34, 32, 59, .24);
+            transition: transform .25s, box-shadow .25s;
+            position: relative
+        }
+
+        .float-btn:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 16px 35px rgba(34, 32, 59, .3)
+        }
+
+        .float-btn svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff
+        }
+
+        .float-call {
+            background: linear-gradient(135deg, #6d54b5, #4e398d)
+        }
+
+        .float-wa {
+            background: linear-gradient(135deg, #25d366, #128c4f)
+        }
+
+        .float-ai {
+            background: linear-gradient(135deg, #d7ae5a, #a97822)
+        }
+
+        .float-tip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 7px 11px;
+            border-radius: 999px;
+            background: #211c2d;
+            color: #fff;
+            font-size: 11px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: .2s
+        }
+
+        .float-btn:hover .float-tip {
+            opacity: 1
+        }
+
+        /* Simple on-page AI assistant */
+        .ai-panel {
+            position: fixed;
+            right: 92px;
+            bottom: 24px;
+            width: 350px;
+            max-width: calc(100vw - 30px);
+            height: 485px;
+            background: #fff;
+            border: 1px solid rgba(34, 32, 59, .12);
+            border-radius: 22px;
+            box-shadow: 0 25px 70px rgba(34, 32, 59, .25);
+            z-index: 9997;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px) scale(.98);
+            transition: .25s
+        }
+
+        .ai-panel.open {
+            opacity: 1;
+            visibility: visible;
+            transform: none
+        }
+
+        .ai-head {
+            padding: 15px 16px;
+            background: linear-gradient(135deg, #292443, #4e3b70);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .ai-avatar {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            border-radius: 13px;
+            background: #ffffff18;
+            font-size: 20px
+        }
+
+        .ai-head strong {
+            display: block;
+            font-size: 14px
+        }
+
+        .ai-head span {
+            display: block;
+            margin-top: 2px;
+            font-size: 10px;
+            color: #d8d0e3
+        }
+
+        .ai-close {
+            margin-left: auto;
+            border: 0;
+            background: #ffffff15;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
+            cursor: pointer
+        }
+
+        .ai-body {
+            flex: 1;
+            padding: 14px;
+            overflow: auto;
+            background: #f8f6f1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .ai-msg {
+            max-width: 86%;
+            padding: 10px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            line-height: 1.6
+        }
+
+        .ai-bot {
+            align-self: flex-start;
+            background: #fff;
+            color: #4d4658;
+            border: 1px solid rgba(34, 32, 59, .08)
+        }
+
+        .ai-user {
+            align-self: flex-end;
+            background: #e9e0f2;
+            color: #342a47
+        }
+
+        .ai-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 2px
+        }
+
+        .ai-option {
+            border: 1px solid rgba(113, 83, 166, .2);
+            background: #fff;
+            color: #4c3d62;
+            border-radius: 999px;
+            padding: 7px 10px;
+            font-size: 10px;
+            cursor: pointer
+        }
+
+        .ai-form {
+            display: flex;
+            gap: 7px;
+            padding: 10px;
+            background: #fff;
+            border-top: 1px solid var(--line)
+        }
+
+        .ai-form input {
+            flex: 1;
+            border: 1px solid var(--line);
+            border-radius: 11px;
+            padding: 10px;
+            font: inherit;
+            font-size: 12px;
+            outline: none
+        }
+
+        .ai-form button {
+            width: 42px;
+            border: 0;
+            border-radius: 11px;
+            background: #2b2640;
+            color: #fff;
+            cursor: pointer
+        }
+
+        .ai-foot {
+            text-align: center;
+            font-size: 9px;
+            color: #8a8190;
+            padding: 6px 10px;
+            background: #fff
+        }
+
+        @media(max-width:700px) {
+            .faq-section {
+                padding: 78px 0
+            }
+
+            .faq-question {
+                font-size: 15px;
+                padding: 17px 13px
+            }
+
+            .faq-answer-inner {
+                font-size: 13px;
+                padding-left: 13px;
+                padding-right: 13px
+            }
+
+            .faq-item.open .faq-answer-inner {
+                padding-left: 13px;
+                padding-right: 13px
+            }
+
+            .float-tools {
+                right: 14px;
+                bottom: 15px;
+                gap: 9px
+            }
+
+            .float-btn {
+                width: 50px;
+                height: 50px
+            }
+
+            .float-btn svg {
+                width: 24px;
+                height: 24px
+            }
+
+            .float-tip {
+                display: none
+            }
+
+            .ai-panel {
+                right: 12px;
+                bottom: 82px;
+                width: calc(100vw - 24px);
+                height: min(500px, calc(100vh - 110px))
+            }
+        }
+
         /* FOOTER */
         footer {
             padding: 35px 0 48px;
-            background: #05030d;
-            border-top: 1px solid var(--line)
+            background: #22203b;
+            border-top: 1px solid rgba(255, 255, 255, .08)
         }
 
         .foot {
@@ -1204,6 +1558,81 @@
                     </div>
                 </div>
             </section>
+
+            <section class="faq-section" id="faq">
+                <div class="wrap faq-wrap">
+                    <div class="section-head reveal">
+                        <div>
+                            <div class="eyebrow">Frequently Asked Questions</div>
+                            <h2 class="section-title">Your questions, <em>answered.</em></h2>
+                        </div>
+                    </div>
+                    <p class="lead reveal">Find quick answers about online psychic readings, astrology consultations,
+                        relationships, career guidance and booking a private consultation.</p>
+                    <div class="faq-list reveal">
+                        <div class="faq-item"><button class="faq-question" type="button"
+                                aria-expanded="false"><span>What can I ask during a psychic reading?</span><span
+                                    class="faq-plus">+</span></button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">You can ask about love, relationships, marriage, career,
+                                    family, finances, business, personal decisions, your future, or any situation where
+                                    you need greater clarity.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>How
+                                    does a psychic reading work?</span><span class="faq-plus">+</span></button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">During your private consultation, you can share the
+                                    questions or concerns that are important to you. Vikram provides personalized
+                                    guidance based on your situation and the type of reading you choose.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Do
+                                    you offer online psychic readings?</span><span class="faq-plus">+</span></button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Yes. Online and phone psychic readings are available for
+                                    clients throughout California and across the USA, making it convenient to receive a
+                                    private consultation from anywhere.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Can
+                                    I get a psychic reading about my love or relationship?</span><span
+                                    class="faq-plus">+</span></button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Yes. Love and relationship readings can provide guidance
+                                    on relationship concerns, marriage, emotional connections, breakups, reconciliation,
+                                    and other matters of the heart.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Can
+                                    a psychic reading help with career or business decisions?</span><span
+                                    class="faq-plus">+</span></button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Yes. Many clients seek guidance when considering a new
+                                    job, career change, business opportunity, financial decision, or an important
+                                    professional choice.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Do
+                                    you offer astrology and birth chart readings?</span><span
+                                    class="faq-plus">+</span></button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Yes. Vikram provides astrology consultations and
+                                    personalized birth chart readings to help you explore areas such as relationships,
+                                    career, personality, life direction, and future possibilities.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>How
+                                    do I book a psychic or astrology consultation?</span><span
+                                    class="faq-plus">+</span></button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">You can call <strong>+1 (929) 586-9234</strong> or submit
+                                    the contact form to schedule a private consultation at a convenient time.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="section" id="contact">
                 <div class="wrap">
                     <div class="section-head reveal">
@@ -1264,14 +1693,78 @@
                 </div>
             </section>
         </main>
-        <footer>
-            <div class="wrap foot"><span>© <span id="year"></span> Vikram Astrologer & Psychic</span>
-                <nav class="footlinks"><a href="#home">Home</a><a href="#about">About</a><a
-                        href="#services">Services</a><a href="#blogs">Blogs</a><a href="#contact">Contact</a></nav>
+
+        <!-- Floating contact tools -->
+        <div class="float-tools" aria-label="Quick contact tools">
+            <a class="float-btn float-call" href="tel:+19295869234" aria-label="Call Vikram"><span
+                    class="float-tip">Call Vikram</span><svg viewBox="0 0 512 512">
+                    <path
+                        d="M493.4 24.6c-20.4-20.4-53.5-20.4-73.9 0L318 126.1c-20.4 20.4-20.4 53.5 0 73.9l32.2 32.2c-18.4 35.7-43.5 68.6-74.6 93.7s-58 56.2-93.7 74.6l-32.2-32.2c-20.4-20.4-53.5-20.4-73.9 0L24.6 420.5c-20.4 20.4-20.4 53.5 0 73.9l28.4 28.4c22.3 22.3 55.2 31.7 85.8 22.9C350.4 493.9 493.9 350.4 545.7 138.8c8.8-30.6-.6-63.5-22.9-85.8l-29.4-28.4z" />
+                </svg></a>
+            <a class="float-btn float-wa" href="https://wa.me/19295869234" target="_blank" rel="noopener"
+                aria-label="WhatsApp Vikram"><span class="float-tip">WhatsApp</span><svg viewBox="0 0 448 512">
+                    <path
+                        d="M380.9 97.1C339-1 223-39.6 125.3 2.3 27.7 44.2-10.8 160.2 31.1 257.9L0 512l257.4-31.2c97.7 41.9 213.7 3.3 255.6-94.4 41.9-97.7 3.3-213.7-94.4-255.3zM224 438c-27.1 0-53.7-7.3-77-21.1l-5.5-3.2-45.8 5.6 6-44.6-3.5-5.7c-15.1-24.8-23.1-53.3-23.1-82.5 0-87.2 71-158.2 158.2-158.2s158.2 71 158.2 158.2S311.2 438 224 438zm87.1-118.6c-4.8-2.4-28.6-14.1-33-15.7-4.5-1.7-7.7-2.4-11 2.4-3.3 4.8-12.6 15.7-15.5 19-2.9 3.3-5.7 3.7-10.5 1.2-4.8-2.4-20.2-7.4-38.5-23.7-14.2-12.6-23.8-28.2-26.6-33-2.9-4.8-.3-7.4 2.2-9.9 2.2-2.2 4.8-5.7 7.2-8.6 2.4-2.9 3.2-4.8 4.8-8.1 1.6-3.3.8-6.1-.4-8.6-1.2-2.4-11-26.4-15-36.2-3.9-9.6-7.9-8.3-11-8.4-2.8-.1-6.1-.1-9.4-.1-3.2 0-8.6 1.2-13.1 6.1-4.5 4.8-17.2 16.8-17.2 41s17.6 47.5 20 50.8c2.4 3.3 34.7 53 84 74.2 11.8 5.1 21 8.1 28.2 10.4 11.8 3.8 22.5 3.2 31 1.9 9.5-1.4 28.6-11.7 32.6-23 4-11.3 4-21 2.8-23-1.2-2-4.5-3.2-9.3-5.6z" />
+                </svg></a>
+            <button class="float-btn float-ai" id="aiToggle" aria-label="Open AI assistant" aria-expanded="false"><span
+                    class="float-tip">Ask Vikram AI</span><svg viewBox="0 0 512 512">
+                    <path
+                        d="M256 32c-123.7 0-224 87.5-224 195.4 0 58.8 31.2 111.8 80.8 147.9-4.6 26.1-15.8 55.1-31.6 77.9-3.8 5.5-1.2 13.1 5.4 15.1 25.5 7.7 67.2 8.1 103.5-7.8 20.7 6.3 42.8 9.6 65.9 9.6 123.7 0 224-87.5 224-195.4S379.7 32 256 32zm-96 202a16 16 0 1 1 0-32 16 16 0 0 1 0 32zm96 0a16 16 0 1 1 0-32 16 16 0 0 1 0 32zm96 0a16 16 0 1 1 0-32 16 16 0 0 1 0 32z" />
+                </svg></button>
+        </div>
+
+        <div class="ai-panel" id="aiPanel" role="dialog" aria-label="Vikram AI Assistant">
+            <div class="ai-head">
+                <div class="ai-avatar">🔮</div>
+                <div><strong>Vikram AI Assistant</strong><span>Quick answers • Available 24/7</span></div><button
+                    class="ai-close" id="aiClose" aria-label="Close">×</button>
             </div>
-        </footer>
+            <div class="ai-body" id="aiBody">
+                <div class="ai-msg ai-bot">Namaste! I can answer common questions about psychic readings, astrology,
+                    relationships, online consultations and booking.</div>
+                <div class="ai-options" id="aiOptions">
+                    <button class="ai-option"
+                        data-answer="Psychic readings can cover love, relationships, marriage, career, family, finances, business and personal decisions.">Psychic
+                        Reading</button>
+                    <button class="ai-option"
+                        data-answer="Yes. Online and phone psychic readings are available for clients across California and the USA.">Online
+                        Reading</button>
+                    <button class="ai-option"
+                        data-answer="Yes. Vikram provides astrology consultations and personalized birth chart readings.">Birth
+                        Chart</button>
+                    <button class="ai-option"
+                        data-answer="Call +1 (929) 586-9234 or use the contact form to schedule a private consultation.">Book
+                        Appointment</button>
+                </div>
+            </div>
+            <form class="ai-form" id="aiForm"><input id="aiInput" autocomplete="off"
+                    placeholder="Ask a question..."><button type="submit" aria-label="Send">➤</button></form>
+            <div class="ai-foot">Informational assistant — for personalized guidance, contact Vikram.</div>
+        </div>
     </div>
     <script>
-        (function () { const m = document.getElementById('menuBtn'), n = document.getElementById('mobileNav'); m.addEventListener('click', () => n.classList.toggle('open')); n.querySelectorAll('a').forEach(a => a.addEventListener('click', () => n.classList.remove('open'))); const o = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('show'); o.unobserve(x.target) } }), { threshold: .12 }); document.querySelectorAll('.reveal').forEach(x => o.observe(x)); document.getElementById('year').textContent = new Date().getFullYear(); document.getElementById('contactForm').addEventListener('submit', e => { e.preventDefault(); const v = id => document.getElementById(id).value.trim(); const subject = encodeURIComponent('Private Consultation Request - ' + v('name')); const body = encodeURIComponent(`Name: ${v('name')}\nEmail: ${v('email')}\nPhone/WhatsApp: ${v('phone')}\nTopic: ${v('topic')}\n\nMessage:\n${v('message')}`); const s = document.getElementById('status'); s.style.display = 'block'; s.style.color = '#2d663f'; s.textContent = 'Opening your email app...'; location.href = `mailto:vikrampsychic78@gmail.com?subject=${subject}&body=${body}` }) })();
+        (function () {
+            const menu = document.getElementById('menuBtn'), mobile = document.getElementById('mobileNav');
+            if (menu && mobile) { menu.addEventListener('click', () => mobile.classList.toggle('open')); mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobile.classList.remove('open'))) }
+            const o = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('show'); o.unobserve(x.target) } }), { threshold: .12 });
+            document.querySelectorAll('.reveal').forEach(x => o.observe(x));
+            const year = document.getElementById('year'); if (year) year.textContent = new Date().getFullYear();
+            const form = document.getElementById('contactForm');
+            if (form) { form.addEventListener('submit', e => { e.preventDefault(); const v = id => document.getElementById(id).value.trim(); const subject = encodeURIComponent('Private Consultation Request - ' + v('name')); const body = encodeURIComponent(`Name: ${v('name')}\nEmail: ${v('email')}\nPhone/WhatsApp: ${v('phone')}\nTopic: ${v('topic')}\n\nMessage:\n${v('message')}`); const s = document.getElementById('status'); s.style.display = 'block'; s.style.color = '#2d663f'; s.textContent = 'Opening your email app...'; location.href = `mailto:vikrampsychic78@gmail.com?subject=${subject}&body=${body}` }) }
+            // FAQ accordion
+            document.querySelectorAll('.faq-question').forEach(btn => btn.addEventListener('click', () => { const item = btn.closest('.faq-item'); const isOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(x => { x.classList.remove('open'); const b = x.querySelector('.faq-question'); if (b) b.setAttribute('aria-expanded', 'false') }); if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true') } }));
+            // AI assistant
+            const aiToggle = document.getElementById('aiToggle'), aiPanel = document.getElementById('aiPanel'), aiClose = document.getElementById('aiClose'), aiBody = document.getElementById('aiBody'), aiForm = document.getElementById('aiForm'), aiInput = document.getElementById('aiInput');
+            function openAI() { aiPanel.classList.add('open'); aiToggle.setAttribute('aria-expanded', 'true'); setTimeout(() => aiInput.focus(), 100) }
+            function closeAI() { aiPanel.classList.remove('open'); aiToggle.setAttribute('aria-expanded', 'false') }
+            if (aiToggle) aiToggle.addEventListener('click', () => aiPanel.classList.contains('open') ? closeAI() : openAI());
+            if (aiClose) aiClose.addEventListener('click', closeAI);
+            function addMsg(text, who) { const d = document.createElement('div'); d.className = 'ai-msg ' + (who === 'user' ? 'ai-user' : 'ai-bot'); d.textContent = text; aiBody.appendChild(d); aiBody.scrollTop = aiBody.scrollHeight }
+            document.querySelectorAll('.ai-option').forEach(btn => btn.addEventListener('click', () => { addMsg(btn.textContent, 'user'); setTimeout(() => addMsg(btn.dataset.answer, 'bot'), 250) }));
+            if (aiForm) { aiForm.addEventListener('submit', e => { e.preventDefault(); const q = aiInput.value.trim(); if (!q) return; addMsg(q, 'user'); aiInput.value = ''; const x = q.toLowerCase(); let a = 'For a personalized answer, please call +1 (929) 586-9234 or use the consultation form on this page.'; if (/book|appointment|schedule/.test(x)) a = 'You can call +1 (929) 586-9234 or submit the contact form to schedule a private consultation.'; else if (/online|phone|remote/.test(x)) a = 'Yes. Online and phone psychic readings are available for clients across California and the USA.'; else if (/love|relationship|marriage/.test(x)) a = 'Love and relationship readings can cover marriage, emotional connections, breakups, reconciliation and other matters of the heart.'; else if (/career|business|job|finance/.test(x)) a = 'Career and business guidance can cover a new job, career change, business opportunity, financial decision or important professional choice.'; else if (/birth chart|astrology|vedic/.test(x)) a = 'Yes. Vikram provides astrology consultations and personalized birth chart readings.'; else if (/psychic|reading/.test(x)) a = 'A psychic reading can cover love, relationships, marriage, career, family, finances, business and personal decisions.'; setTimeout(() => addMsg(a, 'bot'), 300) }) }
+        })();
+    </script>
     </script>
 </body>
+
+</html>
