@@ -607,12 +607,6 @@
             text-transform: uppercase
         }
 
-        /* BLOG */
-        .blogs {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px
-        }
 
         .blog {
             overflow: hidden;
@@ -1201,8 +1195,7 @@
                 height: 470px
             }
 
-            .services,
-            .blogs {
+            .services {
                 grid-template-columns: 1fr 1fr
             }
         }
@@ -1308,7 +1301,6 @@
             }
 
             .services,
-            .blogs,
             .stats {
                 grid-template-columns: 1fr
             }
@@ -1367,14 +1359,14 @@
             <div class="wrap nav-in"><a class="brand" href="#home"><img src="/assets/images/vikram_logo.jpg"
                         alt="Vikram Astrologer & Psychic"><span><strong>Vikram</strong><small>Psychic · Healer ·
                             Spiritual Guide</small></span></a>
-                <nav class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a
-                        href="#services">Services</a><a href="#journey">Why Vikram</a><a href="#blogs">Blogs</a><a
-                        href="#contact">Contact</a></nav><a class="call-btn" href="tel:+19295869234">✦ Call
+                <nav class="nav-links"><a href="#home">Home</a><a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav><a class="call-btn" href="tel:+19295869234">✦ Call
                     Now</a><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
             </div>
-            <nav class="mobile-nav" id="mobileNav"><a href="#home">Home</a><a href="#about">About</a><a
-                    href="#services">Services</a><a href="#journey">Why Vikram</a><a href="#blogs">Blogs</a><a
-                    href="#contact">Contact</a></nav>
+            <nav class="mobile-nav" id="mobileNav"><a href="#home">Home</a><a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </header>
         <main>
             <section class="hero" id="home">
@@ -1519,46 +1511,6 @@
                     </div>
                 </div>
             </section>
-            <section class="section alt" id="blogs">
-                <div class="wrap">
-                    <div class="section-head reveal">
-                        <div>
-                            <div class="eyebrow">From the Blog</div>
-                            <h2 class="section-title">Ideas for <em>clarity.</em></h2>
-                        </div><a class="btn ghost" href="/blog">View all blogs →</a>
-                    </div>
-                    <div class="blogs">
-                        <article class="blog reveal">
-                            <div class="blog-img"><img src="/assets/images/blog1.jpg" alt="Birth chart reading"></div>
-                            <div class="blog-body">
-                                <div class="tag">Astrology · July 2026</div>
-                                <h3>What your birth chart can reveal about your future</h3>
-                                <p>Explore themes around love, career, timing and personal direction through birth-chart
-                                    interpretation.</p><a href="/blog/birth-chart">Read article →</a>
-                            </div>
-                        </article>
-                        <article class="blog reveal">
-                            <div class="blog-img"><img src="/assets/images/blog2.jpg" alt="Psychic reading"></div>
-                            <div class="blog-body">
-                                <div class="tag">Psychic · July 2026</div>
-                                <h3>Finding a trusted psychic for personal guidance</h3>
-                                <p>Questions to consider when choosing a private psychic consultation for love, family
-                                    or life decisions.</p><a href="/blog/psychic-new-york">Read article →</a>
-                            </div>
-                        </article>
-                        <article class="blog reveal">
-                            <div class="blog-img"><img src="/assets/images/blog4.jpg" alt="Horoscope reading"></div>
-                            <div class="blog-body">
-                                <div class="tag">Horoscope · July 2026</div>
-                                <h3>How a horoscope reading can support your next decision</h3>
-                                <p>Use astrology as a reflective tool for the questions you are carrying into the next
-                                    chapter.</p><a href="/blog/best-horoscope">Read article →</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
             <section class="faq-section" id="faq">
                 <div class="wrap faq-wrap">
                     <div class="section-head reveal">
