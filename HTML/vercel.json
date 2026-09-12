@@ -123,6 +123,10 @@
     {
       "source": "/location/psychic-in-florida",
       "destination": "/Locations/Florida.html"
-    }
+    },
+    {
+      "source": "/LandingPage",
+      "destination": "/LandingPage.html"
+    },
   ]
 }
