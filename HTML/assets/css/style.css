@@ -4269,3 +4269,125 @@ textarea.form-control {
     }
 
 }
+
+/* =========================================================
+   LOCATION DETAIL MAP / IMAGE
+   Florida / New Jersey / Texas
+   ========================================================= */
+
+.location-map {
+    width: 100%;
+    max-width: 1250px;
+    height: 360px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #17384e;
+}
+
+.location-map img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* =========================================================
+   IF THE MAP IMAGE IS INSIDE A NORMAL IMAGE CONTAINER
+   ========================================================= */
+
+.location-image,
+.location_map,
+.location_map_image,
+.location-detail-map {
+    width: 100%;
+    max-width: 1250px;
+    height: 360px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.location-image img,
+.location_map img,
+.location_map_image img,
+.location-detail-map img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .location-map,
+    .location-image,
+    .location_map,
+    .location_map_image,
+    .location-detail-map {
+        height: 300px;
+        margin-top: 25px;
+        border-radius: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .location-map,
+    .location-image,
+    .location_map,
+    .location_map_image,
+    .location-detail-map {
+        height: 220px;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .location-map,
+    .location-image,
+    .location_map,
+    .location_map_image,
+    .location-detail-map {
+        height: 190px;
+    }
+
+}
+
+.location-map {
+    width: 100%;
+    max-width: 1250px;
+    height: 340px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.location-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
