@@ -1,0 +1,61 @@
+Options -MultiViews
+RewriteEngine On
+
+# Do not rewrite real files or folders
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# =========================
+# MAIN PAGES
+# =========================
+RewriteRule ^$ index.html [L]
+RewriteRule ^index/?$ index.html [L]
+
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^astrologer/?$ astrologer.html [L]
+RewriteRule ^faq/?$ faq.html [L]
+RewriteRule ^appointment/?$ appointment.html [L]
+
+RewriteRule ^service/?$ service.html [L]
+RewriteRule ^services/?$ service.html [L]
+
+RewriteRule ^blog/?$ blog.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^location/?$ Location.html [L]
+
+RewriteRule ^privacy-policy/?$ privacy_policy.html [L]
+RewriteRule ^social-services/?$ Social_Services.html [L]
+
+RewriteRule ^best-astrologer-in-new-york/?$ astrologer.html [L]
+
+RewriteRule ^LandingPage/?$ LandingPage.html [L]
+
+# =========================
+# BLOG DETAILS
+# =========================
+RewriteRule ^blog/birth-chart/?$ Blogs/blog_detail.html [L]
+RewriteRule ^blog/psychic-new-york/?$ Blogs/PsychicBlog_detail.html [L]
+RewriteRule ^blog/best-psychic/?$ Blogs/BestPsychicBlog_detail.html [L]
+RewriteRule ^blog/best-horoscope/?$ Blogs/BestHoroscopeBlog_detail.html [L]
+RewriteRule ^blog/best-astrology/?$ Blogs/BestAstrologyBlog_detail.html [L]
+RewriteRule ^blog/best-indian-astrologer/?$ Blogs/BestIndianAstrologerBlog_detail.html [L]
+
+# =========================
+# SERVICE DETAILS
+# =========================
+RewriteRule ^service/black-magic-removal-in-new-york/?$ Services/BlackMagicRemoval.html [L]
+RewriteRule ^service/best-sarpa-dosha-pooja-in-new-york/?$ Services/SarpaDosham.html [L]
+RewriteRule ^service/best-psychic-in-new-york/?$ Services/OnlinePsychicReading.html [L]
+RewriteRule ^service/astrology-compatibility-birth-chart/?$ Services/AstrologyCompatibality.html [L]
+RewriteRule ^service/best-horoscope-reading-in-new-york/?$ Services/Horoscope.html [L]
+RewriteRule ^service/vedic-astrology-services-in-new-york/?$ Services/VedicAstrology.html [L]
+RewriteRule ^service/voodoo-priest-in-new-york/?$ Services/VoodooPriest.html [L]
+RewriteRule ^service/spiritual-healing-new-york/?$ Services/Spiritual_healing.html [L]
+
+# =========================
+# LOCATION DETAILS
+# =========================
+RewriteRule ^location/psychic-in-new-jersey/?$ Locations/NewJersey.html [L]
+RewriteRule ^location/psychic-in-texas/?$ Locations/TexasLocation.html [L]
+RewriteRule ^location/psychic-in-florida/?$ Locations/Florida.html [L]
