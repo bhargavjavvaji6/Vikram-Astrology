@@ -4459,3 +4459,295 @@ textarea.form-control {
         border-radius: 12px;
     }
 }
+
+/* =========================================================
+   SERVICE DETAIL - PREMIUM HERO IMAGE
+   ========================================================= */
+
+.as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
+    width: 100%;
+    max-width: 1100px;
+    height: 480px;
+    margin: 0 auto 35px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid rgba(255, 112, 16, 0.18);
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.22),
+        0 4px 12px rgba(0, 0, 0, 0.10);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.as_servicedetail_wrapper .service-detail-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    /* IMPORTANT:
+       Keep the complete artwork visible */
+    object-fit: contain;
+    object-position: center;
+
+    background: #ffffff;
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
+        height: 500px;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1199px) {
+    .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
+        height: 420px;
+        border-radius: 20px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
+        height: 360px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
+        height: 280px;
+        border-radius: 16px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
+        height: 220px;
+        border-radius: 13px;
+    }
+}
+
+/* =========================================================
+   SERVICES PAGE - CONSISTENT RESPONSIVE GRID
+   ========================================================= */
+
+.as_service_page .as_service_wrapper .row {
+    display: grid !important;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 28px 28px;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.as_service_page .as_service_wrapper .row>[class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    display: flex;
+}
+
+.as_service_page .as_service_box {
+    width: 100%;
+    min-height: 330px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 34px 24px 30px;
+
+    border-radius: 18px;
+
+    background: #07273c;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.30s ease,
+        box-shadow 0.30s ease,
+        border-color 0.30s ease;
+}
+
+.as_service_page .as_service_box:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(255, 112, 16, 0.35);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.22);
+}
+
+.as_service_page .as_service_box .as_icon {
+    width: 92px;
+    height: 92px;
+
+    flex: 0 0 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    margin-bottom: 25px;
+}
+
+.as_service_page .as_service_box .as_icon img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+.as_service_page .as_service_box .as_subheading {
+    min-height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 0 0 14px;
+
+    text-align: center;
+
+    line-height: 1.25;
+}
+
+.as_service_page .as_service_box p {
+    min-height: 72px;
+
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    line-height: 1.7;
+}
+
+.as_service_page .as_service_box .as_btn {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .as_service_page .as_service_wrapper .row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .as_service_page .as_service_box {
+        min-height: 330px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .as_service_page .as_service_wrapper .row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .as_service_page .as_service_box {
+        min-height: 320px;
+        padding: 30px 20px 26px;
+    }
+
+    .as_service_page .as_service_box .as_icon {
+        width: 82px;
+        height: 82px;
+        flex-basis: 82px;
+    }
+
+    .as_service_page .as_service_box .as_icon img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .as_service_page .as_service_wrapper .row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .as_service_page .as_service_box {
+        min-height: 0;
+        padding: 28px 20px 26px;
+    }
+
+    .as_service_page .as_service_box .as_subheading {
+        min-height: 0;
+        font-size: 23px;
+    }
+
+    .as_service_page .as_service_box p {
+        min-height: 0;
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .as_service_page .as_service_wrapper {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .as_service_page .as_service_box {
+        border-radius: 15px;
+        padding: 25px 18px;
+    }
+
+    .as_service_page .as_service_box .as_icon {
+        width: 75px;
+        height: 75px;
+        flex-basis: 75px;
+    }
+
+    .as_service_page .as_service_box .as_icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
