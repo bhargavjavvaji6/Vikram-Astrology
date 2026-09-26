@@ -607,6 +607,12 @@
             text-transform: uppercase
         }
 
+        /* BLOG */
+        .blogs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px
+        }
 
         .blog {
             overflow: hidden;
@@ -778,6 +784,239 @@
             margin-top: 10px;
             font-size: 11px;
             font-weight: 700
+        }
+
+        /* =========================================================
+   WHY CHOOSE + CLIENT EXPERIENCE
+   ========================================================= */
+
+        .why-choose-section {
+            padding: 108px 0;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(113, 83, 166, .09), transparent 25%),
+                linear-gradient(180deg, #fffdf9 0%, #f5f1f8 100%);
+            border-top: 1px solid var(--line);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        .why-card {
+            position: relative;
+            min-height: 235px;
+            padding: 27px 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, .9);
+            border: 1px solid rgba(34, 32, 59, .1);
+            box-shadow: 0 18px 45px rgba(34, 32, 59, .08);
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(199, 154, 59, .45);
+            box-shadow: 0 25px 60px rgba(34, 32, 59, .12);
+        }
+
+        .why-number {
+            display: inline-flex;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: #8c651e;
+            background: linear-gradient(135deg, #f5e4bb, #ead49a);
+            border: 1px solid rgba(199, 154, 59, .28);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .08em;
+        }
+
+        .why-card h3 {
+            margin: 20px 0 10px;
+            font: 600 27px/1.05 'Cormorant Garamond', serif;
+            color: #262035;
+        }
+
+        .why-card p {
+            margin: 0;
+            color: #6f6677;
+            font-size: 13px;
+            line-height: 1.75;
+        }
+
+        .why-card::after {
+            content: '✦';
+            position: absolute;
+            right: 18px;
+            bottom: 10px;
+            color: rgba(199, 154, 59, .13);
+            font-size: 54px;
+            font-family: Georgia, serif;
+        }
+
+        /* CLIENT REVIEWS */
+
+        .reviews-section {
+            padding: 108px 0;
+            background: #fff;
+        }
+
+        .reviews-heading {
+            max-width: 770px;
+            margin-bottom: 40px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .review-card {
+            position: relative;
+            min-height: 320px;
+            padding: 28px 24px 25px;
+            border-radius: 23px;
+            background: linear-gradient(155deg, #fffdf8 0%, #f1eaf8 100%);
+            border: 1px solid rgba(199, 154, 59, .2);
+            box-shadow: 0 18px 45px rgba(34, 32, 59, .08);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 25px 60px rgba(34, 32, 59, .13);
+        }
+
+        .review-mark {
+            position: absolute;
+            top: 10px;
+            right: 17px;
+            font: 700 72px/1 Georgia, serif;
+            color: rgba(113, 83, 166, .1);
+        }
+
+        .review-stars {
+            color: #c79a3b;
+            letter-spacing: .12em;
+            font-size: 13px;
+            margin-bottom: 19px;
+        }
+
+        .review-card h3 {
+            margin: 0 0 15px;
+            color: #2d2639;
+            font: 600 26px/1 'Cormorant Garamond', serif;
+        }
+
+        .review-card p {
+            margin: 0;
+            color: #696173;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .review-badge {
+            margin-top: 23px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 11px;
+            border-radius: 999px;
+            border: 1px solid rgba(113, 83, 166, .13);
+            background: rgba(255, 255, 255, .72);
+            color: #7b7186;
+            font-size: 9px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        /* CTA between reviews and FAQ */
+
+        .review-cta {
+            margin-top: 32px;
+            padding: 23px 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(199, 154, 59, .25);
+            background: linear-gradient(90deg, #201a2d, #3b3154);
+            color: #fff;
+        }
+
+        .review-cta strong {
+            display: block;
+            font: 600 27px/1.1 'Cormorant Garamond', serif;
+        }
+
+        .review-cta span {
+            display: block;
+            margin-top: 6px;
+            color: #d8d0df;
+            font-size: 12px;
+        }
+
+        @media(max-width:1199px) {
+
+            .why-grid,
+            .reviews-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media(max-width:991px) {
+
+            .why-grid,
+            .reviews-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .review-card {
+                min-height: 285px;
+            }
+        }
+
+        @media(max-width:700px) {
+
+            .why-choose-section,
+            .reviews-section {
+                padding: 78px 0;
+            }
+
+            .why-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 13px;
+            }
+
+            .why-card {
+                min-height: auto;
+                padding: 24px 20px;
+            }
+
+            .review-card {
+                min-height: auto;
+                padding: 25px 21px;
+            }
+
+            .review-cta {
+                display: block;
+                padding: 22px 20px;
+            }
+
+            .review-cta .btn {
+                margin-top: 15px;
+                width: 100%;
+            }
         }
 
         /* FAQ */
@@ -1195,7 +1434,8 @@
                 height: 470px
             }
 
-            .services {
+            .services,
+            .blogs {
                 grid-template-columns: 1fr 1fr
             }
         }
@@ -1301,6 +1541,7 @@
             }
 
             .services,
+            .blogs,
             .stats {
                 grid-template-columns: 1fr
             }
@@ -1423,7 +1664,7 @@
                     </div>
                     <div class="copy reveal">
                         <div class="eyebrow">About Section</div>
-                        <h3 class="section-title">Trusted Vikram Psychics & Astrology Guidance in California.</h3>
+                        <h2>Trusted Vikram Psychics & Astrology Guidance in California.</h2>
                         <p>With over 30 years of experience and more than 10,000 clients served, Vikram Astrologer &
                             Psychic provides personalized psychic readings in California, astrology consultations, and
                             spiritual guidance. Whether you're looking for a psychic in California, California psychics,
@@ -1566,6 +1807,126 @@
                     </div>
                 </div>
             </section>
+
+            <section class="why-choose-section" id="why-choose">
+                <div class="wrap">
+                    <div class="section-head reveal">
+                        <div>
+                            <div class="eyebrow">Why Choose Vikram</div>
+                            <h2 class="section-title">Guidance built around <em>you.</em></h2>
+                        </div>
+                        <p class="lead">The California landing-page content highlights five reasons clients can connect
+                            with Vikram for personalized psychic and astrology guidance.</p>
+                    </div>
+
+                    <div class="why-grid">
+                        <article class="why-card reveal">
+                            <span class="why-number">01</span>
+                            <h3>30+ Years of Experience</h3>
+                            <p>Decades of experience providing personalized psychic and astrology consultations.</p>
+                        </article>
+
+                        <article class="why-card reveal">
+                            <span class="why-number">02</span>
+                            <h3>Personalized Guidance</h3>
+                            <p>Every consultation focuses on your individual questions, concerns, and circumstances.</p>
+                        </article>
+
+                        <article class="why-card reveal">
+                            <span class="why-number">03</span>
+                            <h3>California & Nationwide Service</h3>
+                            <p>Serving clients throughout California and providing online consultations across the USA.
+                            </p>
+                        </article>
+
+                        <article class="why-card reveal">
+                            <span class="why-number">04</span>
+                            <h3>Private & Confidential</h3>
+                            <p>Your personal questions and consultation are handled with care and respect.</p>
+                        </article>
+
+                        <article class="why-card reveal">
+                            <span class="why-number">05</span>
+                            <h3>Online & Phone Readings</h3>
+                            <p>Connect conveniently without needing to travel to a physical location.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews-section" id="reviews">
+                <div class="wrap">
+                    <div class="reviews-heading reveal">
+                        <div class="eyebrow">Client Experience</div>
+                        <h2 class="section-title">What My Clients Say About Their <em>Astrology & Psychic Reading
+                                Experience</em></h2>
+                        <p class="lead">The testimonials below are reproduced from the supplied California landing-page
+                            document.</p>
+                    </div>
+
+                    <div class="reviews-grid">
+                        <article class="review-card reveal">
+                            <div class="review-mark">“</div>
+                            <div class="review-stars">★★★★★</div>
+                            <h3>Sarah Mitchell</h3>
+                            <p>“Vikram Astrology & Psychic provided an excellent astrology and psychic reading
+                                experience. The personalized guidance gave me valuable insight into love, relationships,
+                                and my future.”</p>
+                            <span class="review-badge">Astrology & Psychic Reading</span>
+                        </article>
+
+                        <article class="review-card reveal">
+                            <div class="review-mark">“</div>
+                            <div class="review-stars">★★★★★</div>
+                            <h3>James Anderson</h3>
+                            <p>“My psychic reading with Vikram Astrology & Psychic was thoughtful and personalized. The
+                                astrology insights and spiritual guidance helped me gain clarity about important
+                                decisions in my life.”</p>
+                            <span class="review-badge">Psychic Reading</span>
+                        </article>
+
+                        <article class="review-card reveal">
+                            <div class="review-mark">“</div>
+                            <div class="review-stars">★★★★★</div>
+                            <h3>Emily Carter</h3>
+                            <p>“I had a wonderful astrology reading with Vikram Astrology & Psychic. The detailed
+                                spiritual guidance helped me better understand my relationships, career, and personal
+                                journey.”</p>
+                            <span class="review-badge">Astrology Reading</span>
+                        </article>
+
+                        <article class="review-card reveal">
+                            <div class="review-mark">“</div>
+                            <div class="review-stars">★★★★★</div>
+                            <h3>Michael Thompson</h3>
+                            <p>“Vikram Astrology & Psychic provided a professional and insightful tarot reading. The
+                                personalized astrology guidance gave me a fresh perspective on my relationships and
+                                future.”</p>
+                            <span class="review-badge">Tarot & Astrology</span>
+                        </article>
+
+                        <article class="review-card reveal">
+                            <div class="review-mark">“</div>
+                            <div class="review-stars">★★★★★</div>
+                            <h3>Olivia Williams</h3>
+                            <p>“Outstanding experience with Vikram Astrology & Psychic. The personalized tarot reading
+                                and spiritual guidance gave me meaningful insight into love, relationships, and the next
+                                chapter of my life.”</p>
+                            <span class="review-badge">Tarot & Spiritual Guidance</span>
+                        </article>
+                    </div>
+
+                    <div class="review-cta reveal">
+                        <div>
+                            <strong>Ready to start your private reading?</strong>
+                            <span>Connect with Vikram by phone or online from California or anywhere across the
+                                USA.</span>
+                        </div>
+                        <a class="btn primary" href="tel:+19295869234">Call +1 (929) 586-9234</a>
+                    </div>
+                </div>
+            </section>
+
             <section class="faq-section" id="faq">
                 <div class="wrap faq-wrap">
                     <div class="section-head reveal">
