@@ -4751,3 +4751,441 @@ textarea.form-control {
         height: 40px;
     }
 }
+
+
+/* ============================================================
+   FINAL VIKRAM ASTROLOGY - ABOUT IMAGE FIX
+   ============================================================ */
+
+/*
+   HTML used in index.html:
+
+   <div class="as_aboutimg text-right">
+       <img src="assets/images/Budha.jpg"
+            alt=""
+            class="img-responsive">
+   </div>
+*/
+
+
+/* ------------------------------------------------------------
+   ABOUT IMAGE CONTAINER
+   ------------------------------------------------------------ */
+
+.as_aboutimg {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 560px !important;
+
+    margin: 40px auto 0 !important;
+
+    /*
+       Extra space is intentionally reserved
+       for the orange L decoration.
+    */
+    padding: 0 0 40px 40px !important;
+
+    text-align: right !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 2 !important;
+}
+
+
+/* ------------------------------------------------------------
+   ABOUT IMAGE
+   ------------------------------------------------------------ */
+
+.as_aboutimg>img {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: 500px !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+
+    z-index: 3 !important;
+
+    border: none !important;
+}
+
+
+/* ------------------------------------------------------------
+   DECORATIVE BACK PANEL
+   ------------------------------------------------------------ */
+
+.as_aboutimg::after {
+    position: absolute !important;
+
+    content: "" !important;
+
+    /*
+       Position it relative to the image container,
+       not the page.
+    */
+
+    top: 55px !important;
+    right: 0 !important;
+
+    width: calc(100% - 55px) !important;
+    height: 445px !important;
+
+    background-color: var(--dark-color2) !important;
+
+    z-index: 1 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* ------------------------------------------------------------
+   ORANGE L-SHAPE
+   ------------------------------------------------------------ */
+
+.as_aboutimg::before {
+    position: absolute !important;
+
+    content: "" !important;
+
+    /*
+       IMPORTANT:
+       The L-shape now stays attached to the
+       bottom-left side of the image frame.
+    */
+
+    left: 0 !important;
+    bottom: 0 !important;
+
+    width: 135px !important;
+    height: 135px !important;
+
+    background: transparent !important;
+
+    border-left: 3px solid var(--secondary-color) !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
+
+    z-index: 4 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* ============================================================
+   ABOUT SLIDER
+   ============================================================ */
+
+.as_about_slider {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 570px !important;
+
+    margin: 40px auto 0 !important;
+
+    overflow: visible !important;
+}
+
+
+/* Make every slide use the same frame */
+
+.as_about_slider .slick-slide {
+    outline: none !important;
+}
+
+.as_about_slider .slick-slide>div {
+    width: 100% !important;
+}
+
+
+/* ============================================================
+   DESKTOP
+   ============================================================ */
+
+@media (min-width: 1200px) {
+
+    .as_about_slider {
+        max-width: 570px !important;
+        margin-right: 0 !important;
+        margin-left: auto !important;
+    }
+
+    .as_aboutimg {
+        max-width: 560px !important;
+
+        padding-left: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .as_aboutimg>img {
+        width: 100% !important;
+        height: 500px !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .as_aboutimg::after {
+        top: 55px !important;
+        right: 0 !important;
+
+        width: calc(100% - 55px) !important;
+        height: 445px !important;
+    }
+
+    .as_aboutimg::before {
+        left: 0 !important;
+        bottom: 0 !important;
+
+        width: 135px !important;
+        height: 135px !important;
+
+        border-left-width: 3px !important;
+        border-bottom-width: 3px !important;
+    }
+}
+
+
+/* ============================================================
+   LAPTOP
+   ============================================================ */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .as_about_slider {
+        max-width: 520px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .as_aboutimg {
+        max-width: 510px !important;
+
+        padding-left: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .as_aboutimg>img {
+        height: 440px !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .as_aboutimg::after {
+        top: 45px !important;
+        right: 0 !important;
+
+        width: calc(100% - 45px) !important;
+        height: 395px !important;
+    }
+
+    .as_aboutimg::before {
+        left: 0 !important;
+        bottom: 0 !important;
+
+        width: 110px !important;
+        height: 110px !important;
+
+        border-left-width: 3px !important;
+        border-bottom-width: 3px !important;
+    }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .as_about_slider {
+        width: 100% !important;
+        max-width: 680px !important;
+
+        margin: 30px auto !important;
+    }
+
+    .as_aboutimg {
+        width: 100% !important;
+        max-width: 650px !important;
+
+        margin: 30px auto !important;
+
+        padding-left: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .as_aboutimg>img {
+        width: 100% !important;
+        height: 440px !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .as_aboutimg::after {
+        top: 40px !important;
+        right: 0 !important;
+
+        width: calc(100% - 40px) !important;
+        height: 400px !important;
+    }
+
+    .as_aboutimg::before {
+        left: 0 !important;
+        bottom: 0 !important;
+
+        width: 105px !important;
+        height: 105px !important;
+
+        border-left-width: 2px !important;
+        border-bottom-width: 2px !important;
+    }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+    .as_about_slider {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 25px auto !important;
+
+        padding: 0 10px !important;
+    }
+
+    .as_aboutimg {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 20px auto !important;
+
+        padding-left: 22px !important;
+        padding-bottom: 24px !important;
+
+        text-align: center !important;
+    }
+
+    .as_aboutimg>img {
+        width: 100% !important;
+        height: 340px !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .as_aboutimg::after {
+        top: 32px !important;
+        right: 0 !important;
+
+        width: calc(100% - 32px) !important;
+        height: 308px !important;
+    }
+
+    .as_aboutimg::before {
+        left: 0 !important;
+        bottom: 0 !important;
+
+        width: 78px !important;
+        height: 78px !important;
+
+        border-left-width: 2px !important;
+        border-bottom-width: 2px !important;
+    }
+}
+
+
+/* ============================================================
+   SMALL MOBILE / iPHONE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .as_about_slider {
+        width: 100% !important;
+
+        margin: 20px auto !important;
+
+        padding: 0 8px !important;
+    }
+
+    .as_aboutimg {
+        width: 100% !important;
+
+        margin: 18px auto !important;
+
+        padding-left: 18px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .as_aboutimg>img {
+        width: 100% !important;
+        height: 275px !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .as_aboutimg::after {
+        top: 27px !important;
+        right: 0 !important;
+
+        width: calc(100% - 27px) !important;
+        height: 248px !important;
+    }
+
+    .as_aboutimg::before {
+        left: 0 !important;
+        bottom: 0 !important;
+
+        width: 62px !important;
+        height: 62px !important;
+
+        border-left-width: 2px !important;
+        border-bottom-width: 2px !important;
+    }
+}
+
+
+/* ============================================================
+   EXTRA SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+    .as_aboutimg {
+        padding-left: 15px !important;
+        padding-bottom: 17px !important;
+    }
+
+    .as_aboutimg>img {
+        height: 245px !important;
+    }
+
+    .as_aboutimg::after {
+        top: 23px !important;
+
+        width: calc(100% - 23px) !important;
+        height: 222px !important;
+    }
+
+    .as_aboutimg::before {
+        width: 54px !important;
+        height: 54px !important;
+    }
+}
