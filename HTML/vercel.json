@@ -17,7 +17,7 @@
       "destination": "/faq.html"
     },
     {
-      "source": "/vedic-astrology-consultation-&-appointment",
+      "source": "/vedic-astrology-consultation-appointment",
       "destination": "/appointment.html"
     },
     {
@@ -41,8 +41,56 @@
       "destination": "/contact.html"
     },
     {
-      "source": "/faq",
+      "source": "/psychic-reading-faq",
       "destination": "/faq.html"
+    },
+    {
+      "source": "/aries-horoscope-today",
+      "destination": "/HTML/Aries_Horoscope.html"
+    },
+    {
+      "source": "/taurus-horoscope-today",
+      "destination": "/HTML/Taurus_Horoscope.html"
+    },
+    {
+      "source": "/spiritual-healing",
+      "destination": "/HTML/Gemini_Horoscope.html"
+    },
+    {
+      "source": "/cancer-zodiac-sign",
+      "destination": "/HTML/Cancer_Horoscope.html"
+    },
+    {
+      "source": "/leo-zodiac-sign",
+      "destination": "/HTML/Leo_Horoscope.html"
+    },
+    {
+      "source": "/virgo-zodiac-sign",
+      "destination": "/HTML/Virgo_Horoscope.html"
+    },
+    {
+      "source": "/libra-zodiac-sign",
+      "destination": "/HTML/Libra_Horoscope.html"
+    },
+    {
+      "source": "/scorpio-zodiac-sign",
+      "destination": "/HTML/Scorpio_Horoscope.html"
+    },
+    {
+      "source": "/sagittarius-zodiac-sign",
+      "destination": "/HTML/Sagittarius_Horoscope.html"
+    },
+    {
+      "source": "/capricorn-zodiac-sign",
+      "destination": "/HTML/Capricorn_Horoscope.html"
+    },
+    {
+      "source": "/aquarius-zodiac-sign",
+      "destination": "/HTML/Aquarius_Horoscope.html"
+    },
+    {
+      "source": "/pisces-zodiac-sign",
+      "destination": "/HTML/Pisces_Horoscope.html"
     },
     {
       "source": "/best-astrologer-in-new-york",
@@ -81,35 +129,35 @@
       "destination": "/Blogs/BestIndianAstrologerBlog_detail.html"
     },
     {
-      "source": "/service/black-magic-removal-in-new-york",
+      "source": "/black-magic-removal-in-new-york",
       "destination": "/Services/BlackMagicRemoval.html"
     },
     {
-      "source": "/service/best-sarpa-dosha-pooja-in-new-york",
+      "source": "/best-sarpa-dosha-pooja-new-york",
       "destination": "/Services/SarpaDosham.html"
     },
     {
-      "source": "/service/best-psychic-in-new-york",
+      "source": "/online-psychic-reading",
       "destination": "/Services/OnlinePsychicReading.html"
     },
     {
-      "source": "/service/astrology-compatibility-birth-chart",
+      "source": "/astrology-compatibility-birth-chart",
       "destination": "/Services/AstrologyCompatibality.html"
     },
     {
-      "source": "/service/best-horoscope-reading-in-new-york",
+      "source": "/best-horoscope-reading-in-new-york",
       "destination": "/Services/Horoscope.html"
     },
     {
-      "source": "/service/vedic-astrology-services-in-new-york",
+      "source": "/vedic-astrology-services-new-york",
       "destination": "/Services/VedicAstrology.html"
     },
     {
-      "source": "/service/voodoo-priest-in-new-york",
+      "source": "/voodoo-priest-new-york",
       "destination": "/Services/VoodooPriest.html"
     },
     {
-      "source": "/service/spiritual-healing-new-york",
+      "source": "/spiritual-healing-new-york",
       "destination": "/Services/Spiritual_healing.html"
     },
     {
