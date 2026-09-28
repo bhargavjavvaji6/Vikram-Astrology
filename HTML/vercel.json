@@ -17,6 +17,10 @@
       "destination": "/faq.html"
     },
     {
+      "source": "/appointment",
+      "destination": "/appointment.html"
+    },
+    {
       "source": "/vedic-astrology-consultation-appointment",
       "destination": "/appointment.html"
     },
