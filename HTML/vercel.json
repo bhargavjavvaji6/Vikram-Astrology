@@ -17,10 +17,6 @@
       "destination": "/faq.html"
     },
     {
-      "source": "/appointment",
-      "destination": "/appointment.html"
-    },
-    {
       "source": "/vedic-astrology-consultation-appointment",
       "destination": "/appointment.html"
     },
@@ -31,14 +27,6 @@
     {
       "source": "/services",
       "destination": "/service.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    },
-    {
-      "source": "/blogs",
-      "destination": "/blog.html"
     },
     {
       "source": "/astrology-blogs",
@@ -65,43 +53,43 @@
       "destination": "/HTML/Taurus_Horoscope.html"
     },
     {
-      "source": "/spiritual-healing",
+      "source": "/gemini-horoscope-today",
       "destination": "/HTML/Gemini_Horoscope.html"
     },
     {
-      "source": "/cancer-zodiac-sign",
+      "source": "/cancer-horoscope-today",
       "destination": "/HTML/Cancer_Horoscope.html"
     },
     {
-      "source": "/leo-zodiac-sign",
+      "source": "/leo-horoscope-today",
       "destination": "/HTML/Leo_Horoscope.html"
     },
     {
-      "source": "/virgo-zodiac-sign",
+      "source": "/virgo-horoscope-today",
       "destination": "/HTML/Virgo_Horoscope.html"
     },
     {
-      "source": "/libra-zodiac-sign",
+      "source": "/libra-horoscope-today",
       "destination": "/HTML/Libra_Horoscope.html"
     },
     {
-      "source": "/scorpio-zodiac-sign",
+      "source": "/scorpio-horoscope-today",
       "destination": "/HTML/Scorpio_Horoscope.html"
     },
     {
-      "source": "/sagittarius-zodiac-sign",
+      "source": "/sagittarius-horoscope-today",
       "destination": "/HTML/Sagittarius_Horoscope.html"
     },
     {
-      "source": "/capricorn-zodiac-sign",
+      "source": "/capricorn-horoscope-today",
       "destination": "/HTML/Capricorn_Horoscope.html"
     },
     {
-      "source": "/aquarius-zodiac-sign",
+      "source": "/aquarius-horoscope-today",
       "destination": "/HTML/Aquarius_Horoscope.html"
     },
     {
-      "source": "/pisces-zodiac-sign",
+      "source": "/pisces-horoscope-today",
       "destination": "/HTML/Pisces_Horoscope.html"
     },
     {
@@ -117,27 +105,27 @@
       "destination": "/Social_Services.html"
     },
     {
-      "source": "/blog/birth-chart",
+      "source": "/blog/birth-chart-reveal-about-your-future",
       "destination": "/Blogs/blog_detail.html"
     },
     {
-      "source": "/blog/psychic-new-york",
+      "source": "/blog/best-psychic-in-new-york",
       "destination": "/Blogs/PsychicBlog_detail.html"
     },
     {
-      "source": "/blog/best-psychic",
+      "source": "/blog/are-psychic-readings-in-new-york-accurate",
       "destination": "/Blogs/BestPsychicBlog_detail.html"
     },
     {
-      "source": "/blog/best-horoscope",
+      "source": "/blog/best-horoscope-reading-in-new-york",
       "destination": "/Blogs/BestHoroscopeBlog_detail.html"
     },
     {
-      "source": "/blog/best-astrology",
+      "source": "/blog/astrology-career-decisions-financial-success",
       "destination": "/Blogs/BestAstrologyBlog_detail.html"
     },
     {
-      "source": "/blog/best-indian-astrologer",
+      "source": "/blog/best-indian-astrologer-oklahoma-city",
       "destination": "/Blogs/BestIndianAstrologerBlog_detail.html"
     },
     {
@@ -173,15 +161,15 @@
       "destination": "/Services/Spiritual_healing.html"
     },
     {
-      "source": "/location/psychic-in-new-jersey",
+      "source": "/psychic-in-new-jersey",
       "destination": "/Locations/NewJersey.html"
     },
     {
-      "source": "/location/psychic-in-texas",
+      "source": "/best-psychic-in-texas",
       "destination": "/Locations/TexasLocation.html"
     },
     {
-      "source": "/location/psychic-in-florida",
+      "source": "/best-psychic-in-florida",
       "destination": "/Locations/Florida.html"
     },
     {
