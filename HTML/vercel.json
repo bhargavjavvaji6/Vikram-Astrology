@@ -46,51 +46,51 @@
     },
     {
       "source": "/aries-horoscope-today",
-      "destination": "/HTML/Aries_Horoscope.html"
+      "destination": "/Aries_Horoscope.html"
     },
     {
       "source": "/taurus-horoscope-today",
-      "destination": "/HTML/Taurus_Horoscope.html"
+      "destination": "/Taurus_Horoscope.html"
     },
     {
       "source": "/gemini-horoscope-today",
-      "destination": "/HTML/Gemini_Horoscope.html"
+      "destination": "/Gemini_Horoscope.html"
     },
     {
       "source": "/cancer-horoscope-today",
-      "destination": "/HTML/Cancer_Horoscope.html"
+      "destination": "/Cancer_Horoscope.html"
     },
     {
       "source": "/leo-horoscope-today",
-      "destination": "/HTML/Leo_Horoscope.html"
+      "destination": "/Leo_Horoscope.html"
     },
     {
       "source": "/virgo-horoscope-today",
-      "destination": "/HTML/Virgo_Horoscope.html"
+      "destination": "/Virgo_Horoscope.html"
     },
     {
       "source": "/libra-horoscope-today",
-      "destination": "/HTML/Libra_Horoscope.html"
+      "destination": "/Libra_Horoscope.html"
     },
     {
       "source": "/scorpio-horoscope-today",
-      "destination": "/HTML/Scorpio_Horoscope.html"
+      "destination": "/Scorpio_Horoscope.html"
     },
     {
       "source": "/sagittarius-horoscope-today",
-      "destination": "/HTML/Sagittarius_Horoscope.html"
+      "destination": "/Sagittarius_Horoscope.html"
     },
     {
       "source": "/capricorn-horoscope-today",
-      "destination": "/HTML/Capricorn_Horoscope.html"
+      "destination": "/Capricorn_Horoscope.html"
     },
     {
       "source": "/aquarius-horoscope-today",
-      "destination": "/HTML/Aquarius_Horoscope.html"
+      "destination": "/Aquarius_Horoscope.html"
     },
     {
       "source": "/pisces-horoscope-today",
-      "destination": "/HTML/Pisces_Horoscope.html"
+      "destination": "/Pisces_Horoscope.html"
     },
     {
       "source": "/best-astrologer-in-new-york",
