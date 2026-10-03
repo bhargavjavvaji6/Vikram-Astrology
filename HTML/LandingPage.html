@@ -25,18 +25,18 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <style>
         :root {
-            --bg: #f8f6f1;
-            --panel: #ffffff;
-            --panel2: #f2eef8;
-            --ink: #211b2d;
-            --muted: #6f6878;
-            --gold: #c79a3b;
-            --gold2: #e2bb66;
-            --violet: #7153a6;
-            --navy: #22203b;
-            --line: rgba(34, 32, 59, .12);
-            --soft: #eee9f4;
-            --max: 1240px
+            --bg: #031d2e;
+            --panel: #07273c;
+            --panel2: #17384e;
+            --ink: #e5f0f5;
+            --muted: #97b0c1;
+            --gold: #ff7010;
+            --gold2: #ff9a4d;
+            --violet: #9b78e5;
+            --navy: #031d2e;
+            --line: rgba(255, 255, 255, 0.10);
+            --soft: #17384e;
+            --max: 1240px;
         }
 
         * {
@@ -51,7 +51,7 @@
         body {
             margin: 0 !important;
             padding: 0 !important;
-            background: var(--bg);
+            background-color: #031d2e;
             color: var(--ink);
             font-family: Inter, Arial, sans-serif;
             overflow-x: hidden
@@ -62,7 +62,19 @@
         }
 
         .lp {
-            background: radial-gradient(circle at 84% 8%, rgba(113, 83, 166, .13), transparent 25%), radial-gradient(circle at 12% 28%, rgba(226, 187, 102, .10), transparent 22%), linear-gradient(180deg, #fbfaf7 0%, #f8f6f1 42%, #f5f1f8 100%)
+            min-height: 100vh;
+
+            background:
+                radial-gradient(circle at 85% 8%,
+                    rgba(113, 83, 166, 0.18),
+                    transparent 25%),
+                radial-gradient(circle at 12% 30%,
+                    rgba(255, 112, 16, 0.08),
+                    transparent 22%),
+                linear-gradient(180deg,
+                    #031d2e 0%,
+                    #07273c 48%,
+                    #031d2e 100%);
         }
 
         .wrap {
@@ -76,8 +88,8 @@
             inset: 0 0 auto;
             height: 78px;
             z-index: 9999;
-            background: rgba(255, 255, 255, .86);
-            border-bottom: 1px solid var(--line);
+            background: rgba(3, 29, 46, 0.92);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px)
         }
@@ -94,7 +106,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            color: var(--navy)
+            color: #ffffff;
         }
 
         .brand img {
@@ -125,7 +137,7 @@
         }
 
         .nav-links a {
-            color: #312b3d;
+            color: #e5f0f5;
             font-size: 13px;
             font-weight: 600;
             padding: 11px 12px;
@@ -134,8 +146,8 @@
         }
 
         .nav-links a:hover {
-            background: #ffffff0d;
-            color: #fff
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff
         }
 
         .call-btn {
