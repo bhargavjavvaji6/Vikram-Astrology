@@ -175,6 +175,10 @@
     {
       "source": "/LandingPage",
       "destination": "/LandingPage.html"
+    },
+    {
+      "source": "/LandingPageTexas",
+      "destination": "/LandingPageTexas.html"
     }
   ]
 }
