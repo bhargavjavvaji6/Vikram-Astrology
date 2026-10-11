@@ -18,11 +18,6 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
     <style>
         :root {
             --home-navy: #031d2e;
@@ -1797,7 +1792,8 @@
 
                 <a class="lp-brand" href="#home" aria-label="Vikram Astrologer & Psychic">
 
-                    <img src="/assets/images/vikram_logo.jpg" alt="Vikram Astrologer & Psychic">
+                    <img src="/assets/images/vikram_logo.jpg" alt="Vikram Astrologer & Psychic"
+                        onerror="this.style.display='none'">
 
                     <span>
                         <strong>Vikram</strong>
@@ -1933,7 +1929,7 @@
 
                     <div class="lp-visual lp-reveal">
                         <div class="lp-zodiac">
-                            <form class="lp-form lp-reveal" id="contactForm">
+                            <form class="lp-form lp-reveal" id="heroForm">
 
                                 <h3>
                                     Request a private consultation
@@ -1950,21 +1946,21 @@
 
                                     <div>
 
-                                        <label for="name">
+                                        <label for="hero-name">
                                             Name
                                         </label>
 
-                                        <input id="name" required placeholder="Your Full Name">
+                                        <input id="hero-name" required placeholder="Your Full Name">
 
                                     </div>
 
                                     <div>
 
-                                        <label for="location">
+                                        <label for="hero-location">
                                             Location
                                         </label>
 
-                                        <select id="location" required>
+                                        <select id="hero-location" required>
 
                                             <option value="">
                                                 Select Your Location
@@ -1972,10 +1968,6 @@
 
                                             <option>
                                                 New York
-                                            </option>
-
-                                            <option>
-                                                Texas
                                             </option>
 
                                             <option>
@@ -2017,11 +2009,11 @@
 
                                     <div>
 
-                                        <label for="phone">
+                                        <label for="hero-phone">
                                             Phone
                                         </label>
 
-                                        <input id="phone" required placeholder="Your Phone Number">
+                                        <input id="hero-phone" required placeholder="Your Phone Number">
 
                                     </div>
 
@@ -2033,7 +2025,7 @@
                                     Prepare My Enquiry ↗
 
                                 </button>
-                                <div class="lp-status" id="status"></div>
+                                <div class="lp-status" id="hero-status"></div>
 
                             </form>
                         </div>
@@ -2053,7 +2045,8 @@
 
                         <div class="lp-photo">
 
-                            <img src="/assets/images/Budha.jpg" alt="Spiritual guidance and meditation">
+                            <img src="/assets/images/Budha.jpg" alt="Spiritual guidance and meditation"
+                                onerror="this.style.display='none'">
 
                             <div class="lp-photo-label">
 
@@ -2550,7 +2543,8 @@
 
                         <div class="lp-zodiac">
 
-                            <img src="/assets/images/banner_image.png" alt="Astrology zodiac chart">
+                            <img src="/assets/images/banner_image.png" alt="Astrology zodiac chart"
+                                onerror="this.style.display='none'">
 
                         </div>
 
@@ -2889,7 +2883,8 @@
 
                             <div class="lp-blog-img">
 
-                                <img src="/assets/images/blog1.jpg" alt="Birth chart and astrology">
+                                <img src="/assets/images/blog1.jpg" alt="Birth chart and astrology"
+                                    onerror="this.style.display='none'">
 
                             </div>
 
@@ -2923,7 +2918,8 @@
 
                             <div class="lp-blog-img">
 
-                                <img src="/assets/images/blog2.jpg" alt="Psychic reading">
+                                <img src="/assets/images/blog2.jpg" alt="Psychic reading"
+                                    onerror="this.style.display='none'">
 
                             </div>
 
@@ -2957,7 +2953,8 @@
 
                             <div class="lp-blog-img">
 
-                                <img src="/assets/images/blog3.jpg" alt="Horoscope and astrology">
+                                <img src="/assets/images/blog3.jpg" alt="Horoscope and astrology"
+                                    onerror="this.style.display='none'">
 
                             </div>
 
@@ -3437,10 +3434,6 @@
                                         </option>
 
                                         <option>
-                                            Texas
-                                        </option>
-
-                                        <option>
                                             Florida
                                         </option>
 
@@ -3602,111 +3595,6 @@
 
                 </div>
 
-
-                <form class="lp-form lp-reveal" id="contactForm">
-
-                    <h3>
-                        Request a private consultation
-                    </h3>
-
-                    <p>
-                        Enter your details and main topic.
-                        Your email app will open with the enquiry prepared for Vikram.
-                    </p>
-
-
-                    <div class="lp-form-grid">
-
-
-                        <div>
-
-                            <label for="name">
-                                Name
-                            </label>
-
-                            <input id="name" required placeholder="Your Full Name">
-
-                        </div>
-
-                        <div>
-
-                            <label for="location">
-                                Location
-                            </label>
-
-                            <select id="location" required>
-
-                                <option value="">
-                                    Select Your Location
-                                </option>
-
-                                <option>
-                                    New York
-                                </option>
-
-                                <option>
-                                    Texas
-                                </option>
-
-                                <option>
-                                    Texas
-                                </option>
-
-                                <option>
-                                    Florida
-                                </option>
-
-                                <option>
-                                    Washington
-                                </option>
-
-                                <option>
-                                    Colorado
-                                </option>
-
-                                <option>
-                                    New Jersey
-                                </option>
-
-                                <option>
-                                    South Carolina
-                                </option>
-
-                                <option>
-                                    New Mexico
-                                </option>
-
-                                <option>
-                                    Other
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div>
-
-                            <label for="phone">
-                                Phone
-                            </label>
-
-                            <input id="phone" required placeholder="Your Phone Number">
-
-                        </div>
-
-                    </div>
-
-
-                    <button class="lp-form-submit" type="submit">
-
-                        Prepare My Enquiry ↗
-
-                    </button>
-                    <div class="lp-status" id="status"></div>
-
-                </form>
-
             </div>
 
 
@@ -3732,493 +3620,185 @@
 
         </aside>
 
+        <!-- FOOTER -->
+
+        <footer class="lp-footer">
+
+            <div class="lp-wrap lp-footer-inner">
+
+                <div class="lp-footer-copy">
+                    © 2026 Vikram Astrologer & Psychic. All rights reserved.
+                </div>
+
+                <div class="lp-footer-links">
+                    <a href="#home">Privacy Policy</a>
+                    <a href="#home">Terms of Service</a>
+                </div>
+
+            </div>
+
+        </footer>
+
     </div>
 
 
     <script>
-
         (function () {
 
-            const menuBtn =
-                document.getElementById('menuBtn');
-
-            const mobileNav =
-                document.getElementById('mobileNav');
-
+            // --- MOBILE MENU ---
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileNav = document.getElementById('mobileNav');
 
             if (menuBtn && mobileNav) {
+                menuBtn.addEventListener('click', () => {
+                    const open = mobileNav.classList.toggle('open');
+                    menuBtn.setAttribute('aria-expanded', String(open));
+                    menuBtn.textContent = open ? '✕' : '☰';
+                });
 
-                menuBtn.addEventListener(
-                    'click',
-                    () => {
-                        const open =
-                            mobileNav.classList.toggle('open');
+                mobileNav.querySelectorAll('a').forEach(a => {
+                    a.addEventListener('click', () => {
+                        mobileNav.classList.remove('open');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                        menuBtn.textContent = '☰';
+                    });
+                });
+            }
 
-                        menuBtn.setAttribute(
-                            'aria-expanded',
-                            String(open)
-                        );
-
-                        menuBtn.textContent =
-                            open ? '✕' : '☰';
+            // --- SCROLL ANIMATIONS ---
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
                     }
-                );
+                });
+            }, { threshold: .12 });
+
+            document.querySelectorAll('.lp-reveal').forEach(el => observer.observe(el));
 
 
-                mobileNav
-                    .querySelectorAll('a')
-                    .forEach(a => {
+            // --- FAQ ACCORDION ---
+            document.querySelectorAll('.lp-faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const item = button.closest('.lp-faq-item');
+                    const alreadyOpen = item.classList.contains('open');
 
-                        a.addEventListener(
-                            'click',
-                            () => {
-                                mobileNav.classList.remove('open');
-
-                                menuBtn.setAttribute(
-                                    'aria-expanded',
-                                    'false'
-                                );
-
-                                menuBtn.textContent =
-                                    '☰';
-                            }
-                        );
-
+                    // Close others
+                    document.querySelectorAll('.lp-faq-item.open').forEach(openItem => {
+                        openItem.classList.remove('open');
+                        const question = openItem.querySelector('.lp-faq-question');
+                        if (question) question.setAttribute('aria-expanded', 'false');
                     });
 
-            }
-
-
-            const observer =
-                new IntersectionObserver(
-                    entries => {
-
-                        entries.forEach(entry => {
-
-                            if (entry.isIntersecting) {
-
-                                entry.target.classList.add('show');
-
-                                observer.unobserve(
-                                    entry.target
-                                );
-
-                            }
-
-                        });
-
-                    },
-                    {
-                        threshold: .12
+                    // Open clicked
+                    if (!alreadyOpen) {
+                        item.classList.add('open');
+                        button.setAttribute('aria-expanded', 'true');
                     }
-                );
-
-
-            document
-                .querySelectorAll('.lp-reveal')
-                .forEach(el =>
-                    observer.observe(el)
-                );
-
-
-            const year =
-                document.getElementById('year');
-
-
-            if (year) {
-
-                year.textContent =
-                    new Date().getFullYear();
-
-            }
-
-
-            /* FAQ */
-
-            document
-                .querySelectorAll('.lp-faq-question')
-                .forEach(button => {
-
-                    button.addEventListener(
-                        'click',
-                        () => {
-
-                            const item =
-                                button.closest('.lp-faq-item');
-
-                            const alreadyOpen =
-                                item.classList.contains('open');
-
-
-                            document
-                                .querySelectorAll('.lp-faq-item.open')
-                                .forEach(openItem => {
-
-                                    openItem.classList.remove('open');
-
-                                    const question =
-                                        openItem.querySelector('.lp-faq-question');
-
-                                    if (question) {
-
-                                        question.setAttribute(
-                                            'aria-expanded',
-                                            'false'
-                                        );
-
-                                    }
-
-                                });
-
-
-                            if (!alreadyOpen) {
-
-                                item.classList.add('open');
-
-                                button.setAttribute(
-                                    'aria-expanded',
-                                    'true'
-                                );
-
-                            }
-
-                        }
-                    );
-
                 });
+            });
 
 
-            /* CONTACT FORM */
+            // --- CONTACT FORMS (Handles both Hero and Bottom form) ---
+            const handleFormSubmit = (event) => {
+                event.preventDefault();
+                const form = event.target;
 
-            const contactForm =
-                document.getElementById('contactForm');
+                // Get inputs scoped to the specific form submitted
+                const name = form.querySelector('input[placeholder*="Name"]').value.trim();
+                const location = form.querySelector('select').value.trim();
+                const phone = form.querySelector('input[placeholder*="Phone"]').value.trim();
 
-
-            if (contactForm) {
-
-                contactForm.addEventListener(
-                    'submit',
-                    event => {
-
-                        event.preventDefault();
-
-
-                        const value =
-                            id =>
-                                document
-                                    .getElementById(id)
-                                    ?.value
-                                    .trim() || '';
-
-
-                        const name =
-                            value('name');
-
-                        const email =
-                            value('email');
-
-                        const location =
-                            value('location');
-
-                        const phone =
-                            value('phone');
-
-                        const topic =
-                            value('topic');
-
-                        const message =
-                            value('message');
-
-
-                        const subject =
-                            encodeURIComponent(
-                                'Private Consultation Request - ' +
-                                name
-                            );
-
-
-                        const body =
-                            encodeURIComponent(
-                                'Name: ' + name + '\n' +
-                                'Email: ' + email + '\n' +
-                                'Location: ' + location + '\n' +
-                                'Phone/WhatsApp: ' + phone + '\n' +
-                                'Topic: ' + topic + '\n\n' +
-                                'Message:\n' + message
-                            );
-
-
-                        const status =
-                            document.getElementById('status');
-
-
-                        if (status) {
-
-                            status.style.display =
-                                'block';
-
-                            status.textContent =
-                                'Opening your email app...';
-
-                        }
-
-
-                        window.location.href =
-                            'mailto:vikrampsychic78@gmail.com' +
-                            '?subject=' +
-                            subject +
-                            '&body=' +
-                            body;
-
-                    }
+                const subject = encodeURIComponent('Private Consultation Request - ' + name);
+                const body = encodeURIComponent(
+                    'Name: ' + name + '\n' +
+                    'Location: ' + location + '\n' +
+                    'Phone/WhatsApp: ' + phone + '\n'
                 );
 
-            }
+                const status = form.querySelector('.lp-status');
+                if (status) {
+                    status.style.display = 'block';
+                    status.textContent = 'Opening your email app...';
+                }
+
+                window.location.href = 'mailto:vikrampsychic78@gmail.com?subject=' + subject + '&body=' + body;
+            };
+
+            const contactForm = document.getElementById('contactForm');
+            const heroForm = document.getElementById('heroForm');
+
+            if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
+            if (heroForm) heroForm.addEventListener('submit', handleFormSubmit);
 
 
-            /* AI */
-
-            const aiToggle =
-                document.getElementById('aiToggle');
-
-            const aiPanel =
-                document.getElementById('aiPanel');
-
-            const aiClose =
-                document.getElementById('aiClose');
-
-            const aiBody =
-                document.getElementById('aiBody');
-
-            const aiForm =
-                document.getElementById('aiForm');
-
-            const aiInput =
-                document.getElementById('aiInput');
-
+            // --- AI CHAT PANEL ---
+            const aiToggle = document.getElementById('aiToggle');
+            const aiPanel = document.getElementById('aiPanel');
+            const aiClose = document.getElementById('aiClose');
+            const aiBody = document.getElementById('aiBody');
+            const aiForm = document.getElementById('aiForm');
+            const aiInput = document.getElementById('aiInput');
 
             function openAI() {
-
-                if (!aiPanel) {
-                    return;
-                }
-
-                aiPanel.classList.add(
-                    'open'
-                );
-
-                aiToggle?.setAttribute(
-                    'aria-expanded',
-                    'true'
-                );
-
-                setTimeout(
-                    () => {
-                        aiInput?.focus();
-                    },
-                    100
-                );
-
+                if (!aiPanel) return;
+                aiPanel.classList.add('open');
+                aiToggle?.setAttribute('aria-expanded', 'true');
+                setTimeout(() => { aiInput?.focus(); }, 100);
             }
-
 
             function closeAI() {
-
-                if (!aiPanel) {
-                    return;
-                }
-
-                aiPanel.classList.remove(
-                    'open'
-                );
-
-                aiToggle?.setAttribute(
-                    'aria-expanded',
-                    'false'
-                );
-
+                if (!aiPanel) return;
+                aiPanel.classList.remove('open');
+                aiToggle?.setAttribute('aria-expanded', 'false');
             }
 
+            aiToggle?.addEventListener('click', () => {
+                aiPanel.classList.contains('open') ? closeAI() : openAI();
+            });
 
-            aiToggle?.addEventListener(
-                'click',
-                () => {
-                    aiPanel.classList.contains('open')
-                        ? closeAI()
-                        : openAI();
-                }
-            );
+            aiClose?.addEventListener('click', closeAI);
 
-
-            aiClose?.addEventListener(
-                'click',
-                closeAI
-            );
-
-
-            function addAIMessage(
-                message,
-                type
-            ) {
-
-                const div =
-                    document.createElement(
-                        'div'
-                    );
-
-                div.className =
-                    'lp-ai-msg ' +
-                    (
-                        type === 'user'
-                            ? 'lp-ai-user'
-                            : 'lp-ai-bot'
-                    );
-
-                div.textContent =
-                    message;
-
-                aiBody.appendChild(
-                    div
-                );
-
-                aiBody.scrollTop =
-                    aiBody.scrollHeight;
-
+            function addAIMessage(message, type) {
+                const div = document.createElement('div');
+                div.className = 'lp-ai-msg ' + (type === 'user' ? 'lp-ai-user' : 'lp-ai-bot');
+                div.textContent = message;
+                aiBody.appendChild(div);
+                aiBody.scrollTop = aiBody.scrollHeight;
             }
 
+            aiForm?.addEventListener('submit', event => {
+                event.preventDefault();
+                const question = (aiInput.value || '').trim();
+                if (!question) return;
 
-            document
-                .querySelectorAll('.lp-ai-option')
-                .forEach(button => {
+                addAIMessage(question, 'user');
+                aiInput.value = '';
 
-                    button.addEventListener(
-                        'click',
-                        () => {
+                const x = question.toLowerCase();
+                let answer = 'For a personalized answer, please call +1 (929) 586-9234 or use the consultation form on this page.';
 
-                            addAIMessage(
-                                button.textContent.trim(),
-                                'user'
-                            );
+                if (/book|appointment|schedule/.test(x)) {
+                    answer = 'You can call +1 (929) 586-9234 or use the contact form to schedule a private consultation.';
+                } else if (/online|phone|remote/.test(x)) {
+                    answer = 'Yes. Online and phone psychic readings are available for clients across Texas and the USA.';
+                } else if (/love|relationship|marriage/.test(x)) {
+                    answer = 'Love and relationship readings can cover marriage, emotional connections, breakups, reconciliation and other matters of the heart.';
+                } else if (/career|business|job|finance/.test(x)) {
+                    answer = 'Career and business guidance can cover a new job, career change, business opportunity, financial decision or important professional choice.';
+                } else if (/birth chart|astrology|vedic/.test(x)) {
+                    answer = 'Yes. Vikram provides astrology consultations and personalized birth chart readings.';
+                } else if (/psychic|reading/.test(x)) {
+                    answer = 'A psychic reading can cover love, relationships, marriage, career, family, finances, business and personal decisions.';
+                }
 
-                            setTimeout(
-                                () => {
-                                    addAIMessage(
-                                        button.dataset.answer,
-                                        'bot'
-                                    );
-                                },
-                                220
-                            );
-
-                        }
-                    );
-
-                });
-
-
-            aiForm?.addEventListener(
-                'submit',
-                event => {
-
-                    event.preventDefault();
-
-
-                    const question =
-                        (aiInput.value || '').trim();
-
-
-                    if (!question) {
-                        return;
-                    }
-
-
-                    addAIMessage(
-                        question,
-                        'user'
-                    );
-
-
-                    aiInput.value =
-                        '';
-
-
-                    const x =
-                        question.toLowerCase();
-
-
-                    let answer =
-                        'For a personalized answer, please call +1 (929) 586-9234 or use the consultation form on this page.';
-
-
-                    if (
-                        /book|appointment|schedule/.test(x)
-                    ) {
-
-                        answer =
-                            'You can call +1 (929) 586-9234 or use the contact form to schedule a private consultation.';
-
-                    }
-
-                    else if (
-                        /online|phone|remote/.test(x)
-                    ) {
-
-                        answer =
-                            'Yes. Online and phone psychic readings are available for clients across Texas and the USA.';
-
-                    }
-
-                    else if (
-                        /love|relationship|marriage/.test(x)
-                    ) {
-
-                        answer =
-                            'Love and relationship readings can cover marriage, emotional connections, breakups, reconciliation and other matters of the heart.';
-
-                    }
-
-                    else if (
-                        /career|business|job|finance/.test(x)
-                    ) {
-
-                        answer =
-                            'Career and business guidance can cover a new job, career change, business opportunity, financial decision or important professional choice.';
-
-                    }
-
-                    else if (
-                        /birth chart|astrology|vedic/.test(x)
-                    ) {
-
-                        answer =
-                            'Yes. Vikram provides astrology consultations and personalized birth chart readings.';
-
-                    }
-
-                    else if (
-                        /psychic|reading/.test(x)
-                    ) {
-
-                        answer =
-                            'A psychic reading can cover love, relationships, marriage, career, family, finances, business and personal decisions.';
-
-                    }
-
-
-                    setTimeout(
-                        () => {
-                            addAIMessage(
-                                answer,
-                                'bot'
-                            );
-                        },
-                        280
-                    );
-
-                });
+                setTimeout(() => {
+                    addAIMessage(answer, 'bot');
+                }, 280);
+            });
 
         })();
-
     </script>
 
 </body>
