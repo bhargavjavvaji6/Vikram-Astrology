@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="Pandith K.B.Vijay Guruji — Best Astrologer in Mumbai offering personalized Vedic astrology, horoscope reading, and spiritual guidance.">
-    <meta name="theme-color" content="#031d2e">
+    <meta name="theme-color" content="#3b0918">
     <title>Pandith K.B.Vijay Guruji | Best Astrologer in Mumbai</title>
 
     <meta name="robots" content="index,follow,max-image-preview:large">
@@ -19,18 +19,24 @@
 
     <style>
         :root {
-            --home-navy: #031d2e;
-            --home-blue: #07273c;
-            --home-blue-2: #17384e;
-            --home-blue-3: #0c314a;
-            --home-orange: #ff7010;
-            --home-orange-2: #ff9a4d;
+            /* NEW VEDIC ASTROLOGY THEME COLORS */
+            --home-bg-main: #3b0918;
+            /* Deep Maroon */
+            --home-bg-alt: #4a0d1f;
+            /* Crimson */
+            --home-bg-dark: #2a050f;
+            /* Dark Burgundy */
+            --home-orange: #ff5e00;
+            /* Traditional Saffron */
+            --home-orange-2: #ff8c00;
             --home-gold: #f3c66f;
-            --home-text: #e5f0f5;
-            --home-muted: #9eb7c6;
+            --home-text: #fdf5e6;
+            /* Warm off-white */
+            --home-muted: #dcb8bc;
             --home-white: #ffffff;
-            --home-line: rgba(255, 255, 255, .11);
-            --home-shadow: 0 28px 70px rgba(0, 0, 0, .28);
+            --home-line: rgba(243, 198, 111, 0.15);
+            /* Gold-tinted line */
+            --home-shadow: 0 28px 70px rgba(0, 0, 0, .4);
             --home-radius: 24px;
             --home-max: 1240px;
         }
@@ -49,7 +55,7 @@
         body {
             margin: 0 !important;
             padding: 0 !important;
-            background: var(--home-navy) !important;
+            background: var(--home-bg-main) !important;
             color: var(--home-text) !important;
             font-family: Inter, Arial, sans-serif;
             overflow-x: hidden;
@@ -66,9 +72,9 @@
         .lp-shell {
             min-height: 100vh;
             background:
-                radial-gradient(circle at 85% 8%, rgba(96, 69, 146, .16), transparent 24%),
-                radial-gradient(circle at 12% 24%, rgba(255, 112, 16, .07), transparent 20%),
-                linear-gradient(180deg, var(--home-navy) 0%, var(--home-blue) 50%, var(--home-navy) 100%);
+                radial-gradient(circle at 85% 8%, rgba(255, 94, 0, .15), transparent 24%),
+                radial-gradient(circle at 12% 24%, rgba(243, 198, 111, .1), transparent 20%),
+                linear-gradient(180deg, var(--home-bg-main) 0%, var(--home-bg-alt) 50%, var(--home-bg-main) 100%);
         }
 
         .lp-wrap {
@@ -82,7 +88,7 @@
             inset: 0 0 auto;
             z-index: 10000;
             height: 80px;
-            background: rgba(3, 29, 46, .90);
+            background: rgba(59, 9, 24, .90);
             border-bottom: 1px solid var(--home-line);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
@@ -109,17 +115,19 @@
             height: 50px;
             object-fit: cover;
             border-radius: 50%;
+            border: 2px solid var(--home-gold);
         }
 
         .lp-brand strong {
             display: block;
             font: 600 22px/1 "Cormorant Garamond", serif;
+            color: var(--home-gold);
         }
 
         .lp-brand small {
             display: block;
             margin-top: 5px;
-            color: #9cb4c3;
+            color: var(--home-muted);
             font-size: 8px;
             letter-spacing: .18em;
             text-transform: uppercase;
@@ -132,7 +140,7 @@
         }
 
         .lp-nav-links a {
-            color: #dce9ef;
+            color: #fdf5e6;
             font-size: 12px;
             font-weight: 600;
             padding: 11px 12px;
@@ -141,8 +149,8 @@
         }
 
         .lp-nav-links a:hover {
-            background: rgba(255, 255, 255, .08);
-            color: #fff;
+            background: rgba(243, 198, 111, .15);
+            color: var(--home-gold);
         }
 
         .lp-nav-call {
@@ -151,12 +159,12 @@
             gap: 8px;
             padding: 11px 16px;
             border-radius: 999px;
-            background: linear-gradient(135deg, var(--home-orange-2), var(--home-orange));
-            color: #19110a;
+            background: linear-gradient(135deg, var(--home-gold), #d4af37);
+            color: #2a050f;
             font-size: 12px;
             font-weight: 800;
             white-space: nowrap;
-            box-shadow: 0 12px 28px rgba(255, 112, 16, .18);
+            box-shadow: 0 12px 28px rgba(243, 198, 111, .2);
         }
 
         .lp-menu {
@@ -178,7 +186,7 @@
             left: 12px;
             right: 12px;
             padding: 10px;
-            background: rgba(3, 29, 46, .98);
+            background: rgba(59, 9, 24, .98);
             border: 1px solid var(--home-line);
             border-radius: 18px;
             box-shadow: var(--home-shadow);
@@ -191,12 +199,13 @@
         .lp-mobile a {
             padding: 12px 13px;
             border-radius: 11px;
-            color: #e5f0f5;
+            color: #fdf5e6;
             font-size: 13px;
         }
 
         .lp-mobile a:hover {
-            background: rgba(255, 255, 255, .06);
+            background: rgba(243, 198, 111, .1);
+            color: var(--home-gold);
         }
 
         /* HERO */
@@ -205,7 +214,7 @@
             padding: 135px 0 72px;
             position: relative;
             overflow: hidden;
-            background: radial-gradient(circle at 78% 48%, rgba(27, 81, 110, .22), transparent 28%), linear-gradient(180deg, #031d2e 0%, #07273c 100%);
+            background: radial-gradient(circle at 78% 48%, rgba(255, 94, 0, .2), transparent 28%), linear-gradient(180deg, var(--home-bg-main) 0%, var(--home-bg-alt) 100%);
         }
 
         .lp-hero-grid {
@@ -240,7 +249,7 @@
             max-width: 760px;
             font: 600 clamp(44px, 6vw, 82px)/1.05 "Cormorant Garamond", serif;
             letter-spacing: -.02em;
-            color: #eef6f9;
+            color: #fff;
         }
 
         .lp-hero h1 em,
@@ -251,7 +260,7 @@
 
         .lp-hero-copy {
             max-width: 700px;
-            color: #c3d3dc;
+            color: var(--home-muted);
             font-size: 17px;
             line-height: 1.82;
             margin: 0 0 10px;
@@ -279,25 +288,26 @@
 
         .lp-btn-primary {
             background: linear-gradient(135deg, var(--home-orange-2), var(--home-orange));
-            color: #1a0e06;
-            box-shadow: 0 16px 35px rgba(255, 112, 16, .18);
+            color: #fff;
+            box-shadow: 0 16px 35px rgba(255, 94, 0, .3);
         }
 
         .lp-btn-primary:hover {
             transform: translateY(-2px);
-            color: #1a0e06;
+            color: #fff;
+            filter: brightness(1.1);
         }
 
         .lp-btn-outline {
-            border: 1px solid rgba(255, 255, 255, .16);
-            background: rgba(255, 255, 255, .035);
-            color: #edf5f8;
+            border: 1px solid rgba(243, 198, 111, .3);
+            background: rgba(243, 198, 111, .05);
+            color: var(--home-gold);
         }
 
         .lp-btn-outline:hover {
             transform: translateY(-2px);
-            border-color: rgba(255, 154, 77, .5);
-            color: #fff;
+            background: var(--home-gold);
+            color: var(--home-bg-main);
         }
 
         .lp-trust {
@@ -312,7 +322,7 @@
             border-radius: 999px;
             border: 1px solid var(--home-line);
             background: rgba(255, 255, 255, .035);
-            color: #b9ccd7;
+            color: var(--home-muted);
             font-size: 10px;
         }
 
@@ -329,26 +339,19 @@
             border-radius: 50%;
             display: grid;
             place-items: center;
-            background: radial-gradient(circle, #17384e 0 30%, #0c2c42 31% 55%, #062133 56%);
-            border: 1px solid rgba(229, 240, 245, .18);
-            box-shadow: 0 0 0 18px rgba(255, 255, 255, .025), 0 35px 90px rgba(0, 0, 0, .34), inset 0 0 70px rgba(158, 123, 232, .07);
+            background: radial-gradient(circle, #5b1024 0 30%, #4a0d1f 31% 55%, #3b0918 56%);
+            border: 1px solid rgba(243, 198, 111, .2);
+            box-shadow: 0 0 0 18px rgba(243, 198, 111, .03), 0 35px 90px rgba(0, 0, 0, .5), inset 0 0 70px rgba(255, 94, 0, .1);
             position: relative;
             z-index: 2;
             animation: lpFloat 7s ease-in-out infinite;
-        }
-
-        .lp-zodiac img {
-            width: 82%;
-            height: 82%;
-            object-fit: contain;
-            filter: drop-shadow(0 22px 32px rgba(0, 0, 0, .42));
         }
 
         .lp-orbit {
             position: absolute;
             width: 610px;
             height: 610px;
-            border: 1px solid rgba(158, 123, 232, .18);
+            border: 1px solid rgba(243, 198, 111, .15);
             border-radius: 50%;
             right: -110px;
             top: 30px;
@@ -359,14 +362,14 @@
         .lp-orbit::after {
             content: "";
             position: absolute;
-            border: 1px solid rgba(255, 154, 77, .14);
+            border: 1px solid rgba(255, 94, 0, .2);
             border-radius: 50%;
             inset: 50px;
         }
 
         .lp-orbit::after {
             inset: 125px;
-            border-color: rgba(158, 123, 232, .18);
+            border-color: rgba(243, 198, 111, .1);
         }
 
         .lp-orbit-dot {
@@ -376,8 +379,8 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: var(--home-orange-2);
-            box-shadow: 0 0 22px var(--home-orange);
+            background: var(--home-gold);
+            box-shadow: 0 0 22px var(--home-gold);
         }
 
         @keyframes lpSpin {
@@ -398,9 +401,9 @@
             padding: 10px 13px;
             border: 1px solid var(--home-line);
             border-radius: 13px;
-            background: rgba(3, 29, 46, .86);
+            background: rgba(42, 5, 15, .86);
             backdrop-filter: blur(12px);
-            color: #e4eef2;
+            color: var(--home-gold);
             font-size: 10px;
             box-shadow: var(--home-shadow);
         }
@@ -427,7 +430,7 @@
         }
 
         .lp-section.alt {
-            background: linear-gradient(180deg, #07273c, #031d2e);
+            background: linear-gradient(180deg, var(--home-bg-alt), var(--home-bg-main));
             border-block: 1px solid var(--home-line);
         }
 
@@ -444,12 +447,12 @@
             max-width: 820px;
             font: 600 clamp(40px, 5vw, 66px)/.96 "Cormorant Garamond", serif;
             letter-spacing: -.025em;
-            color: #edf6f8;
+            color: #fff;
         }
 
         .lp-lead {
             max-width: 760px;
-            color: #9fb7c5;
+            color: var(--home-muted);
             font-size: 15px;
             line-height: 1.8;
             margin: 0;
@@ -473,8 +476,8 @@
             border-radius: 22px;
             overflow: hidden;
             position: relative;
-            background: #0a2a40;
-            border: 1px solid rgba(255, 255, 255, .1);
+            background: var(--home-bg-dark);
+            border: 1px solid var(--home-line);
             box-shadow: var(--home-shadow);
             z-index: 2;
         }
@@ -490,7 +493,7 @@
             content: "";
             position: absolute;
             inset: 42% 0 0;
-            background: linear-gradient(transparent, rgba(3, 12, 20, .9));
+            background: linear-gradient(transparent, rgba(42, 5, 15, .95));
         }
 
         .lp-photo-label {
@@ -503,13 +506,13 @@
         .lp-photo-label strong {
             display: block;
             font: 600 31px "Cormorant Garamond", serif;
-            color: #fff;
+            color: var(--home-gold);
         }
 
         .lp-photo-label span {
             display: block;
             margin-top: 4px;
-            color: #9fb3c0;
+            color: #fff;
             font-size: 9px;
             letter-spacing: .14em;
             text-transform: uppercase;
@@ -534,8 +537,8 @@
             bottom: 23px;
             width: 125px;
             height: 125px;
-            border-left: 1px solid rgba(255, 255, 255, .12);
-            border-bottom: 1px solid rgba(255, 255, 255, .12);
+            border-left: 1px solid var(--home-line);
+            border-bottom: 1px solid var(--home-line);
             z-index: 1;
         }
 
@@ -550,7 +553,7 @@
             padding: 17px;
             border-radius: 16px;
             border: 1px solid var(--home-line);
-            background: rgba(255, 255, 255, .035);
+            background: rgba(243, 198, 111, .03);
         }
 
         .lp-stat b {
@@ -560,7 +563,7 @@
         }
 
         .lp-stat span {
-            color: #8ea7b5;
+            color: var(--home-muted);
             font-size: 10px;
             line-height: 1.45;
         }
@@ -577,7 +580,7 @@
             padding: 25px;
             border-radius: 21px;
             border: 1px solid var(--home-line);
-            background: linear-gradient(150deg, #0a3149, #07273c);
+            background: linear-gradient(150deg, #5b1024, #4a0d1f);
             position: relative;
             overflow: hidden;
             transition: .3s;
@@ -585,7 +588,7 @@
 
         .lp-service:hover {
             transform: translateY(-7px);
-            border-color: rgba(255, 112, 16, .42);
+            border-color: var(--home-orange);
             box-shadow: var(--home-shadow);
         }
 
@@ -597,7 +600,7 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 112, 16, .12), transparent 67%);
+            background: radial-gradient(circle, rgba(243, 198, 111, .15), transparent 67%);
         }
 
         .lp-service-icon {
@@ -606,22 +609,22 @@
             border-radius: 15px;
             display: grid;
             place-items: center;
-            background: rgba(255, 112, 16, .1);
-            border: 1px solid rgba(255, 154, 77, .25);
-            color: var(--home-orange-2);
+            background: rgba(255, 94, 0, .15);
+            border: 1px solid rgba(243, 198, 111, .3);
+            color: var(--home-gold);
             margin-bottom: 18px;
             font-size: 24px;
         }
 
         .lp-service h3 {
             margin: 0 0 10px;
-            color: #eaf3f6;
+            color: #fff;
             font: 600 24px/1.1 "Cormorant Garamond", serif;
         }
 
         .lp-service p {
             margin: 0;
-            color: #9eb5c2;
+            color: var(--home-muted);
             font-size: 12px;
             line-height: 1.6;
         }
@@ -637,7 +640,7 @@
             padding: 24px 20px;
             min-height: 200px;
             border-radius: 20px;
-            background: #ffffff04;
+            background: rgba(243, 198, 111, .02);
             border: 1px solid var(--home-line);
             position: relative;
             overflow: hidden;
@@ -650,9 +653,9 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-            background: rgba(255, 112, 16, .1);
-            border: 1px solid rgba(255, 154, 77, .25);
-            color: var(--home-orange-2);
+            background: rgba(255, 94, 0, .15);
+            border: 1px solid rgba(243, 198, 111, .3);
+            color: var(--home-gold);
             font-size: 14px;
             font-weight: 800;
         }
@@ -660,12 +663,12 @@
         .lp-why-card h3 {
             margin: 19px 0 10px;
             font: 600 22px/1.1 "Cormorant Garamond", serif;
-            color: #eef5f7;
+            color: #fff;
         }
 
         .lp-why-card p {
             margin: 0;
-            color: #94adbb;
+            color: var(--home-muted);
             font-size: 12px;
             line-height: 1.6;
         }
@@ -675,7 +678,7 @@
             position: absolute;
             right: 13px;
             bottom: 3px;
-            color: rgba(255, 112, 16, .09);
+            color: rgba(243, 198, 111, .1);
             font: 60px Georgia, serif;
         }
 
@@ -690,16 +693,16 @@
             min-height: 250px;
             padding: 24px;
             border-radius: 21px;
-            background: linear-gradient(155deg, #0b3048, #08283e);
+            background: linear-gradient(155deg, #5b1024, #3b0918);
             border: 1px solid var(--home-line);
-            box-shadow: 0 18px 45px rgba(0, 0, 0, .18);
+            box-shadow: var(--home-shadow);
             position: relative;
             transition: .3s;
         }
 
         .lp-review:hover {
             transform: translateY(-7px);
-            border-color: rgba(255, 154, 77, .28);
+            border-color: var(--home-gold);
         }
 
         .lp-quote-mark {
@@ -712,7 +715,7 @@
 
         .lp-review p {
             margin: 0;
-            color: #e1edf4;
+            color: var(--home-text);
             font-size: 15px;
             line-height: 1.6;
             font-style: italic;
@@ -743,14 +746,14 @@
             padding: 19px 18px;
             border: 0;
             background: transparent;
-            color: #ebf3f6;
+            color: #fff;
             text-align: left;
             cursor: pointer;
             font: 600 15px/1.45 Inter, Arial, sans-serif;
         }
 
         .lp-faq-question:hover {
-            background: rgba(255, 255, 255, .035);
+            background: rgba(243, 198, 111, .05);
         }
 
         .lp-faq-plus {
@@ -760,8 +763,8 @@
             border-radius: 50%;
             display: grid;
             place-items: center;
-            color: var(--home-orange-2);
-            border: 1px solid rgba(255, 154, 77, .3);
+            color: var(--home-gold);
+            border: 1px solid rgba(243, 198, 111, .3);
             font-size: 23px;
             transition: .25s;
         }
@@ -769,7 +772,8 @@
         .lp-faq-item.open .lp-faq-plus {
             transform: rotate(45deg);
             background: var(--home-orange);
-            color: #20120a;
+            color: #fff;
+            border-color: var(--home-orange);
         }
 
         .lp-faq-answer {
@@ -781,7 +785,7 @@
         .lp-faq-answer-inner {
             overflow: hidden;
             padding: 0 18px;
-            color: #9cafbb;
+            color: var(--home-muted);
             font-size: 13px;
             line-height: 1.8;
         }
@@ -810,13 +814,13 @@
 
         .lp-contact-card {
             padding: 32px;
-            background: #07273c;
+            background: var(--home-bg-alt);
         }
 
         .lp-contact-card h3,
         .lp-form h3 {
             margin: 0 0 24px;
-            color: #f0f6f8;
+            color: var(--home-gold);
             font: 600 40px/1 "Cormorant Garamond", serif;
         }
 
@@ -837,39 +841,39 @@
             display: grid;
             place-items: center;
             border-radius: 12px;
-            background: rgba(255, 112, 16, .1);
-            color: var(--home-orange-2);
+            background: rgba(243, 198, 111, .1);
+            color: var(--home-gold);
             flex: 0 0 auto;
             font-size: 18px;
         }
 
         .lp-contact-item strong {
             display: block;
-            color: #e6f0f3;
+            color: #fff;
             font-size: 12px;
             margin-bottom: 4px;
         }
 
         .lp-contact-item span,
         .lp-contact-item a {
-            color: #9eb5c1;
+            color: var(--home-muted);
             font-size: 12px;
             line-height: 1.65;
         }
 
         .lp-form {
             padding: 33px;
-            background: linear-gradient(145deg, #f7efe2, #e9dec9);
-            color: #211a27;
+            background: linear-gradient(145deg, #fdf5e6, #f3e5cb);
+            color: #3b0918;
         }
 
         .lp-form h3 {
-            color: #241c2b;
+            color: #3b0918;
         }
 
         .lp-form p {
             margin: 0 0 21px;
-            color: #6b6170;
+            color: #5b1024;
             font-size: 12px;
             line-height: 1.75;
         }
@@ -883,7 +887,7 @@
         .lp-form label {
             display: block;
             margin: 0 0 6px;
-            color: #534a58;
+            color: #4a0d1f;
             font-size: 10px;
             font-weight: 700;
         }
@@ -891,11 +895,11 @@
         .lp-form input,
         .lp-form select {
             width: 100%;
-            border: 1px solid rgba(33, 26, 39, .12);
+            border: 1px solid rgba(74, 13, 31, .2);
             border-radius: 12px;
-            background: rgba(255, 255, 255, .68);
+            background: #fff;
             padding: 13px;
-            color: #251d2b;
+            color: #3b0918;
             outline: none;
             font: inherit;
             font-size: 12px;
@@ -907,8 +911,8 @@
 
         .lp-form input:focus,
         .lp-form select:focus {
-            border-color: rgba(255, 112, 16, .55);
-            box-shadow: 0 0 0 3px rgba(255, 112, 16, .08);
+            border-color: var(--home-orange);
+            box-shadow: 0 0 0 3px rgba(255, 94, 0, .1);
         }
 
         .lp-form-submit {
@@ -917,10 +921,15 @@
             margin-top: 12px;
             border: 0;
             border-radius: 12px;
-            background: var(--home-navy);
-            color: #fff;
+            background: var(--home-bg-main);
+            color: var(--home-gold);
             font-weight: 800;
             cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .lp-form-submit:hover {
+            background: var(--home-bg-alt);
         }
 
         .lp-status {
@@ -952,7 +961,7 @@
             place-items: center;
             cursor: pointer;
             color: #fff;
-            box-shadow: 0 14px 35px rgba(0, 0, 0, .27);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, .4);
             transition: .25s;
             position: relative;
             font-size: 24px;
@@ -965,7 +974,7 @@
         }
 
         .lp-call {
-            background: linear-gradient(135deg, #ff8b30, #ff5f00);
+            background: linear-gradient(135deg, var(--home-orange), #cc4a00);
         }
 
         .lp-wa {
@@ -973,7 +982,8 @@
         }
 
         .lp-ai {
-            background: linear-gradient(135deg, #7255b9, #4a3689);
+            background: linear-gradient(135deg, #d4af37, #aa8014);
+            color: #3b0918 !important;
         }
 
         .lp-float-tip {
@@ -983,13 +993,14 @@
             transform: translateY(-50%);
             padding: 7px 10px;
             border-radius: 999px;
-            background: #071723;
-            color: #fff;
+            background: var(--home-bg-dark);
+            color: var(--home-gold);
             font-size: 10px;
             white-space: nowrap;
             opacity: 0;
             pointer-events: none;
             transition: .2s;
+            border: 1px solid var(--home-line);
         }
 
         .lp-float-btn:hover .lp-float-tip {
@@ -1005,9 +1016,9 @@
             max-width: calc(100vw - 28px);
             height: 485px;
             background: #fff;
-            border: 1px solid rgba(34, 32, 59, .12);
+            border: 1px solid rgba(59, 9, 24, .2);
             border-radius: 21px;
-            box-shadow: 0 28px 80px rgba(0, 0, 0, .3);
+            box-shadow: 0 28px 80px rgba(0, 0, 0, .4);
             z-index: 9997;
             display: flex;
             flex-direction: column;
@@ -1026,8 +1037,8 @@
 
         .lp-ai-head {
             padding: 15px 16px;
-            background: linear-gradient(135deg, #2d2450, #513a79);
-            color: #fff;
+            background: linear-gradient(135deg, var(--home-bg-main), var(--home-bg-alt));
+            color: var(--home-gold);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -1039,19 +1050,20 @@
             display: grid;
             place-items: center;
             border-radius: 12px;
-            background: #fff1;
+            background: rgba(243, 198, 111, .2);
             font-size: 20px;
         }
 
         .lp-ai-head strong {
             display: block;
             font-size: 13px;
+            color: #fff;
         }
 
         .lp-ai-head span {
             display: block;
             margin-top: 2px;
-            color: #ddd6e9;
+            color: var(--home-gold);
             font-size: 9px;
         }
 
@@ -1061,8 +1073,8 @@
             height: 30px;
             border: 0;
             border-radius: 9px;
-            background: #fff2;
-            color: #fff;
+            background: rgba(243, 198, 111, .15);
+            color: var(--home-gold);
             cursor: pointer;
             font-size: 18px;
         }
@@ -1071,7 +1083,7 @@
             flex: 1;
             overflow: auto;
             padding: 13px;
-            background: #f7f5f1;
+            background: #fdf5e6;
             display: flex;
             flex-direction: column;
             gap: 9px;
@@ -1088,14 +1100,15 @@
         .lp-ai-bot {
             align-self: flex-start;
             background: #fff;
-            color: #4f4859;
-            border: 1px solid #26203312;
+            color: #3b0918;
+            border: 1px solid rgba(59, 9, 24, .1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
         .lp-ai-user {
             align-self: flex-end;
-            background: #e9e0f2;
-            color: #342b45;
+            background: var(--home-bg-main);
+            color: var(--home-gold);
         }
 
         .lp-ai-quick {
@@ -1107,12 +1120,18 @@
 
         .lp-ai-quick button {
             background: #fff;
-            border: 1px solid #ddd;
+            border: 1px solid var(--home-orange);
             padding: 6px 10px;
             border-radius: 20px;
             font-size: 10px;
             cursor: pointer;
-            color: #555;
+            color: var(--home-orange);
+            transition: 0.2s;
+        }
+
+        .lp-ai-quick button:hover {
+            background: var(--home-orange);
+            color: #fff;
         }
 
         .lp-ai-form {
@@ -1120,14 +1139,14 @@
             gap: 7px;
             padding: 9px;
             background: #fff;
-            border-top: 1px solid #22203b12;
+            border-top: 1px solid rgba(59, 9, 24, .1);
         }
 
         .lp-ai-form input {
             flex: 1;
             padding: 10px;
             border-radius: 10px;
-            border: 1px solid #22203b18;
+            border: 1px solid rgba(59, 9, 24, .2);
             font: inherit;
             font-size: 12px;
             outline: none;
@@ -1137,8 +1156,8 @@
             width: 42px;
             border: 0;
             border-radius: 10px;
-            background: #2b2640;
-            color: #fff;
+            background: var(--home-bg-main);
+            color: var(--home-gold);
             cursor: pointer;
             font-size: 16px;
         }
@@ -1146,10 +1165,10 @@
         /* FOOTER */
         .lp-footer {
             padding: 34px 0 45px;
-            background: #021520;
+            background: var(--home-bg-dark);
             border-top: 1px solid var(--home-line);
             text-align: center;
-            color: #7993a2;
+            color: var(--home-muted);
             font-size: 12px;
         }
 
@@ -1186,11 +1205,6 @@
             .lp-visual {
                 order: -1;
                 min-height: 410px;
-            }
-
-            .lp-orbit {
-                right: -220px;
-                top: 35px;
             }
 
             .lp-services {
@@ -1314,7 +1328,7 @@
             <div class="lp-wrap lp-nav-inner">
                 <a class="lp-brand" href="#home">
                     <img src="/assets/logo.jpeg" alt="Pandith K.B.Vijay Guruji"
-                        onerror="this.src='https://via.placeholder.com/50/031d2e/fff?text=VG'">
+                        onerror="this.src='https://via.placeholder.com/50/f3c66f/3b0918?text=VG'">
                     <span>
                         <strong>Pandith K.B.Vijay Guruji</strong>
                         <small>World Famous Astrologer</small>
@@ -1390,7 +1404,7 @@
                     <div class="lp-visual lp-reveal">
                         <div class="lp-zodiac">
                             <!-- Abstract Graphic for Zodiac/Astrology in center -->
-                            <div style="font-size: 100px; opacity: 0.8;">🔯</div>
+                            <div style="font-size: 100px; opacity: 0.9;">🕉️</div>
                         </div>
                         <span class="lp-chip chip1">♈ Vedic Astrology</span>
                         <span class="lp-chip chip2">✦ Kundali Reading</span>
@@ -1468,16 +1482,14 @@
                     </div>
 
                     <div class="lp-services">
-                        <!-- Service 1 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">🧿</div>
-                            <h3>Black Magic & Negative Energy Guidance</h3>
+                            <h3>Black Magic & Negative Energy</h3>
                             <p>Spiritual consultation for people who are concerned about negative energy, spiritual
                                 disturbances or related personal experiences.</p>
                             <a class="lp-service-link" href="#contact">Learn more →</a>
                         </article>
 
-                        <!-- Service 2 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">🔮</div>
                             <h3>Horoscope Reading</h3>
@@ -1486,16 +1498,14 @@
                             <a class="lp-service-link" href="#contact">Learn more →</a>
                         </article>
 
-                        <!-- Service 3 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">❤️</div>
-                            <h3>Love & Relationship Guidance</h3>
+                            <h3>Love & Relationship</h3>
                             <p>Get thoughtful astrology-based guidance for relationship concerns, compatibility and
                                 important decisions in your love life.</p>
                             <a class="lp-service-link" href="#contact">Learn more →</a>
                         </article>
 
-                        <!-- Service 4 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">💍</div>
                             <h3>Marriage Astrology</h3>
@@ -1504,7 +1514,6 @@
                             <a class="lp-service-link" href="#contact">Learn more →</a>
                         </article>
 
-                        <!-- Service 5 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">💼</div>
                             <h3>Career & Job Astrology</h3>
@@ -1513,7 +1522,6 @@
                             <a class="lp-service-link" href="#contact">Learn more →</a>
                         </article>
 
-                        <!-- Service 6 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">💰</div>
                             <h3>Business Astrology</h3>
@@ -1522,7 +1530,6 @@
                             <a class="lp-service-link" href="#contact">Learn more →</a>
                         </article>
 
-                        <!-- Service 7 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">✋</div>
                             <h3>Palm Reading</h3>
@@ -1531,7 +1538,6 @@
                             <a class="lp-service-link" href="#contact">Learn more →</a>
                         </article>
 
-                        <!-- Service 8 -->
                         <article class="lp-service lp-reveal">
                             <div class="lp-service-icon">🧘</div>
                             <h3>Spiritual Healing & Chakra</h3>
@@ -1623,7 +1629,7 @@
                 <div class="lp-wrap lp-faq">
                     <div class="lp-reveal">
                         <div class="lp-eyebrow">FAQ</div>
-                        <h2 class="lp-title" style="color: #fff;">Questions, answered with <em>clarity.</em></h2>
+                        <h2 class="lp-title">Questions, answered with <em>clarity.</em></h2>
                     </div>
 
                     <div class="lp-faq-list">
@@ -1736,7 +1742,7 @@
                             </div>
                         </div>
 
-                        <!-- Formal Form Submission mimicking main.jsx style -->
+                        <!-- Formal Form Submission -->
                         <form class="lp-form lp-reveal" id="contactForm">
                             <h3>Request a consultation</h3>
                             <div class="lp-form-grid">
@@ -1898,13 +1904,12 @@
                     const name = document.getElementById('name').value.trim();
                     const phone = document.getElementById('phone').value.trim();
                     const topic = document.getElementById('topic').value.trim();
-                    const status = document.getElementById('form-status');
 
-                    // Show success message logic (Mimicking React state formSent=true)
+                    // Show success message logic
                     contactForm.innerHTML = `
                         <div style="text-align:center; padding: 20px;">
-                            <h3 style="color:#2d6540; font-size: 24px;">Thank you, ${name}.</h3>
-                            <p style="color:#333;">Your request has been recorded as a demo submission. Please use Call or WhatsApp for a real appointment.</p>
+                            <h3 style="color:var(--home-gold); font-size: 24px;">Thank you, ${name}.</h3>
+                            <p style="color:var(--home-main);">Your request for ${topic} has been recorded as a demo submission. Please use Call or WhatsApp for a real appointment.</p>
                         </div>
                     `;
                 });
