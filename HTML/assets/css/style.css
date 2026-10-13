@@ -4467,7 +4467,7 @@ textarea.form-control {
 .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
     width: 100%;
     max-width: 1100px;
-    height: 350px;
+    height: 320px;
     /* Decreased from 480px */
     margin: 0 auto 35px;
     border-radius: 24px;
