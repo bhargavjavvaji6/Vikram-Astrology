@@ -4486,14 +4486,6 @@ textarea.form-control {
 .as_servicedetail_wrapper .service-detail-image img {
     width: 100%;
     height: 100%;
-    display: block;
-
-    /* IMPORTANT:
-       Keep the complete artwork visible */
-    object-fit: contain;
-    object-position: center;
-
-    background: #ffffff;
 }
 
 /* Desktop */
