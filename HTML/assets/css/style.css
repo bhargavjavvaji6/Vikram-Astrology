@@ -4461,13 +4461,14 @@ textarea.form-control {
 }
 
 /* =========================================================
-   SERVICE DETAIL - PREMIUM HERO IMAGE
+   SERVICE DETAIL - PREMIUM HERO IMAGE (REDUCED HEIGHT)
    ========================================================= */
 
 .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
     width: 100%;
     max-width: 1100px;
-    height: 480px;
+    height: 350px;
+    /* Decreased from 480px */
     margin: 0 auto 35px;
     border-radius: 24px;
     overflow: hidden;
@@ -4498,14 +4499,16 @@ textarea.form-control {
 /* Desktop */
 @media (min-width: 1200px) {
     .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
-        height: 500px;
+        height: 380px;
+        /* Decreased from 500px */
     }
 }
 
 /* Laptop */
 @media (max-width: 1199px) {
     .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
-        height: 420px;
+        height: 320px;
+        /* Decreased from 420px */
         border-radius: 20px;
     }
 }
@@ -4513,7 +4516,8 @@ textarea.form-control {
 /* Tablet */
 @media (max-width: 991px) {
     .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
-        height: 360px;
+        height: 280px;
+        /* Decreased from 360px */
         margin-bottom: 30px;
     }
 }
@@ -4521,7 +4525,8 @@ textarea.form-control {
 /* Mobile */
 @media (max-width: 767px) {
     .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
-        height: 280px;
+        height: 220px;
+        /* Decreased from 280px */
         border-radius: 16px;
         margin-bottom: 25px;
     }
@@ -4530,7 +4535,8 @@ textarea.form-control {
 /* Small phones */
 @media (max-width: 480px) {
     .as_servicedetail_wrapper .as_service_detail_inner>.service-detail-image {
-        height: 220px;
+        height: 180px;
+        /* Decreased from 220px */
         border-radius: 13px;
     }
 }
