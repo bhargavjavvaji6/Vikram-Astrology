@@ -2416,11 +2416,10 @@
 
                                     <div>
 
-                                        <label for="phone">
-                                            Phone
-                                        </label>
+                                        <label for="phone"> Phone </label>
 
-                                        <input id="phone" required placeholder="Your Phone Number">
+                                        <input id="phone" name="phone" type="tel" autocomplete="tel" required
+                                            placeholder="Your Phone Number">
 
                                     </div>
 
@@ -3808,7 +3807,8 @@
                                         Name
                                     </label>
 
-                                    <input id="name" required placeholder="Your Full Name">
+                                    <input id="name" name="name" type="text" autocomplete="name" required
+                                        placeholder="Your Full Name">
 
                                 </div>
 
@@ -3818,7 +3818,7 @@
                                         Location
                                     </label>
 
-                                    <select id="location" required>
+                                    <select id="location" name="location" required>
 
                                         <option value="">
                                             Select Your Location
@@ -4517,15 +4517,12 @@
                                 'Opening your email app...';
 
                         }
-
-
                         window.location.href =
                             'mailto:vikrampsychic78@gmail.com' +
                             '?subject=' +
                             subject +
                             '&body=' +
                             body;
-
                     }
                 );
 
