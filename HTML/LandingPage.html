@@ -1957,6 +1957,169 @@
                 white-space: normal;
             }
         }
+
+
+        /* =====================================================
+   MOBILE AND TABLET NAVIGATION FIX
+   ===================================================== */
+
+        /* Tablet and mobile */
+        @media screen and (max-width: 1199px) {
+
+            /* Navigation header */
+            .lp-nav {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                height: 80px !important;
+                min-height: 80px !important;
+                z-index: 10000 !important;
+                overflow: visible !important;
+            }
+
+            /* Header content */
+            .lp-nav-inner {
+                width: calc(100% - 28px) !important;
+                height: 100% !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 10px !important;
+            }
+
+            /* Hide desktop navigation links */
+            .lp-nav .lp-nav-links {
+                display: none !important;
+                visibility: hidden !important;
+            }
+
+            /* Hide desktop call button */
+            .lp-nav .lp-nav-call {
+                display: none !important;
+            }
+
+            /* Show hamburger button */
+            .lp-nav .lp-menu {
+                display: flex !important;
+                flex: 0 0 46px !important;
+                width: 46px !important;
+                height: 46px !important;
+                align-items: center !important;
+                justify-content: center !important;
+                position: relative !important;
+                z-index: 10003 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                border: 1px solid rgba(243, 198, 111, 0.5) !important;
+                border-radius: 12px !important;
+                background: #07273c !important;
+                color: #f3c66f !important;
+                font-size: 25px !important;
+                line-height: 1 !important;
+                cursor: pointer !important;
+                pointer-events: auto !important;
+                touch-action: manipulation;
+            }
+
+            /* Closed dropdown menu */
+            .lp-nav .lp-mobile {
+                display: none !important;
+                position: absolute !important;
+                top: calc(100% + 8px) !important;
+                left: 14px !important;
+                right: 14px !important;
+                width: auto !important;
+                max-height: calc(100vh - 105px) !important;
+                overflow-y: auto !important;
+                padding: 10px !important;
+                background: rgba(3, 29, 46, 0.98) !important;
+                border: 1px solid rgba(243, 198, 111, 0.25) !important;
+                border-radius: 16px !important;
+                box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45) !important;
+                z-index: 10002 !important;
+            }
+
+            /* Open dropdown menu */
+            .lp-nav .lp-mobile.open {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 3px !important;
+                visibility: visible !important;
+            }
+
+            /* Individual navigation links */
+            .lp-nav .lp-mobile a {
+                display: block !important;
+                width: 100% !important;
+                padding: 14px 16px !important;
+                color: #e5f0f5 !important;
+                background: transparent !important;
+                font-size: 15px !important;
+                font-weight: 600 !important;
+                line-height: 1.5 !important;
+                text-align: left !important;
+                text-decoration: none !important;
+                border-radius: 9px !important;
+            }
+
+            /* Highlight hovered or focused links */
+            .lp-nav .lp-mobile a:hover,
+            .lp-nav .lp-mobile a:focus {
+                background: rgba(255, 112, 16, 0.15) !important;
+                color: #ff7010 !important;
+                outline: none;
+            }
+        }
+
+
+        /* =====================================================
+   SMALL MOBILE PHONES
+   ===================================================== */
+
+        @media screen and (max-width: 680px) {
+
+            .lp-nav {
+                height: 68px !important;
+                min-height: 68px !important;
+            }
+
+            .lp-nav-inner {
+                width: calc(100% - 24px) !important;
+                gap: 8px !important;
+            }
+
+            /* Keep the brand and hamburger on one row */
+            .lp-nav .as_header_logo,
+            .lp-nav .lp-brand {
+                flex: 1 1 auto !important;
+                min-width: 0 !important;
+                max-width: calc(100% - 58px) !important;
+                overflow: hidden !important;
+            }
+
+            .lp-nav .lp-menu {
+                flex: 0 0 42px !important;
+                width: 42px !important;
+                height: 42px !important;
+            }
+
+            /* Dropdown positioning on phones */
+            .lp-nav .lp-mobile {
+                top: calc(100% + 8px) !important;
+                left: 12px !important;
+                right: 12px !important;
+                max-height: calc(100vh - 90px) !important;
+                padding: 8px !important;
+            }
+
+            .lp-nav .lp-mobile a {
+                padding: 13px 14px !important;
+                font-size: 14px !important;
+            }
+        }
     </style>
 </head>
 
@@ -1996,10 +2159,7 @@
 
                 </a>
 
-                <button class="lp-menu" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false">
-
-                    ☰
-
+                <button class="lp-menu" id="menuBtn" type="button" aria-label="Open navigation" aria-expanded="false"> ☰
                 </button>
 
             </div>
@@ -3995,6 +4155,166 @@
                     new Date().getFullYear();
 
             }
+
+            /* =====================================================
+   CONTACT / ENQUIRY FORMS
+   Sends all three landing-page forms using FormSubmit
+   ===================================================== */
+
+            document.querySelectorAll('.js-contact-form').forEach((form) => {
+
+                form.addEventListener('submit', async (event) => {
+
+                    event.preventDefault();
+
+                    const name =
+                        form.querySelector('[name="name"]')?.value.trim() || '';
+
+                    const location =
+                        form.querySelector('[name="location"]')?.value.trim() || '';
+
+                    const phone =
+                        form.querySelector('[name="phone"]')?.value.trim() || '';
+
+                    const status =
+                        form.querySelector('.lp-status');
+
+                    const submitButton =
+                        form.querySelector('button[type="submit"]');
+
+                    const originalButtonText =
+                        submitButton?.textContent || 'Prepare My Enquiry ↗';
+
+                    if (!name || !location || !phone) {
+
+                        if (status) {
+                            status.style.display = 'block';
+                            status.style.color = '#d9534f';
+                            status.textContent =
+                                'Please enter your name, location, and phone number.';
+                        }
+
+                        return;
+                    }
+
+                    if (submitButton) {
+                        submitButton.disabled = true;
+                        submitButton.textContent = 'Sending Enquiry...';
+                    }
+
+                    if (status) {
+                        status.style.display = 'block';
+                        status.style.color = '#555';
+                        status.textContent = 'Sending your enquiry. Please wait...';
+                    }
+
+                    const payload = {
+                        name: name,
+                        location: location,
+                        phone: phone,
+
+                        _subject: 'New Consultation Enquiry - ' + name,
+
+                        _template: 'table',
+
+                        _url: window.location.href,
+
+                        message:
+                            'New consultation enquiry from the Vikram Astrology website.\n\n' +
+                            'Name: ' + name + '\n' +
+                            'Location: ' + location + '\n' +
+                            'Phone/WhatsApp: ' + phone + '\n\n' +
+                            'Please contact this person to discuss their consultation.'
+                    };
+
+                    try {
+
+                        const response = await fetch(
+                            'https://formsubmit.co/ajax/vikrampsychic78@gmail.com',
+                            {
+                                method: 'POST',
+
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json'
+                                },
+
+                                body: JSON.stringify(payload)
+                            }
+                        );
+
+                        const result = await response.json().catch(() => ({}));
+
+                        const success =
+                            result.success === true ||
+                            result.success === 'true';
+
+                        if (!response.ok || !success) {
+
+                            const serverMessage =
+                                String(result.message || '');
+
+                            if (/activat/i.test(serverMessage)) {
+                                throw new Error(
+                                    'Email activation is required. Check ' +
+                                    'vikrampsychic78@gmail.com for the FormSubmit ' +
+                                    'activation email, click Activate Form, and then ' +
+                                    'submit the enquiry again.'
+                                );
+                            }
+
+                            throw new Error(
+                                serverMessage ||
+                                'The enquiry could not be submitted. Please try again.'
+                            );
+                        }
+
+                        if (status) {
+
+                            status.style.display = 'block';
+                            status.style.color = '#18864b';
+
+                            status.textContent =
+                                'Thank you! Your enquiry has been submitted successfully. ' +
+                                'Vikram will contact you soon.';
+
+                        }
+
+                        form.reset();
+
+                    } catch (error) {
+
+                        console.error(
+                            'Enquiry submission error:',
+                            error
+                        );
+
+                        if (status) {
+
+                            status.style.display = 'block';
+                            status.style.color = '#d9534f';
+
+                            status.textContent =
+                                error.message ||
+                                'Unable to send your enquiry. Please call +1 929-586-9234.';
+                        }
+
+                    } finally {
+
+                        if (submitButton) {
+
+                            submitButton.disabled = false;
+
+                            submitButton.textContent =
+                                originalButtonText;
+
+                        }
+
+                    }
+
+                });
+
+            });
 
 
             /* FAQ */
