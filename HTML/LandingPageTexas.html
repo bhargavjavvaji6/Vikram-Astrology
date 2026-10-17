@@ -1666,6 +1666,78 @@
                 font-size: 14px !important;
             }
         }
+
+        /* ==========================================
+   BLOG IMAGES — FULL IMAGE, NO CROPPING
+   ========================================== */
+
+        .lp-blog-img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #031d2e;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 0;
+        }
+
+        .lp-blog-img img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+
+            /* Display the complete image */
+            object-fit: contain;
+            object-position: center center;
+
+            /* Prevent unwanted zoom and cropping */
+            transform: none !important;
+
+            transition: filter 0.3s ease;
+        }
+
+        /* Subtle hover effect without zooming or cropping */
+        .lp-blog:hover .lp-blog-img img {
+            transform: none !important;
+            filter: brightness(1.05);
+        }
+
+        /* Ensure blog cards do not force image cropping */
+        .lp-blog {
+            min-width: 0;
+            overflow: hidden;
+            border-radius: 21px;
+        }
+
+        /* Tablet */
+        @media screen and (max-width: 1024px) {
+            .lp-blog-img {
+                aspect-ratio: 16 / 9;
+            }
+
+            .lp-blog-img img {
+                object-fit: contain;
+            }
+        }
+
+        /* Mobile */
+        @media screen and (max-width: 680px) {
+            .lp-blog-img {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+
+            .lp-blog-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
     </style>
 </head>
 

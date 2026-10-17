@@ -2120,6 +2120,78 @@
                 font-size: 14px !important;
             }
         }
+
+        /* ==========================================
+   BLOG IMAGES — FULL IMAGE, NO CROPPING
+   ========================================== */
+
+        .lp-blog-img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            background: #031d2e;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 0;
+        }
+
+        .lp-blog-img img {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+
+            /* Display the complete image */
+            object-fit: contain;
+            object-position: center center;
+
+            /* Prevent unwanted zoom and cropping */
+            transform: none !important;
+
+            transition: filter 0.3s ease;
+        }
+
+        /* Subtle hover effect without zooming or cropping */
+        .lp-blog:hover .lp-blog-img img {
+            transform: none !important;
+            filter: brightness(1.05);
+        }
+
+        /* Ensure blog cards do not force image cropping */
+        .lp-blog {
+            min-width: 0;
+            overflow: hidden;
+            border-radius: 21px;
+        }
+
+        /* Tablet */
+        @media screen and (max-width: 1024px) {
+            .lp-blog-img {
+                aspect-ratio: 16 / 9;
+            }
+
+            .lp-blog-img img {
+                object-fit: contain;
+            }
+        }
+
+        /* Mobile */
+        @media screen and (max-width: 680px) {
+            .lp-blog-img {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+            }
+
+            .lp-blog-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
     </style>
 </head>
 
@@ -2260,7 +2332,7 @@
                     <div class="lp-visual lp-reveal">
                         <div class="lp-zodiac">
 
-                            <form class="lp-form lp-reveal" id="contactForm">
+                            <form class="lp-form lp-reveal js-contact-form">
 
                                 <h3>
                                     Connect with Vikram Astrologer & Psychic to book your consultation today.
@@ -3213,7 +3285,7 @@
 
                             <div class="lp-blog-img">
 
-                                <img src="/assets/images/blog1.jpg" alt="Birth chart and astrology">
+                                <img src="/assets/images/blog1.jpg" alt="Birth chart and astrology" loading="lazy">
 
                             </div>
 
@@ -3247,7 +3319,7 @@
 
                             <div class="lp-blog-img">
 
-                                <img src="/assets/images/blog2.jpg" alt="Psychic reading">
+                                <img src="/assets/images/blog2.jpg" alt="Psychic reading" loading="lazy">
 
                             </div>
 
@@ -3281,7 +3353,7 @@
 
                             <div class="lp-blog-img">
 
-                                <img src="/assets/images/blog3.jpg" alt="Horoscope and astrology">
+                                <img src="/assets/images/blog3.jpg" alt="Horoscope and astrology" loading="lazy">
 
                             </div>
 
@@ -3715,7 +3787,7 @@
                         </div>
 
 
-                        <form class="lp-form lp-reveal" id="contactForm">
+                        <form class="lp-form lp-reveal js-contact-form">
 
                             <h4>
                                 Connect with Vikram Astrologer & Psychic to book your consultation today.
@@ -3927,7 +3999,7 @@
                 </div>
 
 
-                <form class="lp-form lp-reveal" id="contactForm">
+                <form class="lp-form lp-reveal js-contact-form">
 
                     <h4>
                         Connect with Vikram Astrologer & Psychic to book your consultation today.
